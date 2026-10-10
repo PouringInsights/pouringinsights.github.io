@@ -6,6 +6,7 @@ import { VersionB } from "./VersionB";
 import { B_TOTAL } from "./bkit";
 import { HostPreview } from "./HostPreview";
 import { VersionC, C_TOTAL } from "./VersionC";
+import { CastSheet } from "./CastSheet";
 
 const KdsRoot: React.FC = () => (
   <>
@@ -27,6 +28,7 @@ const KdsRoot: React.FC = () => (
     />
     <Composition id="KDS-Host" component={HostPreview} durationInFrames={150} fps={FPS} width={1920} height={1080} />
     <Composition id="KDS-C" component={VersionC} durationInFrames={Math.round(C_TOTAL * FPS)} fps={FPS} width={1920} height={1080} />
+    <Composition id="KDS-Cast" component={CastSheet} durationInFrames={120} fps={FPS} width={1920} height={1080} />
   </>
 );
 
