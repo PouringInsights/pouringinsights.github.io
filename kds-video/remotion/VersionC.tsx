@@ -16,6 +16,7 @@ import world from "world-atlas/countries-110m.json";
 import PLAN from "./plan_c.json";
 import { Fonts, MediaFill } from "./common";
 import { Bg, C, Counter, FONT, Icon, KImg, PhotoCard, Rise, Sfx, Tag, Wipe, ease, pop, sec } from "./bkit";
+import { CamDrift, Grade, Grain, Letterbox, LightLeak, LightSweep } from "./Cine";
 import { Actor, SchoolGate, Whiteboard, Bulb, Bubble, Trophy, ChibiSweep } from "./Actors";
 
 const FPS = 30;
@@ -55,24 +56,33 @@ const Caption: React.FC<{ text: string; at: number; x: number; y: number }> = ({
 // ---------------------------------------------------------------------------
 const Open: React.FC = () => {
   const cuts = [
-    { src: "clip/v3_dance.mp4", from: 0, to: 2.4, start: 0.3 },
-    { src: "clip/v5_banner.mp4", from: 2.4, to: 3.8 },
-    { src: img(18), from: 3.8, to: 5.4 },
-    { src: img(10), from: 5.4, to: 7.7 },
+    { src: "clip/v3_dance.mp4", from: 1.1, to: 3.1, start: 0.3 },
+    { src: "clip/v5_banner.mp4", from: 3.1, to: 4.4 },
+    { src: img(18), from: 4.4, to: 5.6 },
+    { src: img(10), from: 5.6, to: 7.7 },
   ];
   const f = useCurrentFrame();
-  const title = pop(f, 5.6, FPS, 16);
+  const title = pop(f, 5.8, FPS, 18);
+  const track = interpolate(f, [sec(5.8), sec(7.7)], [22, 2], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const fadeIn = interpolate(f, [sec(1.0), sec(1.5)], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
-    <AbsoluteFill style={{ backgroundColor: C.navy }}>
+    <AbsoluteFill style={{ backgroundColor: "#000" }}>
+      <Sequence durationInFrames={sec(1.4)}>
+        <AbsoluteFill style={{ alignItems: "center", justifyContent: "center" }}>
+          <div style={{ fontFamily: FONT, fontWeight: 600, fontSize: 30, letterSpacing: 14, color: "rgba(255,255,255,0.85)", opacity: interpolate(f, [6, 14, 32, 40], [0, 1, 1, 0], { extrapolateRight: "clamp" }) }}>HaUI · SCHOOL OF ECONOMICS</div>
+        </AbsoluteFill>
+        <LightSweep />
+      </Sequence>
       {cuts.map((c, i) => (
         <Sequence key={i} from={sec(c.from)} durationInFrames={sec(c.to - c.from) + (i < cuts.length - 1 ? 5 : 0)}>
           <MediaFill m={{ src: c.src, kind: c.src.endsWith(".mp4") ? "video" : "img", startFrom: (c as any).start }} dur={sec(c.to - c.from)} />
         </Sequence>
       ))}
-      <AbsoluteFill style={{ background: "linear-gradient(0deg, rgba(10,26,74,0.85) 0%, rgba(10,26,74,0) 50%)" }} />
-      <div style={{ ...W, left: 120, bottom: 110, opacity: title, transform: `translateY(${(1 - title) * 40}px)` }}>
-        <div style={{ fontFamily: FONT, fontWeight: 600, fontSize: 36, color: C.yellow, letterSpacing: 2 }}>TRƯỜNG KINH TẾ · ĐẠI HỌC CÔNG NGHIỆP HÀ NỘI</div>
-        <div style={{ fontFamily: FONT, fontWeight: 900, fontSize: 120, color: C.white, lineHeight: 1.05 }}>Khoa Kinh doanh số</div>
+      <AbsoluteFill style={{ backgroundColor: "#000", opacity: 1 - fadeIn }} />
+      <AbsoluteFill style={{ background: "linear-gradient(0deg, rgba(3,8,24,0.9) 0%, rgba(3,8,24,0) 55%)", opacity: title }} />
+      <div style={{ ...W, left: 0, right: 0, bottom: 170, textAlign: "center", opacity: title }}>
+        <div style={{ fontFamily: FONT, fontWeight: 600, fontSize: 30, color: C.yellow, letterSpacing: 8 }}>TRƯỜNG KINH TẾ · ĐẠI HỌC CÔNG NGHIỆP HÀ NỘI</div>
+        <div style={{ fontFamily: FONT, fontWeight: 800, fontSize: 112, color: C.white, lineHeight: 1.1, letterSpacing: track, textShadow: "0 0 40px rgba(255,220,150,0.35)" }}>KHOA KINH DOANH SỐ</div>
       </div>
     </AbsoluteFill>
   );
@@ -928,12 +938,25 @@ const musicVol = (fr: number) => {
   return (1 - 0.5 * duck) * tail * out;
 };
 
+const Bars: React.FC = () => {
+  const t = useCurrentFrame() / FPS;
+  const montage = SC.experience[0] + 7.9;
+  const a = Math.max(
+    interpolate(t, [0, 0.1, SC.open[1], SC.open[1] + 0.6], [1, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
+    interpolate(t, [montage - 0.6, montage, SC.experience[1] - 0.6, SC.experience[1]], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
+    interpolate(t, [SC.chant[0] - 0.5, SC.chant[0], C_TOTAL], [0, 1, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
+  );
+  return <Letterbox amount={a} />;
+};
+
 export const VersionC: React.FC = () => (
   <AbsoluteFill style={{ backgroundColor: C.navy }}>
     <Fonts />
     {SCENES.map(([id, Comp]) => (
       <Sequence key={id} from={sec(SC[id][0])} durationInFrames={sec(SC[id][1]) - sec(SC[id][0])}>
-        <Comp />
+        <CamDrift dir={SCENES.findIndex((x) => x[0] === id) % 2 ? -1 : 1}>
+          <Comp />
+        </CamDrift>
       </Sequence>
     ))}
     {SWEEPS.map((id) => (
@@ -949,6 +972,14 @@ export const VersionC: React.FC = () => (
         <Wipe color={C.blue} color2={C.yellow} />
       </Sequence>
     ))}
+    {(Object.keys(SC) as SceneId[]).filter((id) => id !== "open").map((id, i) => (
+      <Sequence key={`ll${id}`} from={sec(SC[id][0]) - 12} durationInFrames={30}>
+        <LightLeak hue={i % 2 ? "gold" : "warm"} />
+      </Sequence>
+    ))}
+    <Grade />
+    <Grain />
+    <Bars />
     <Audio src={staticFile("kds/audio/voice_c.wav")} volume={1} />
     <Audio src={staticFile("kds/audio/music_c.wav")} volume={musicVol} />
   </AbsoluteFill>
