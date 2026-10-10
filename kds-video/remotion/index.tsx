@@ -4,6 +4,7 @@ import { FPS } from "./common";
 import { VersionA, V1_DURATION } from "./VersionA";
 import { VersionB } from "./VersionB";
 import { B_TOTAL } from "./bkit";
+import { HostPreview } from "./HostPreview";
 
 const KdsRoot: React.FC = () => (
   <>
@@ -23,6 +24,7 @@ const KdsRoot: React.FC = () => (
       width={1920}
       height={1080}
     />
+    <Composition id="KDS-Host" component={HostPreview} durationInFrames={150} fps={FPS} width={1920} height={1080} />
   </>
 );
 
