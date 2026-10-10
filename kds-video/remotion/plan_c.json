@@ -1,0 +1,173 @@
+{
+ "total": 189.406,
+ "segments": [
+  {
+   "scene": "intro",
+   "id": "name",
+   "src": 11.05,
+   "end": 14.065,
+   "at": 8.0,
+   "dur": 3.015
+  },
+  {
+   "scene": "intro",
+   "id": "young",
+   "src": 15.665,
+   "end": 20.21,
+   "at": 11.465,
+   "dur": 4.545
+  },
+  {
+   "scene": "found",
+   "id": "found",
+   "src": 20.21,
+   "end": 30.425,
+   "at": 17.31,
+   "dur": 10.215
+  },
+  {
+   "scene": "found",
+   "id": "majors",
+   "src": 30.915,
+   "end": 35.99,
+   "at": 28.126,
+   "dur": 5.075
+  },
+  {
+   "scene": "found",
+   "id": "aim",
+   "src": 35.99,
+   "end": 42.88,
+   "at": 33.651,
+   "dur": 6.89
+  },
+  {
+   "scene": "faculty",
+   "id": "behind",
+   "src": 45.655,
+   "end": 49.25,
+   "at": 41.84,
+   "dur": 3.595
+  },
+  {
+   "scene": "faculty",
+   "id": "faculty",
+   "src": 49.39,
+   "end": 59.28,
+   "at": 45.886,
+   "dur": 9.89
+  },
+  {
+   "scene": "faculty",
+   "id": "views",
+   "src": 59.545,
+   "end": 65.4,
+   "at": 56.176,
+   "dur": 5.855
+  },
+  {
+   "scene": "faculty",
+   "id": "learn",
+   "src": 65.8,
+   "end": 72.2,
+   "at": 62.531,
+   "dur": 6.4
+  },
+  {
+   "scene": "research",
+   "id": "classes",
+   "src": 72.2,
+   "end": 76.435,
+   "at": 70.231,
+   "dur": 4.235
+  },
+  {
+   "scene": "research",
+   "id": "research",
+   "src": 76.55,
+   "end": 85.125,
+   "at": 74.866,
+   "dur": 8.575
+  },
+  {
+   "scene": "contests",
+   "id": "life",
+   "src": 93.69,
+   "end": 99.715,
+   "at": 84.741,
+   "dur": 6.025
+  },
+  {
+   "scene": "contests",
+   "id": "logi",
+   "src": 99.715,
+   "end": 108.105,
+   "at": 91.366,
+   "dur": 8.39
+  },
+  {
+   "scene": "contests",
+   "id": "logi2",
+   "src": 108.105,
+   "end": 114.455,
+   "at": 100.106,
+   "dur": 6.35
+  },
+  {
+   "scene": "contests",
+   "id": "mc8",
+   "src": 114.455,
+   "end": 119.8,
+   "at": 107.056,
+   "dur": 5.345
+  },
+  {
+   "scene": "contests",
+   "id": "mj",
+   "src": 122.44,
+   "end": 131.52,
+   "at": 112.851,
+   "dur": 9.08
+  },
+  {
+   "scene": "experience",
+   "id": "pieces",
+   "src": 131.52,
+   "end": 138.415,
+   "at": 123.231,
+   "dur": 6.895
+  },
+  {
+   "scene": "partners",
+   "id": "partners",
+   "src": 141.595,
+   "end": 153.37,
+   "at": 143.126,
+   "dur": 11.775
+  },
+  {
+   "scene": "partners",
+   "id": "questions",
+   "src": 153.625,
+   "end": 164.85,
+   "at": 155.401,
+   "dur": 11.225
+  },
+  {
+   "scene": "outcomes",
+   "id": "outcomes",
+   "src": 164.85,
+   "end": 170.64,
+   "at": 167.925,
+   "dur": 5.79
+  },
+  {
+   "scene": "outro",
+   "id": "outro",
+   "src": 187.35,
+   "end": 193.94,
+   "at": 175.316,
+   "dur": 6.59
+  }
+ ]
+}

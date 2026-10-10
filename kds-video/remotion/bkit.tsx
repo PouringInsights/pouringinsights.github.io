@@ -109,7 +109,8 @@ export const KImg: React.FC<{
   style?: React.CSSProperties;
   zoom?: number; // total zoom over the life of the element
   pos?: string;
-}> = ({ src, style, zoom = 0.08, pos = "50% 50%" }) => {
+  fit?: "cover" | "contain";
+}> = ({ src, style, zoom = 0.08, pos = "50% 50%", fit = "cover" }) => {
   const f = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
   const s = 1.02 + zoom * (f / Math.max(durationInFrames, 1));
@@ -117,7 +118,7 @@ export const KImg: React.FC<{
   const common: React.CSSProperties = {
     width: "100%",
     height: "100%",
-    objectFit: "cover",
+    objectFit: fit,
     objectPosition: pos,
     transform: `scale(${s})`,
   };
