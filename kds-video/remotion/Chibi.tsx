@@ -4,7 +4,8 @@
 import React from "react";
 import type { PersonPose, Prop, Variant } from "./Cast";
 
-const OL = "#3B2A33"; // warm dark outline
+const OL = "#3B2A33"; // warm dark outline (silhouette + facial features)
+const IN = "#CDBFC6"; // soft internal seam line
 const W = "#FFFFFF";
 const SH = "#E4E8F3"; // cloth shadow
 const NAVY = "#1F3488";
@@ -45,16 +46,16 @@ const Held: React.FC<{ prop?: Prop; side: 1 | -1 }> = ({ prop, side }) => {
     case "megaphone":
       return (
         <g transform={`translate(${side * 4} -4) rotate(${side * -75})`}>
-          <path d="M0 -12 L70 -40 L70 40 L0 12 Z" fill="#FF7A59" stroke={OL} strokeWidth={4} strokeLinejoin="round" />
-          <ellipse cx={70} cy={0} rx={9} ry={40} fill="#FFD3C4" stroke={OL} strokeWidth={4} />
-          <rect x={-16} y={-14} width={20} height={28} rx={6} fill="#FFC93C" stroke={OL} strokeWidth={4} />
+          <path d="M0 -12 L70 -40 L70 40 L0 12 Z" fill="#FF7A59" stroke={IN} strokeWidth={2.4} strokeLinejoin="round" />
+          <ellipse cx={70} cy={0} rx={9} ry={40} fill="#FFD3C4" stroke={IN} strokeWidth={2.4} />
+          <rect x={-16} y={-14} width={20} height={28} rx={6} fill="#FFC93C" stroke={IN} strokeWidth={2.4} />
         </g>
       );
     case "box":
       return (
         <g transform="translate(0 -36)">
-          <rect x={-56} y={-16} width={112} height={84} rx={6} fill="#E0AE6E" stroke={OL} strokeWidth={4} />
-          <rect x={-56} y={-16} width={112} height={18} fill="#CC9654" stroke={OL} strokeWidth={4} />
+          <rect x={-56} y={-16} width={112} height={84} rx={6} fill="#E0AE6E" stroke={IN} strokeWidth={2.4} />
+          <rect x={-56} y={-16} width={112} height={18} fill="#CC9654" stroke={IN} strokeWidth={2.4} />
           <rect x={-10} y={-16} width={20} height={84} fill="#F3D8AE" />
         </g>
       );
@@ -62,7 +63,7 @@ const Held: React.FC<{ prop?: Prop; side: 1 | -1 }> = ({ prop, side }) => {
     case "tablet":
       return (
         <g transform={`translate(${side * -26} -30) rotate(${side * -10})`}>
-          <rect x={-44} y={-18} width={88} height={112} rx={10} fill={NAVY} stroke={OL} strokeWidth={4} />
+          <rect x={-44} y={-18} width={88} height={112} rx={10} fill={NAVY} stroke={IN} strokeWidth={2.4} />
           <rect x={-36} y={-10} width={72} height={94} rx={5} fill="#8EC1FF" />
           <rect x={-26} y={44} width={11} height={30} fill="#FFC93C" />
           <rect x={-9} y={28} width={11} height={46} fill={W} />
@@ -72,12 +73,12 @@ const Held: React.FC<{ prop?: Prop; side: 1 | -1 }> = ({ prop, side }) => {
     case "cap":
       return (
         <g transform="translate(0 -24)">
-          <path d="M-54 0 L0 -24 L54 0 L0 24 Z" fill="#20203A" stroke={OL} strokeWidth={4} />
+          <path d="M-54 0 L0 -24 L54 0 L0 24 Z" fill="#20203A" stroke={IN} strokeWidth={2.4} />
           <path d="M28 6 L40 36" stroke="#FFC93C" strokeWidth={5} strokeLinecap="round" />
         </g>
       );
     case "phone":
-      return <rect x={-14} y={-30} width={28} height={50} rx={6} fill="#2A2A2A" stroke={OL} strokeWidth={3} />;
+      return <rect x={-14} y={-30} width={28} height={50} rx={6} fill="#2A2A2A" stroke={IN} strokeWidth={2.4} />;
   }
   return null;
 };
@@ -92,21 +93,21 @@ const Arm: React.FC<{ x: number; y: number; s: number; e: number; side: 1 | -1; 
   const sleeve = blazer ? (back ? "#182A6E" : NAVY) : back ? SH : W;
   return (
     <g transform={`translate(${x} ${y})`}>
-      <path d={tube([[0, 0], [ex, ey], Wr], [24, 21, 19])} fill={blazer ? sleeve : skin} stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+      <path d={tube([[0, 0], [ex, ey], Wr], [24, 21, 19])} fill={blazer ? sleeve : skin} stroke={IN} strokeWidth={2.4} strokeLinejoin="round" />
       <g transform={`translate(${Wr[0]} ${Wr[1]}) rotate(${a2})`}>
         <Held prop={hold} side={side} />
         {blazer ? <path d="M-19 -6 Q0 2 19 -6" stroke={W} strokeWidth={6} fill="none" /> : null}
         {/* chibi mitten hand */}
-        <ellipse cx={0} cy={8} rx={21} ry={20} fill={skin} stroke={OL} strokeWidth={4} />
-        <path d={`M${side * -16} 2 Q${side * -24} 10 ${side * -16} 16`} fill="none" stroke={OL} strokeWidth={3} strokeLinecap="round" />
+        <ellipse cx={0} cy={8} rx={21} ry={20} fill={skin} stroke={IN} strokeWidth={2.4} />
+        <path d={`M${side * -16} 2 Q${side * -24} 10 ${side * -16} 16`} fill="none" stroke={IN} strokeWidth={2.4} strokeLinecap="round" />
       </g>
       <g transform={`rotate(${a1})`}>
         {blazer ? (
-          <path d="M-28 -16 Q0 -30 28 -16 Q31 20 28 52 Q0 58 -28 52 Q-31 20 -28 -16 Z" fill={sleeve} stroke={OL} strokeWidth={4} />
+          <path d="M-28 -16 Q0 -30 28 -16 Q31 20 28 52 Q0 58 -28 52 Q-31 20 -28 -16 Z" fill={sleeve} stroke={IN} strokeWidth={2.4} />
         ) : (
           <g>
-            <path d="M-30 -18 Q0 -34 30 -18 Q33 10 34 38 Q0 46 -34 38 Q-33 10 -30 -18 Z" fill={sleeve} stroke={OL} strokeWidth={4} strokeLinejoin="round" />
-            <path d="M-34 28 Q0 36 34 28 L34 42 Q0 50 -34 42 Z" fill={NAVY} stroke={OL} strokeWidth={3} />
+            <path d="M-30 -18 Q0 -34 30 -18 Q33 10 34 38 Q0 46 -34 38 Q-33 10 -30 -18 Z" fill={sleeve} stroke={IN} strokeWidth={2.4} strokeLinejoin="round" />
+            <path d="M-34 28 Q0 36 34 28 L34 42 Q0 50 -34 42 Z" fill={NAVY} stroke={IN} strokeWidth={2.4} />
             <path d="M-33 35 Q0 43 33 35" stroke={RED} strokeWidth={2.6} fill="none" />
           </g>
         )}
@@ -117,8 +118,8 @@ const Arm: React.FC<{ x: number; y: number; s: number; e: number; side: 1 | -1; 
 
 const Leg: React.FC<{ x: number; y: number; a: number; p: Pal; front?: boolean }> = ({ x, y, a, p, front }) => (
   <g transform={`translate(${x} ${y}) rotate(${a})`}>
-    <path d="M-34 -10 Q-38 60 -38 112 Q0 120 38 112 Q38 60 34 -10 Z" fill={front ? p.pants : p.pantsSh} stroke={OL} strokeWidth={4} strokeLinejoin="round" />
-    <path d="M-36 112 Q-44 140 -8 142 L30 142 Q50 140 44 122 Q40 110 24 110 Z" fill={p.shoe} stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+    <path d="M-34 -10 Q-38 60 -38 112 Q0 120 38 112 Q38 60 34 -10 Z" fill={front ? p.pants : p.pantsSh} stroke={IN} strokeWidth={2.4} strokeLinejoin="round" />
+    <path d="M-36 112 Q-44 140 -8 142 L30 142 Q50 140 44 122 Q40 110 24 110 Z" fill={p.shoe} stroke={IN} strokeWidth={2.4} strokeLinejoin="round" />
     <path d="M-34 132 Q4 138 44 130" stroke="#D9DCE6" strokeWidth={4} fill="none" />
   </g>
 );
@@ -155,9 +156,9 @@ const Face: React.FC<{ v: Variant; p: Pal; pose: PersonPose }> = ({ v, p, pose }
   return (
     <g>
       {/* face: soft mochi shape */}
-      <path d="M72 200 Q72 70 200 70 Q328 70 328 200 Q328 318 200 330 Q72 318 72 200 Z" fill={p.skin} stroke={OL} strokeWidth={4.5} />
-      <ellipse cx={70} cy={222} rx={16} ry={24} fill={p.skinSh} stroke={OL} strokeWidth={4} />
-      <ellipse cx={330} cy={222} rx={16} ry={24} fill={p.skinSh} stroke={OL} strokeWidth={4} />
+      <path d="M72 200 Q72 70 200 70 Q328 70 328 200 Q328 318 200 330 Q72 318 72 200 Z" fill={p.skin} stroke={IN} strokeWidth={2.4} />
+      <ellipse cx={70} cy={222} rx={16} ry={24} fill={p.skinSh} stroke={IN} strokeWidth={2.4} />
+      <ellipse cx={330} cy={222} rx={16} ry={24} fill={p.skinSh} stroke={IN} strokeWidth={2.4} />
       <Eye cx={140} p={p} blink={blink} look={look} side={-1} />
       <Eye cx={260} p={p} blink={blink} look={look} side={1} />
       {/* brows */}
@@ -189,17 +190,17 @@ const Face: React.FC<{ v: Variant; p: Pal; pose: PersonPose }> = ({ v, p, pose }
 
 const HairBack: React.FC<{ v: Variant; p: Pal; sway: number }> = ({ v, p, sway }) => {
   if (v === "longHair")
-    return <path d={`M64 190 Q48 360 ${86 + sway} 470 Q200 494 ${314 + sway} 470 Q352 360 336 190 Z`} fill={p.hairSh} stroke={OL} strokeWidth={4.5} />;
+    return <path d={`M64 190 Q48 360 ${86 + sway} 470 Q200 494 ${314 + sway} 470 Q352 360 336 190 Z`} fill={p.hairSh} stroke={IN} strokeWidth={2.4} />;
   if (v === "ponytail")
     return (
       <g>
-        <path d={`M300 110 Q392 ${150 + sway} 374 ${270 + sway * 2} Q362 340 ${330 + sway} 360 Q356 ${280 + sway} 318 200 Z`} fill={p.hair} stroke={OL} strokeWidth={4.5} strokeLinejoin="round" />
+        <path d={`M300 110 Q392 ${150 + sway} 374 ${270 + sway * 2} Q362 340 ${330 + sway} 360 Q356 ${280 + sway} 318 200 Z`} fill={p.hair} stroke={IN} strokeWidth={2.4} strokeLinejoin="round" />
         <path d={`M330 140 Q370 ${190 + sway} 356 ${270 + sway}`} stroke={p.hairHi} strokeWidth={6} fill="none" strokeLinecap="round" opacity={0.6} />
-        <path d="M296 100 Q326 80 338 110 Q330 134 300 128 Z" fill="#2F57C8" stroke={OL} strokeWidth={4} />
+        <path d="M296 100 Q326 80 338 110 Q330 134 300 128 Z" fill="#2F57C8" stroke={IN} strokeWidth={2.4} />
       </g>
     );
   if (v === "teacher")
-    return <circle cx={200} cy={58} r={46} fill={p.hair} stroke={OL} strokeWidth={4.5} />;
+    return <circle cx={200} cy={58} r={46} fill={p.hair} stroke={IN} strokeWidth={2.4} />;
   return null;
 };
 
@@ -208,25 +209,25 @@ const HairFront: React.FC<{ v: Variant; p: Pal }> = ({ v, p }) => {
   if (v === "boy")
     return (
       <g>
-        <path d="M64 214 Q50 54 200 46 Q350 54 336 214 Q326 160 300 140 L292 176 L268 132 L244 170 L222 128 L196 168 L170 126 L148 170 L128 136 L106 178 Q84 160 64 214 Z" fill={p.hair} stroke={OL} strokeWidth={4.5} strokeLinejoin="round" />
+        <path d="M64 214 Q50 54 200 46 Q350 54 336 214 Q326 160 300 140 L292 176 L268 132 L244 170 L222 128 L196 168 L170 126 L148 170 L128 136 L106 178 Q84 160 64 214 Z" fill={p.hair} stroke={IN} strokeWidth={2.4} strokeLinejoin="round" />
         {shine}
       </g>
     );
   if (v === "teacher")
     return (
       <g>
-        <path d="M66 240 Q50 60 200 54 Q350 60 334 240 Q322 150 270 120 Q238 150 186 140 Q130 150 104 176 Q78 200 66 240 Z" fill={p.hair} stroke={OL} strokeWidth={4.5} strokeLinejoin="round" />
-        <path d="M84 230 Q80 300 96 330 L112 320 Q100 280 104 220 Z" fill={p.hair} stroke={OL} strokeWidth={4} />
-        <path d="M316 230 Q320 300 304 330 L288 320 Q300 280 296 220 Z" fill={p.hair} stroke={OL} strokeWidth={4} />
+        <path d="M66 240 Q50 60 200 54 Q350 60 334 240 Q322 150 270 120 Q238 150 186 140 Q130 150 104 176 Q78 200 66 240 Z" fill={p.hair} stroke={IN} strokeWidth={2.4} strokeLinejoin="round" />
+        <path d="M84 230 Q80 300 96 330 L112 320 Q100 280 104 220 Z" fill={p.hair} stroke={IN} strokeWidth={2.4} />
+        <path d="M316 230 Q320 300 304 330 L288 320 Q300 280 296 220 Z" fill={p.hair} stroke={IN} strokeWidth={2.4} />
         {shine}
       </g>
     );
   // girls: cap + bangs made of pointed locks
   return (
     <g>
-      <path d="M62 250 Q46 56 200 48 Q354 56 338 250 Q336 200 318 166 Q312 200 288 214 Q292 176 266 150 Q254 186 226 196 Q230 160 206 140 Q190 178 160 192 Q162 160 146 146 Q132 182 104 200 Q108 170 104 156 Q82 190 80 228 Z" fill={p.hair} stroke={OL} strokeWidth={4.5} strokeLinejoin="round" />
-      <path d="M70 230 Q64 320 84 372 L106 360 Q92 300 98 226 Z" fill={p.hair} stroke={OL} strokeWidth={4} strokeLinejoin="round" />
-      <path d="M330 230 Q336 320 316 372 L294 360 Q308 300 302 226 Z" fill={p.hair} stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+      <path d="M62 250 Q46 56 200 48 Q354 56 338 250 Q336 200 318 166 Q312 200 288 214 Q292 176 266 150 Q254 186 226 196 Q230 160 206 140 Q190 178 160 192 Q162 160 146 146 Q132 182 104 200 Q108 170 104 156 Q82 190 80 228 Z" fill={p.hair} stroke={IN} strokeWidth={2.4} strokeLinejoin="round" />
+      <path d="M70 230 Q64 320 84 372 L106 360 Q92 300 98 226 Z" fill={p.hair} stroke={IN} strokeWidth={2.4} strokeLinejoin="round" />
+      <path d="M330 230 Q336 320 316 372 L294 360 Q308 300 302 226 Z" fill={p.hair} stroke={IN} strokeWidth={2.4} strokeLinejoin="round" />
       {shine}
     </g>
   );
@@ -235,23 +236,23 @@ const HairFront: React.FC<{ v: Variant; p: Pal }> = ({ v, p }) => {
 const Torso: React.FC<{ blazer: boolean }> = ({ blazer }) =>
   blazer ? (
     <g>
-      <path d="M120 360 Q200 340 280 360 Q292 440 286 520 Q200 532 114 520 Q108 440 120 360 Z" fill={NAVY} stroke={OL} strokeWidth={4} strokeLinejoin="round" />
-      <path d="M172 348 L200 420 L228 348 Z" fill={W} stroke={OL} strokeWidth={3} />
+      <path d="M120 360 Q200 340 280 360 Q292 440 286 520 Q200 532 114 520 Q108 440 120 360 Z" fill={NAVY} stroke={IN} strokeWidth={2.4} strokeLinejoin="round" />
+      <path d="M172 348 L200 420 L228 348 Z" fill={W} stroke={IN} strokeWidth={2.4} />
       <path d="M164 352 L200 432 L192 524 M236 352 L200 432 L208 524" stroke="#14235F" strokeWidth={4} fill="none" />
       <circle cx={200} cy={470} r={6} fill="#D8B24A" stroke={OL} strokeWidth={2} />
     </g>
   ) : (
     <g>
-      <path d="M118 362 Q200 338 282 362 Q294 440 290 524 Q200 538 110 524 Q106 440 118 362 Z" fill={W} stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+      <path d="M118 362 Q200 338 282 362 Q294 440 290 524 Q200 538 110 524 Q106 440 118 362 Z" fill={W} stroke={IN} strokeWidth={2.4} strokeLinejoin="round" />
       {/* soft shadow on one side + hem */}
       <path d="M252 368 Q282 372 284 400 Q290 460 288 520 Q270 526 254 528 Q262 450 252 368 Z" fill={SH} />
       <path d="M116 506 Q200 520 288 506" stroke={SH} strokeWidth={7} fill="none" />
       {/* placket */}
-      <rect x={191} y={356} width={18} height={68} rx={4} fill={W} stroke={OL} strokeWidth={3} />
+      <rect x={191} y={356} width={18} height={68} rx={4} fill={W} stroke={IN} strokeWidth={2.4} />
       <circle cx={200} cy={380} r={4} fill="#DCE1EC" stroke={OL} strokeWidth={2} />
       <circle cx={200} cy={406} r={4} fill="#DCE1EC" stroke={OL} strokeWidth={2} />
       {/* navy collar with red tipping */}
-      <path d="M150 346 Q200 330 250 346 L266 358 L218 392 L200 362 L182 392 L134 358 Z" fill={NAVY} stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+      <path d="M150 346 Q200 330 250 346 L266 358 L218 392 L200 362 L182 392 L134 358 Z" fill={NAVY} stroke={IN} strokeWidth={2.4} strokeLinejoin="round" />
       <path d="M140 360 L183 388 M260 360 L217 388" stroke={RED} strokeWidth={3} />
       {/* HaUI badge, left chest */}
       <g transform="translate(206 446)">
@@ -275,8 +276,19 @@ export const Chibi: React.FC<{ v: Variant; pose?: PersonPose; height?: number; f
   const tilt = pose.tilt ?? 0;
   return (
     <svg viewBox="0 0 400 700" width={(height * 400) / 700} height={height} style={{ overflow: "visible", transform: flip ? "scaleX(-1)" : undefined }}>
+      <defs>
+        <filter id="kdsChibiOutline" x="-25%" y="-15%" width="150%" height="130%">
+          <feMorphology in="SourceAlpha" operator="dilate" radius="4.5" result="d" />
+          <feFlood floodColor={OL} />
+          <feComposite in2="d" operator="in" result="o" />
+          <feMerge>
+            <feMergeNode in="o" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
       <ellipse cx={200} cy={684} rx={110} ry={14} fill="rgba(0,0,0,0.15)" />
-      <g transform={`translate(0 ${bob})`}>
+      <g transform={`translate(0 ${bob})`} filter="url(#kdsChibiOutline)">
         <g transform={`rotate(${tilt} 200 340)`}>
           <HairBack v={v} p={p} sway={sw * 6} />
         </g>

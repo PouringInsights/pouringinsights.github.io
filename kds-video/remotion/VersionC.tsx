@@ -16,7 +16,7 @@ import world from "world-atlas/countries-110m.json";
 import PLAN from "./plan_c.json";
 import { Fonts, MediaFill } from "./common";
 import { Bg, C, Counter, FONT, Icon, KImg, PhotoCard, Rise, Sfx, Tag, Wipe, ease, pop, sec } from "./bkit";
-import { HostActor, HostSweep } from "./HostActor";
+import { Actor, SchoolGate, Whiteboard, Bulb, Bubble, Trophy, ChibiSweep } from "./Actors";
 
 const FPS = 30;
 type SegId = string;
@@ -91,18 +91,20 @@ const Intro: React.FC = () => {
   ];
   return (
     <AbsoluteFill>
-      <Bg tone="navy" />
-      <PhotoCard src={slide(1)} at={0.05} x={90} y={130} w={900} h={720} rot={-2} from="left" />
-      <div style={{ ...W, left: 1060, top: 170, width: 820 }}>
-        <Rise text="Khoa Kinh doanh số" at={tName} size={86} style={{ whiteSpace: "nowrap" }} />
+      <SchoolGate />
+      <Actor v="ponytail" x={430} y={455} height={440} walkIn={[0.1, 1.9]} xFrom={-300} acts={[{ at: 2.0, kind: "wave", dur: 1.8 }]} seed={1} />
+      <Actor v="boy" x={760} y={455} height={440} walkIn={[0.3, 2.1]} xFrom={-500} acts={[{ at: 2.2, kind: "wave", dur: 1.6 }]} seed={2} />
+      <Actor v="longHair" x={1090} y={455} height={440} walkIn={[0.2, 2.0]} xFrom={2100} acts={[{ at: 2.1, kind: "wave", dur: 1.7 }]} seed={3} />
+      <div style={{ ...W, left: 60, top: 50, width: 900, backgroundColor: "rgba(10,26,74,0.92)", borderRadius: 32, padding: "28px 40px", opacity: pop(useCurrentFrame(), tName - 0.2, FPS, 16) }}>
+        <Rise text="Khoa Kinh doanh số" at={tName} size={78} style={{ whiteSpace: "nowrap" }} />
         <Rise text="Trường Kinh tế · Đại học Công nghiệp Hà Nội" at={tSub} size={34} weight={600} color="rgba(255,255,255,0.85)" stagger={0.04} />
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 18, marginTop: 40, width: 520 }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 16, marginTop: 24 }}>
           {chips.map((c, i) => (
             <Tag key={i} text={c.t} at={c.at} bg={c.bg} color={(c as any).c ?? C.ink} size={36} />
           ))}
         </div>
       </div>
-      <HostActor sceneStart={s0} walkIn={[0.2, 1.4]} xFrom={2000} x={1560} y={360} height={660} acts={[{ at: 1.5, kind: "wave", dur: 1.4 }, { at: 3.2, kind: "present", dur: 5 }]} />
+
       {chips.map((c, i) => (
         <Sfx key={i} at={c.at} name="click-soft" vol={0.25} />
       ))}
@@ -180,7 +182,7 @@ const Found: React.FC = () => {
           <Tag text="Định hướng" at={tMission} bg={C.yellow} size={36} />
           <Rise text="Đào tạo nguồn nhân lực cho nền kinh tế số" at={L("found", "found", 28.48)} size={92} style={{ textAlign: "center", width: 1300, marginTop: 36 }} highlight={["kinh", "tế", "số"]} />
         </AbsoluteFill>
-        <HostActor sceneStart={s0} x={110} y={330} height={680} acts={[{ at: tDate, kind: "point", dur: 3.2 }, { at: tMission + 0.4, kind: "present", dur: 3.5 }]} />
+        <Actor v="teacher" x={70} y={420} height={560} walkIn={[0, 0.9]} xFrom={-400} acts={[{ at: tDate, kind: "point", dur: 3.4 }, { at: tMission + 0.4, kind: "present", dur: 3.8 }]} seed={4} />
         <Sfx at={dAt[0]} name="pop" vol={0.25} />
       </Sequence>
       {/* B: three majors */}
@@ -189,19 +191,24 @@ const Found: React.FC = () => {
         <div style={{ ...W, left: 0, right: 0, top: 80, textAlign: "center" }}>
           <Rise text="Ba ngành đào tạo" at={0.1} size={72} color={C.navy} style={{ display: "inline-block" }} />
         </div>
-        <div style={{ ...W, left: 110, right: 110, top: 230, display: "flex", gap: 50 }}>
+        <div style={{ ...W, left: 110, right: 110, top: 200, display: "flex", gap: 50 }}>
           {majors.map((m, i) => {
             const lt = m.at - tMajors;
             const p = pop(f - sec(tMajors), lt, FPS, 13);
             const prog = ease(f - sec(tMajors), lt, lt + 1.4);
             return (
-              <div key={i} style={{ flex: 1, height: 720, backgroundColor: C.navy, borderRadius: 36, overflow: "hidden", transform: `translateY(${(1 - p) * 260}px)`, opacity: Math.min(1, p * 2), boxShadow: "0 30px 60px rgba(10,26,74,0.25)" }}>
-                <div style={{ height: 300, overflow: "hidden", backgroundColor: "#fff" }}>
+              <div key={i} style={{ flex: 1, height: 760, backgroundColor: C.navy, borderRadius: 36, overflow: "hidden", transform: `translateY(${(1 - p) * 260}px)`, opacity: Math.min(1, p * 2), boxShadow: "0 30px 60px rgba(10,26,74,0.25)" }}>
+                <div style={{ height: 340, position: "relative", overflow: "hidden", background: `linear-gradient(180deg, ${m.col}55, ${m.col}22)` }}>
+                  <div style={{ position: "absolute", right: 22, top: 22 }}>
+                    <Icon kind={m.icon} size={110} color={C.white} progress={prog} />
+                  </div>
+                  <Actor v={(["ponytail", "boy", "longHair"] as const)[i]} x={175} y={20} height={320} popAt={lt + 0.1} base={(["megaphone", "holdFront", "present"] as const)[i]} rHold={(["megaphone", "box", "tablet"] as const)[i]} acts={i === 2 ? [{ at: lt + 0.6, kind: "point", dur: 2.4 }] : []} hop={i === 1} seed={i} />
+                </div>
+                <div style={{ height: 150, backgroundColor: "#fff", padding: 6 }}>
                   <KImg src={m.logo} style={{ width: "100%", height: "100%" }} zoom={0.02} fit="contain" />
                 </div>
-                <div style={{ padding: "26px 40px", display: "flex", flexDirection: "column", gap: 14 }}>
-                  <Icon kind={m.icon} size={130} color={m.col} progress={prog} />
-                  <div style={{ fontFamily: FONT, fontWeight: 800, fontSize: 46, color: C.white, lineHeight: 1.12 }}>{m.name}</div>
+                <div style={{ padding: "20px 36px", display: "flex", flexDirection: "column", gap: 8 }}>
+                  <div style={{ fontFamily: FONT, fontWeight: 800, fontSize: 42, color: C.white, lineHeight: 1.12 }}>{m.name}</div>
                   <div style={{ fontFamily: FONT, fontWeight: 600, fontSize: 28, color: m.col }}>{m.club}</div>
                 </div>
               </div>
@@ -227,6 +234,9 @@ const Found: React.FC = () => {
             ))}
           </div>
         </div>
+        {(["ponytail", "boy", "longHair"] as const).map((v, i) => (
+          <Actor key={v} v={v} x={1060 + i * 230} y={640} height={380} popAt={aims[i].at - tAim} acts={[{ at: aims[3].at - tAim + 0.3, kind: "cheer", dur: 2.2 }]} seed={i + 5} />
+        ))}
         {aims.map((a, i) => (
           <Sfx key={i} at={a.at - tAim} name="click-soft" vol={0.25} />
         ))}
@@ -275,12 +285,15 @@ const Faculty: React.FC = () => {
       {/* A: behind every class */}
       <Sequence durationInFrames={sec(tFac) + 8}>
         <Bg tone="navy" />
-        <PhotoCard src={slide(11)} at={0.1} x={560} y={110} w={760} h={560} rot={-3} from="up" />
-        <PhotoCard src={slide(8)} at={0.6} x={1120} y={330} w={700} h={460} rot={3} from="right" />
-        <div style={{ ...W, left: 470, top: 840, width: 1400 }}>
+        <div style={{ ...W, left: 50, top: 150 }}>
+          <Whiteboard progress={ease(f, 0.2, 3.2)} />
+        </div>
+        <PhotoCard src={slide(11)} at={0.6} x={1080} y={90} w={740} h={500} rot={-3} from="up" />
+        <PhotoCard src={slide(8)} at={1.1} x={1200} y={470} w={620} h={400} rot={3} from="right" />
+        <div style={{ ...W, left: 60, top: 900, width: 1400 }}>
           <Rise text="Đằng sau mỗi giờ học là những người thầy, người cô" at={0.3} size={42} weight={700} stagger={0.04} style={{ whiteSpace: "nowrap" }} />
         </div>
-        <HostActor sceneStart={s0} x={120} y={330} height={680} acts={[{ at: 0.5, kind: "point", dur: 3 }]} />
+        <Actor v="teacher" x={720} y={380} height={520} walkIn={[0, 0.8]} xFrom={1100} flip acts={[{ at: 0.9, kind: "point", dur: 3 }]} seed={6} />
       </Sequence>
       {/* B: numbers + map */}
       <Sequence from={sec(tFac)} durationInFrames={sec(tViews - tFac) + 8}>
@@ -313,7 +326,7 @@ const Faculty: React.FC = () => {
             <Rise text="Và để SẴN SÀNG bước vào nghề nghiệp." at={L("faculty", "learn", 69.7) - tLearn} size={64} highlight={["SẴN", "SÀNG"]} />
           </div>
         </div>
-        <HostActor sceneStart={s0 + tLearn} x={200} y={330} height={680} acts={[{ at: 0.4, kind: "present", dur: 5.5 }]} />
+        <Actor v="teacher" x={170} y={380} height={600} acts={[{ at: 0.3, kind: "present", dur: 6 }]} seed={7} />
       </Sequence>
     </AbsoluteFill>
   );
@@ -400,6 +413,10 @@ const Research: React.FC = () => {
             <Tag text="Sáng tạo" at={L("research", "classes", 74.16)} bg={C.blue} color={C.white} size={48} />
             <Tag text="Vận dụng vào thực tế" at={L("research", "classes", 74.94)} bg={C.yellow} size={48} />
           </div>
+        </div>
+        <Actor v="longHair" x={1330} y={600} height={420} popAt={0.4} acts={[{ at: L("research", "classes", 74.16), kind: "raise", dur: 2.2 }]} seed={8} />
+        <div style={{ ...W, left: 1520, top: 440 }}>
+          <Bulb at={L("research", "classes", 74.16)} />
         </div>
       </Sequence>
       <Sequence from={sec(tR)}>
@@ -550,6 +567,12 @@ const LogiMaster: React.FC<{ base: number; t2: number; s0: number }> = ({ base, 
           ))}
         </div>
       </AbsoluteFill>
+      <AbsoluteFill style={{ opacity: 1 - phase2 }}>
+        <Actor v="boy" x={790} y={650} height={390} popAt={tSeasons} acts={[{ at: tStud, kind: "cheer", dur: 2.4 }]} seed={9} />
+        <div style={{ ...W, left: 1010, top: 820, transform: `scale(${pop(f, tTeams, FPS, 10)})` }}>
+          <Trophy size={150} />
+        </div>
+      </AbsoluteFill>
       <AbsoluteFill style={{ opacity: phase2 }}>
         <PhotoCard src={slide(22)} at={t2 - base} x={110} y={140} w={900} h={700} rot={-2} from="left" border={C.navy} />
         <PhotoCard src={slide(17)} at={t2 - base + 0.5} x={1060} y={110} w={760} h={420} rot={2} from="right" border={C.navy} />
@@ -589,6 +612,7 @@ const MarketingJourney: React.FC<{ base: number }> = ({ base }) => {
         ))}
         <div style={{ ...W, left: 0, bottom: 68, width: 600, height: 4, backgroundColor: "rgba(255,255,255,0.4)" }} />
       </div>
+      <Actor v="ponytail" x={770} y={600} height={400} popAt={tl(124.06)} rHold="megaphone" base="megaphone" acts={[{ at: tl(125.6) + 0.3, kind: "cheer", dur: 2 }]} seed={10} />
       <PhotoCard src={slide(20)} at={tl(127.32) - 0.6} x={1060} y={170} w={760} h={330} rot={-2} from="right" />
       <div style={{ ...W, left: 1060, top: 560 }}>
         <div style={{ display: "flex", alignItems: "baseline", gap: 20 }}>
@@ -733,7 +757,8 @@ const Partners: React.FC = () => {
           <div style={{ ...W, left: 110, top: 80 }}>
             <Rise text="Khoa đồng hành cùng" at={tNet} size={54} weight={700} />
           </div>
-          <HostActor sceneStart={s0} x={40} y={420} height={620} acts={[{ at: tNet + 0.2, kind: "present", dur: 7 }]} />
+          <Actor v="boy" x={30} y={640} height={400} popAt={tNet + 0.1} acts={[{ at: L("partners", "partners", 148.24), kind: "wave", dur: 2 }]} seed={11} />
+          <Actor v="longHair" x={230} y={640} height={400} popAt={tNet + 0.3} acts={[{ at: L("partners", "partners", 150.02), kind: "present", dur: 2.5 }]} seed={12} />
         </AbsoluteFill>
       </Sequence>
       <Sequence from={sec(tQ0)}>
@@ -749,7 +774,7 @@ const Partners: React.FC = () => {
           ))}
         </AbsoluteFill>
         <AbsoluteFill style={{ opacity: out1 }}>
-          <div style={{ ...W, left: 700, top: 270 }}>
+          <div style={{ ...W, left: 760, top: 250 }}>
             <Rise text="Định hướng rõ ràng" at={tQ - tQ0} size={42} weight={700} color={C.sky} />
             <div style={{ display: "flex", flexDirection: "column", gap: 18, marginTop: 26 }}>
               {qs.map((q, i) => (
@@ -757,7 +782,14 @@ const Partners: React.FC = () => {
               ))}
             </div>
           </div>
-          <HostActor sceneStart={s0 + tQ0} x={170} y={330} height={680} acts={[{ at: tQ - tQ0 + 0.3, kind: "present", dur: 6.5 }]} />
+          {(["ponytail", "boy", "longHair"] as const).map((v, i) => (
+            <React.Fragment key={v}>
+              <Actor v={v} x={40 + i * 215} y={620} height={400} popAt={tQ - tQ0 + 0.1 + i * 0.1} acts={[{ at: qs[i].at - tQ0 + 0.7, kind: "raise", dur: 1.6 }]} seed={13 + i} />
+              <div style={{ ...W, left: 70 + i * 215, top: 540 }}>
+                <Bubble text="?" at={qs[i].at - tQ0} done={qs[i].at - tQ0 + 0.8} />
+              </div>
+            </React.Fragment>
+          ))}
         </AbsoluteFill>
       </Sequence>
     </AbsoluteFill>
@@ -802,6 +834,9 @@ const Outcomes: React.FC = () => {
           <Rise text="có việc làm sau 6 tháng" at={L("outcomes", "outcomes", 169.12)} size={36} weight={600} style={{ width: 260 }} />
         </div>
       </div>
+      {(["ponytail", "boy", "longHair"] as const).map((v, i) => (
+        <Actor key={v} v={v} x={1230 + i * 210} y={80} height={360} popAt={0.3 + i * 0.12} rHold="cap" acts={[{ at: t1000 + 0.2, kind: "cheer", dur: 3.5 }]} seed={16 + i} />
+      ))}
       <Sfx at={t1000} name="pop" vol={0.25} />
     </AbsoluteFill>
   );
@@ -844,7 +879,10 @@ const Outro: React.FC = () => {
           </div>
         </div>
       </AbsoluteFill>
-      <HostActor sceneStart={s0} walkIn={[4.6, 5.6]} xFrom={-400} x={70} y={420} height={620} acts={[{ at: 5.7, kind: "wave", dur: 1.6 }]} talk={false} />
+      <Actor v="teacher" x={20} y={620} height={430} walkIn={[4.2, 5.2]} xFrom={-400} acts={[{ at: 5.3, kind: "wave", dur: 2 }]} seed={20} />
+      <Actor v="ponytail" x={250} y={640} height={410} walkIn={[4.3, 5.3]} xFrom={-500} acts={[{ at: 5.4, kind: "wave", dur: 1.9 }]} seed={21} />
+      <Actor v="boy" x={1440} y={640} height={410} walkIn={[4.2, 5.2]} xFrom={2200} acts={[{ at: 5.3, kind: "wave", dur: 2 }]} seed={22} />
+      <Actor v="longHair" x={1670} y={640} height={410} walkIn={[4.3, 5.3]} xFrom={2400} acts={[{ at: 5.4, kind: "wave", dur: 1.9 }]} seed={23} />
     </AbsoluteFill>
   );
 };
@@ -900,7 +938,7 @@ export const VersionC: React.FC = () => (
     ))}
     {SWEEPS.map((id) => (
       <Sequence key={`s${id}`} from={sec(SC[id][0]) - 24} durationInFrames={36}>
-        <HostSweep />
+        <ChibiSweep v={(["ponytail", "boy", "longHair", "ponytail", "boy"] as const)[SWEEPS.indexOf(id)]} />
       </Sequence>
     ))}
     {SWEEPS.map((id) => (
