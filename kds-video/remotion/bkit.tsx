@@ -406,3 +406,57 @@ export const Icon: React.FC<{
 };
 
 export { FPS, sec };
+
+// ---------------------------------------------------------------------------
+// Aspect-true photo card: sized to the image's own ratio inside a max box,
+// centred on (cx, cy). Never crops, never zooms.
+// ---------------------------------------------------------------------------
+import DIMS_ from "./dims.json";
+export const FitCard: React.FC<{
+  src: string;
+  at: number;
+  cx: number;
+  cy: number;
+  maxW: number;
+  maxH: number;
+  rot?: number;
+  from?: "left" | "right" | "up" | "down" | "scale";
+  border?: string;
+}> = ({ src, at, cx, cy, maxW, maxH, rot = 0, from = "scale", border = C.white }) => {
+  const f = useCurrentFrame();
+  const d = (DIMS_ as Record<string, number[]>)[src] ?? [16, 9];
+  const r = d[0] / d[1];
+  let w = maxW;
+  let h = w / r;
+  if (h > maxH) {
+    h = maxH;
+    w = h * r;
+  }
+  const p = pop(f, at, FPS, 15);
+  const off = (1 - p) * 220;
+  const tx = from === "left" ? -off : from === "right" ? off : 0;
+  const ty = from === "up" ? -off : from === "down" ? off : 0;
+  const sc = from === "scale" ? 0.7 + 0.3 * p : 1;
+  const bw = 8;
+  return (
+    <div
+      style={{
+        position: "absolute",
+        left: cx - w / 2 - bw,
+        top: cy - h / 2 - bw,
+        width: w + bw * 2,
+        height: h + bw * 2,
+        opacity: Math.min(1, p * 1.6),
+        transform: `translate(${tx}px, ${ty}px) rotate(${rot * p}deg) scale(${sc})`,
+        borderRadius: 20,
+        border: `${bw}px solid ${border}`,
+        boxShadow: "0 30px 60px rgba(0,0,0,0.35)",
+        overflow: "hidden",
+        backgroundColor: "#111",
+        boxSizing: "border-box",
+      }}
+    >
+      <Img src={staticFile(`kds/${src}`)} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+    </div>
+  );
+};

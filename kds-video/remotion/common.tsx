@@ -13,6 +13,14 @@ import {
   Easing,
 } from "remotion";
 import { FONT_CSS } from "./fonts";
+import DIMS from "./dims.json";
+
+/** true when an image is not ~16:9 and would be cropped by a cover fit */
+export const needsContain = (src: string) => {
+  const d = (DIMS as Record<string, number[]>)[src];
+  if (!d) return false;
+  return Math.abs(d[0] / d[1] - 16 / 9) > 0.06;
+};
 
 export const FPS = 30;
 export const sec = (s: number) => Math.round(s * FPS);
@@ -45,6 +53,8 @@ export type Media = {
   zoom?: "in" | "out";
   pan?: "left" | "right" | "up" | "none";
   focusY?: number; // object-position Y in % for cover crops
+  still?: boolean; // no Ken Burns scale/pan
+  autoFit?: boolean; // contain (with blurred fill) whenever a cover fit would crop
 };
 
 /** One still or clip filling the frame, with a slow Ken Burns move. */
@@ -54,8 +64,9 @@ export const MediaFill: React.FC<{ m: Media; dur: number }> = ({ m, dur }) => {
     extrapolateRight: "clamp",
   });
   const zoomIn = m.zoom !== "out";
-  const scale = zoomIn ? 1.04 + 0.08 * t : 1.12 - 0.08 * t;
-  const panPx = 40 * (t - 0.5);
+  const scale = m.still ? 1 : zoomIn ? 1.04 + 0.08 * t : 1.12 - 0.08 * t;
+  const panPx = m.still ? 0 : 40 * (t - 0.5);
+  if (m.autoFit && m.kind === "img" && needsContain(m.src)) m = { ...m, portrait: true };
   const tx = m.pan === "left" ? -panPx : m.pan === "right" ? panPx : 0;
   const ty = m.pan === "up" ? -panPx : 0;
   const src = staticFile(`kds/${m.src}`);

@@ -15,6 +15,8 @@ import { feature } from "topojson-client";
 // @ts-ignore - json module
 import world from "world-atlas/countries-110m.json";
 import { Fonts, MediaFill } from "./common";
+import { Img } from "remotion";
+import { Grade } from "./Cine";
 import {
   B_TOTAL,
   Bg,
@@ -25,6 +27,7 @@ import {
   Icon,
   KImg,
   PhotoCard,
+  FitCard,
   Rise,
   SEGS,
   Sfx,
@@ -81,7 +84,8 @@ const Hook: React.FC = () => {
               src: s.src,
               kind: s.src.endsWith(".mp4") ? "video" : "img",
               startFrom: (s as any).start ?? 0,
-              zoom: "in",
+              still: true,
+              autoFit: true,
             }}
             dur={sec(each)}
           />
@@ -127,7 +131,7 @@ const Name: React.FC = () => {
   return (
     <AbsoluteFill>
       <Bg tone="navy" />
-      <PhotoCard src="img/p10.jpg" at={0.05} x={1100} y={150} w={700} h={780} rot={3} from="right" pos="50% 60%" />
+      <FitCard src="slide/s01.jpg" at={0.05} cx={1460} cy={540} maxW={760} maxH={780} rot={2} from="right" />
       <div style={{ ...W, left: 130, top: 300, width: 980 }}>
         <Tag text="HaUI · Trường Kinh tế" at={0.05} bg={C.yellow} size={34} />
         <Rise text="Khoa" at={t0} size={72} weight={600} color={C.sky} style={{ marginTop: 40 }} />
@@ -225,9 +229,9 @@ const Found: React.FC = () => {
 const Majors: React.FC = () => {
   const f = useCurrentFrame();
   const items = [
-    { name: "Marketing", sub: "", icon: "megaphone" as const, at: L("majors", "majors", 31.8), col: C.coral },
-    { name: "Logistics &", sub: "Quản lý chuỗi cung ứng", icon: "truck" as const, at: L("majors", "majors", 32.66), col: C.yellow },
-    { name: "Phân tích", sub: "dữ liệu kinh doanh", icon: "chart" as const, at: L("majors", "majors", 34.62), col: C.sky },
+    { name: "Marketing", sub: "", club: "CLB MC8", logo: "slide/s04.jpg", icon: "megaphone" as const, at: L("majors", "majors", 31.8), col: C.coral },
+    { name: "Logistics &", sub: "Quản lý chuỗi cung ứng", club: "CLB SELOG", logo: "slide/s05.jpg", icon: "truck" as const, at: L("majors", "majors", 32.66), col: C.yellow },
+    { name: "Phân tích", sub: "dữ liệu kinh doanh", club: "CLB SEAL", logo: "slide/s06.jpg", icon: "chart" as const, at: L("majors", "majors", 34.62), col: C.sky },
   ];
   return (
     <AbsoluteFill>
@@ -235,7 +239,7 @@ const Majors: React.FC = () => {
       <div style={{ ...W, left: 0, right: 0, top: 110, textAlign: "center" }}>
         <Rise text="3 ngành học" at={0.1} size={80} color={C.navy} style={{ display: "inline-block" }} highlight={["3"]} accent={C.blue} />
       </div>
-      <div style={{ ...W, left: 130, right: 130, top: 330, display: "flex", gap: 60 }}>
+      <div style={{ ...W, left: 130, right: 130, top: 250, display: "flex", gap: 60 }}>
         {items.map((it, i) => {
           const p = pop(f, it.at, FPS, 12);
           const prog = ease(f, it.at, it.at + 1.4);
@@ -244,23 +248,31 @@ const Majors: React.FC = () => {
               key={i}
               style={{
                 flex: 1,
-                height: 520,
+                height: 720,
                 backgroundColor: C.navy,
                 borderRadius: 40,
-                padding: 50,
+                padding: "40px 36px",
                 transform: `translateY(${(1 - p) * 300}px) scale(${0.85 + 0.15 * p})`,
                 opacity: Math.min(1, p * 2),
                 boxShadow: "0 30px 60px rgba(10,26,74,0.25)",
                 display: "flex",
                 flexDirection: "column",
+                alignItems: "center",
                 justifyContent: "space-between",
+                textAlign: "center",
                 borderTop: `14px solid ${it.col}`,
               }}
             >
-              <Icon kind={it.icon} size={200} color={it.col} progress={prog} />
-              <div style={{ fontFamily: FONT, color: C.white }}>
-                <div style={{ fontWeight: 800, fontSize: 58, lineHeight: 1.1 }}>{it.name}</div>
-                <div style={{ fontWeight: 600, fontSize: 38, lineHeight: 1.2, color: "rgba(255,255,255,0.75)", marginTop: 8 }}>{it.sub}</div>
+              <Icon kind={it.icon} size={170} color={it.col} progress={prog} />
+              <div style={{ fontFamily: FONT, color: C.white, minHeight: 130 }}>
+                <div style={{ fontWeight: 800, fontSize: 52, lineHeight: 1.1 }}>{it.name}</div>
+                <div style={{ fontWeight: 600, fontSize: 34, lineHeight: 1.2, color: "rgba(255,255,255,0.75)", marginTop: 8 }}>{it.sub}</div>
+              </div>
+              <div style={{ width: "100%" }}>
+                <div style={{ height: 170, backgroundColor: "#fff", borderRadius: 18, padding: 8 }}>
+                  <Img src={staticFile(`kds/${it.logo}`)} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                </div>
+                <div style={{ fontFamily: FONT, fontWeight: 700, fontSize: 30, color: it.col, marginTop: 14 }}>{it.club}</div>
               </div>
             </div>
           );
@@ -385,8 +397,9 @@ const Learn: React.FC = () => {
   ];
   return (
     <AbsoluteFill>
-      <KImg src="img/p17.jpg" style={{ position: "absolute", inset: 0 }} pos="50% 40%" zoom={0.12} />
-      <AbsoluteFill style={{ background: "linear-gradient(90deg, rgba(10,26,74,0.96) 0%, rgba(10,26,74,0.85) 55%, rgba(10,26,74,0.35) 100%)" }} />
+      <Bg tone="navy" />
+      <FitCard src="slide/s12.jpg" at={0.2} cx={1520} cy={300} maxW={620} maxH={380} rot={2} from="right" />
+      <FitCard src="slide/s40.jpg" at={1.2} cx={1650} cy={850} maxW={440} maxH={290} rot={-2} from="right" />
       <div style={{ ...W, left: 130, top: 170 }}>
         <Tag text="Ở Kinh doanh số" at={0.05} size={36} />
         <div style={{ marginTop: 40, display: "flex", flexDirection: "column", gap: 14 }}>
@@ -412,8 +425,8 @@ const Research: React.FC = () => {
   return (
     <AbsoluteFill>
       <Bg tone="navy" />
-      <PhotoCard src="img/v1_research.jpg" at={0.1} x={1060} y={210} w={740} h={480} rot={-3} from="right" />
-      <PhotoCard src="img/p15.jpg" at={L("research", "research", 85.0) - 1.6} x={1180} y={600} w={560} h={360} rot={4} from="down" />
+      <FitCard src="slide/s15.jpg" at={0.1} cx={1440} cy={360} maxW={700} maxH={460} rot={-2} from="right" />
+      <FitCard src="slide/s16.jpg" at={L("research", "research", 85.0) - 1.6} cx={1500} cy={800} maxW={560} maxH={340} rot={3} from="down" />
       <div style={{ ...W, left: 130, top: 150, width: 960 }}>
         <Rise text="Nghiên cứu khoa học" at={L("research", "research", 76.82)} size={80} style={{ whiteSpace: "nowrap" }} highlight={["khoa", "học"]} accent={C.sky} />
         <Rise text="một phần quan trọng của đời sống học thuật" at={L("research", "research", 78.0)} size={38} weight={600} color="rgba(255,255,255,0.75)" stagger={0.04} />
@@ -455,7 +468,7 @@ const Life: React.FC = () => {
     <AbsoluteFill style={{ backgroundColor: C.navy }}>
       {cuts.map((c, i) => (
         <Sequence key={i} from={sec(c.from)} durationInFrames={Math.max(1, sec(c.to - c.from))}>
-          <MediaFill m={{ src: c.src, kind: c.src.endsWith(".mp4") ? "video" : "img", portrait: (c as any).portrait }} dur={sec(c.to - c.from)} />
+          <MediaFill m={{ src: c.src, kind: c.src.endsWith(".mp4") ? "video" : "img", portrait: (c as any).portrait, still: true, autoFit: true }} dur={sec(c.to - c.from)} />
         </Sequence>
       ))}
       <AbsoluteFill style={{ background: "linear-gradient(0deg, rgba(10,26,74,0.75) 0%, rgba(10,26,74,0) 45%), linear-gradient(180deg, rgba(10,26,74,0.7) 0%, rgba(10,26,74,0) 40%)" }} />
@@ -487,7 +500,7 @@ const Logi: React.FC = () => {
   return (
     <AbsoluteFill>
       <Bg tone="cream" />
-      <PhotoCard src="img/v1_logimaster.jpg" at={0.1} x={980} y={130} w={820} h={540} rot={2.5} from="right" border={C.navy} />
+      <FitCard src="slide/s18.jpg" at={0.1} cx={1390} cy={400} maxW={820} maxH={540} rot={2} from="right" border={C.navy} />
       <div style={{ ...W, left: 130, top: 140, width: 820 }}>
         <Tag text="Với sinh viên Logistics" at={0.05} bg={C.navy} color={C.white} size={32} />
         <Rise text="HaUI LogiMaster" at={tTitle} size={104} color={C.navy} style={{ marginTop: 30 }} highlight={["LogiMaster"]} accent={C.blue} />
@@ -538,7 +551,7 @@ const MJ: React.FC = () => {
   return (
     <AbsoluteFill>
       <Bg tone="navy" />
-      <PhotoCard src="img/v1_mc8.jpg" at={0.1} x={1120} y={120} w={680} h={440} rot={-3} from="right" />
+      <FitCard src="slide/s19.jpg" at={0.1} cx={1460} cy={330} maxW={680} maxH={420} rot={-2} from="right" />
       <div style={{ ...W, left: 130, top: 120, width: 900 }}>
         <Tag text="Với sinh viên Marketing · CLB MC8" at={0.05} bg={C.coral} color={C.white} size={32} />
         <Rise text="Marketing Journey" at={tTitle} size={88} style={{ marginTop: 30, whiteSpace: "nowrap" }} highlight={["Journey"]} accent={C.coral} />
@@ -604,7 +617,7 @@ const Partners: React.FC = () => {
     <AbsoluteFill>
       <Bg tone="navy" />
       <AbsoluteFill style={{ opacity: 1 - fade1 }}>
-        <KImg src="img/v1_business.jpg" style={{ position: "absolute", inset: 0 }} pos="50% 35%" />
+        <FitCard src="slide/s24.jpg" at={0} cx={1560} cy={540} maxW={620} maxH={700} rot={2} from="right" />
         <AbsoluteFill style={{ background: "linear-gradient(90deg, rgba(10,26,74,0.95) 0%, rgba(10,26,74,0.7) 60%, rgba(10,26,74,0.2) 100%)" }} />
         <div style={{ ...W, left: 130, top: 330, width: 1100 }}>
           <Rise text="Tri thức ý nghĩa hơn" at={tLine} size={104} />
@@ -648,10 +661,10 @@ const Questions: React.FC = () => {
   const tQ = L("questions", "questions", 157.84);
   const out1 = ease(f, tQ - 0.2, tQ + 0.4);
   const acts = [
-    { t: "Tham quan doanh nghiệp", at: L("questions", "questions", 154.04), src: "img/v1_visit_company.jpg", x: 120, y: 170, rot: -3 },
-    { t: "Kiến tập", at: L("questions", "questions", 155.14), src: "img/v1_visit_exp.jpg", x: 1010, y: 130, rot: 3 },
-    { t: "Thực tập", at: L("questions", "questions", 155.8), src: "img/v1_business.jpg", x: 200, y: 590, rot: 2 },
-    { t: "Tọa đàm chuyên môn", at: L("questions", "questions", 156.64), src: "img/v1_visit_career.jpg", x: 1060, y: 560, rot: -2 },
+    { t: "Tham quan doanh nghiệp", at: L("questions", "questions", 154.04), src: "slide/s27.jpg", x: 480, y: 290, rot: -2 },
+    { t: "Kiến tập", at: L("questions", "questions", 155.14), src: "slide/s26.jpg", x: 1400, y: 280, rot: 2 },
+    { t: "Thực tập", at: L("questions", "questions", 155.8), src: "slide/s24.jpg", x: 560, y: 790, rot: 2 },
+    { t: "Tọa đàm chuyên môn", at: L("questions", "questions", 156.64), src: "slide/s28.jpg", x: 1420, y: 780, rot: -2 },
   ];
   const qs = [
     { t: "Mình đang học gì?", at: L("questions", "questions", 159.86) },
@@ -664,8 +677,8 @@ const Questions: React.FC = () => {
       <AbsoluteFill style={{ opacity: 1 - out1, transform: `scale(${1 + 0.1 * out1})` }}>
         {acts.map((a, i) => (
           <React.Fragment key={i}>
-            <PhotoCard src={a.src} at={a.at} x={a.x} y={a.y} w={700} h={380} rot={a.rot} from={i % 2 ? "right" : "left"} />
-            <div style={{ ...W, left: a.x + 30, top: a.y + 300 }}>
+            <FitCard src={a.src} at={a.at} cx={a.x} cy={a.y} maxW={640} maxH={400} rot={a.rot} from={i % 2 ? "right" : "left"} />
+            <div style={{ ...W, left: a.x - 200, top: a.y + 150 }}>
               <Tag text={a.t} at={a.at + 0.15} size={40} />
             </div>
           </React.Fragment>
@@ -700,7 +713,7 @@ const Outcomes: React.FC = () => {
   const circ = 2 * Math.PI * R;
   return (
     <AbsoluteFill>
-      <KImg src="img/v1_graduation.jpg" style={{ position: "absolute", inset: 0 }} pos="50% 30%" zoom={0.1} />
+      <KImg src="slide/s29.jpg" style={{ position: "absolute", inset: 0 }} zoom={0} />
       <AbsoluteFill style={{ background: "linear-gradient(0deg, rgba(10,26,74,0.97) 0%, rgba(10,26,74,0.9) 55%, rgba(10,26,74,0.45) 100%)" }} />
       <div style={{ ...W, left: 130, top: 120 }}>
         <Tag text="Thành quả" at={0.05} size={36} />
@@ -737,8 +750,8 @@ const Outcomes: React.FC = () => {
 const Outro: React.FC = () => {
   const f = useCurrentFrame();
   const pics = [
-    "img/p01.jpg", "img/p12.jpg", "img/p09.jpg", "img/p14.jpg", "img/p05.jpg", "img/p21.jpg",
-    "img/p16.jpg", "img/p03.jpg", "img/p11.jpg", "img/p13.jpg", "img/p08.jpg", "img/p02.jpg",
+    "slide/s33.jpg", "img/p12.jpg", "slide/s39.jpg", "img/p14.jpg", "img/p05.jpg", "slide/s29.jpg",
+    "img/p16.jpg", "slide/s01.jpg", "slide/s42.jpg", "img/p09.jpg", "slide/s19.jpg", "img/p21.jpg",
   ];
   const cols = 4;
   const cw = 1920 / cols;
@@ -753,16 +766,9 @@ const Outro: React.FC = () => {
   const panel = pop(f, tName - 0.1, FPS, 16);
   return (
     <AbsoluteFill style={{ backgroundColor: C.navy }}>
-      {pics.map((src, i) => {
-        const p = pop(f, i * 0.05, FPS, 14);
-        const x = (i % cols) * cw;
-        const y = Math.floor(i / cols) * ch;
-        return (
-          <div key={i} style={{ ...W, left: x, top: y, width: cw, height: ch, transform: `scale(${p})`, opacity: p, padding: 6 }}>
-            <KImg src={src} style={{ width: "100%", height: "100%", borderRadius: 16 }} zoom={0.15} />
-          </div>
-        );
-      })}
+      {pics.map((src, i) => (
+        <FitCard key={i} src={src} at={i * 0.06} cx={(i % cols) * cw + cw / 2} cy={Math.floor(i / cols) * ch + ch / 2} maxW={cw - 50} maxH={ch - 50} rot={i % 2 ? 2.5 : -2.5} from="scale" />
+      ))}
       <AbsoluteFill style={{ backgroundColor: `rgba(10,26,74,${0.55 * panel})` }} />
       <AbsoluteFill style={{ alignItems: "center", justifyContent: "center" }}>
         <div style={{ backgroundColor: C.navy, borderRadius: 40, padding: "60px 90px", transform: `scale(${0.8 + 0.2 * panel})`, opacity: panel, textAlign: "center", boxShadow: "0 40px 100px rgba(0,0,0,0.5)", border: `6px solid ${C.yellow}` }}>
@@ -857,6 +863,7 @@ export const VersionB: React.FC = () => {
       {(["found", "faculty", "life", "mj", "questions", "outro"] as SceneId[]).map((id) => (
         <Sfx key={`ws${id}`} at={SC[id][0] - 0.25} name="whoosh" vol={0.18} />
       ))}
+      <Grade />
       <Audio src={staticFile("kds/audio/voice_b.wav")} volume={1} />
       <Audio src={staticFile("kds/audio/music_b.wav")} volume={musicVol} />
     </AbsoluteFill>
