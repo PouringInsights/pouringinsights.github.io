@@ -16,7 +16,7 @@ import { feature } from "topojson-client";
 import world from "world-atlas/countries-110m.json";
 import { Fonts, MediaFill } from "./common";
 import { Img } from "remotion";
-import { Grade } from "./Cine";
+import { Grade, Grain, Letterbox, LightLeak, Captions, Cue } from "./Cine";
 import {
   B_TOTAL,
   Bg,
@@ -51,11 +51,11 @@ const SC = {
   life: [51.75, 58.6],
   logi: [58.6, 67.7],
   mj: [67.7, 77.6],
-  partners: [77.6, 90.05],
-  questions: [90.05, 101.7],
-  outcomes: [101.7, 108.65],
-  outro: [108.65, 115.6],
-  cheer: [115.6, B_TOTAL],
+  partners: [77.6, 89.65],
+  questions: [89.65, 101.3],
+  outcomes: [101.3, 108.25],
+  outro: [108.25, 115.2],
+  cheer: [115.2, B_TOTAL],
 } as const;
 type SceneId = keyof typeof SC;
 
@@ -68,36 +68,20 @@ const W: React.CSSProperties = { position: "absolute" };
 // ---------------------------------------------------------------------------
 const Hook: React.FC = () => {
   const f = useCurrentFrame();
-  const shots = [
-    { src: "clip/v4_cheer.mp4", start: 6.4, word: "HỌC." },
-    { src: "img/p18.jpg", word: "LÀM." },
-    { src: "clip/v5_balloons.mp4", word: "KẾT NỐI." },
-    { src: "img/p05.jpg", word: "TRƯỞNG THÀNH." },
-  ];
-  const each = 0.82;
+  const len = SC.hook[1] - SC.hook[0];
+  const slam = pop(f, 1.9, FPS, 10);
+  const flash = interpolate(f, [sec(1.85), sec(1.95), sec(2.3)], [0, 0.55, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
-    <AbsoluteFill style={{ backgroundColor: C.navy }}>
-      {shots.map((s, i) => (
-        <Sequence key={i} from={sec(i * each)} durationInFrames={sec(each) + 1}>
-          <MediaFill
-            m={{
-              src: s.src,
-              kind: s.src.endsWith(".mp4") ? "video" : "img",
-              startFrom: (s as any).start ?? 0,
-              still: true,
-              autoFit: true,
-            }}
-            dur={sec(each)}
-          />
-          <AbsoluteFill style={{ backgroundColor: "rgba(10,26,74,0.35)" }} />
-          <AbsoluteFill style={{ alignItems: "center", justifyContent: "center" }}>
-            <HookWord text={s.word} />
-          </AbsoluteFill>
-        </Sequence>
-      ))}
-      {shots.map((_, i) => (
-        <Sfx key={i} at={i * each} name="click-soft" vol={0.45} />
-      ))}
+    <AbsoluteFill style={{ backgroundColor: "#000" }}>
+      <MediaFill m={{ src: "clip/v4_cheer.mp4", kind: "video", startFrom: 5.2, still: true }} dur={sec(len)} />
+      <Audio src={staticFile("kds/clip/v4_cheer.mp4")} startFrom={sec(5.2)} volume={(fr) => interpolate(fr, [0, 3, sec(len - 0.35), sec(len)], [0, 0.95, 0.95, 0], { extrapolateRight: "clamp" })} />
+      <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 60%, rgba(3,8,24,0.15) 0%, rgba(3,8,24,0.75) 100%)", opacity: slam }} />
+      <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", opacity: Math.min(1, slam * 1.4) }}>
+        <div style={{ fontFamily: FONT, fontWeight: 700, fontSize: 32, color: C.yellow, letterSpacing: 10, marginBottom: 46, opacity: interpolate(f, [sec(2.2), sec(2.6)], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) }}>HaUI · TRƯỜNG KINH TẾ</div>
+        <div style={{ fontFamily: FONT, fontWeight: 900, fontSize: 150, color: C.white, letterSpacing: -2, lineHeight: 1.05, transform: `scale(${1.6 - 0.6 * slam})`, textShadow: "0 14px 50px rgba(0,0,0,0.6)" }}>KHOA KINH DOANH SỐ</div>
+      </AbsoluteFill>
+      <AbsoluteFill style={{ backgroundColor: "#fff", opacity: flash }} />
+      <Sfx at={1.85} name="impact-bass-1" vol={0.5} />
     </AbsoluteFill>
   );
 };
@@ -459,26 +443,26 @@ const Life: React.FC = () => {
     { src: "img/p21.jpg", from: L("life", "life", 98.82), to: SC.life[1] - SC.life[0] },
   ];
   const tags = [
-    { t: "Cuộc thi", at: L("life", "life", 96.42), x: 150, y: 640, bg: C.yellow },
-    { t: "Workshop", at: L("life", "life", 97.14), x: 520, y: 760, bg: C.coral, c: C.white },
-    { t: "Ngoại khóa", at: L("life", "life", 97.84), x: 940, y: 650, bg: C.sky },
-    { t: "Những người bạn", at: L("life", "life", 98.82), x: 1240, y: 790, bg: C.white },
+    { t: "Cuộc thi", at: L("life", "life", 96.42), x: 150, y: 850, bg: C.yellow },
+    { t: "Workshop", at: L("life", "life", 97.14), x: 470, y: 850, bg: C.coral, c: C.white },
+    { t: "Ngoại khóa", at: L("life", "life", 97.84), x: 830, y: 850, bg: C.sky },
+    { t: "Những người bạn", at: L("life", "life", 98.82), x: 1210, y: 850, bg: C.white },
   ];
   return (
     <AbsoluteFill style={{ backgroundColor: C.navy }}>
       {cuts.map((c, i) => (
         <Sequence key={i} from={sec(c.from)} durationInFrames={Math.max(1, sec(c.to - c.from))}>
-          <MediaFill m={{ src: c.src, kind: c.src.endsWith(".mp4") ? "video" : "img", portrait: (c as any).portrait, still: true, autoFit: true }} dur={sec(c.to - c.from)} />
+          <MediaFill m={{ src: c.src, kind: c.src.endsWith(".mp4") ? "video" : "img", portrait: (c as any).portrait, still: true, autoFit: true, inset: 128 }} dur={sec(c.to - c.from)} />
         </Sequence>
       ))}
       <AbsoluteFill style={{ background: "linear-gradient(0deg, rgba(10,26,74,0.75) 0%, rgba(10,26,74,0) 45%), linear-gradient(180deg, rgba(10,26,74,0.7) 0%, rgba(10,26,74,0) 40%)" }} />
-      <div style={{ ...W, left: 130, top: 110 }}>
-        <Rise text="Thanh xuân đại học" at={0.15} size={96} style={{ textShadow: "0 8px 30px rgba(0,0,0,0.5)" }} />
+      <div style={{ ...W, left: 130, top: 160 }}>
+        <Rise text="Thanh xuân đại học" at={0.15} size={88} style={{ textShadow: "0 8px 30px rgba(0,0,0,0.5)" }} />
         <Rise text="không chỉ có giờ lên lớp" at={L("life", "life", 94.58)} size={56} weight={600} style={{ textShadow: "0 8px 30px rgba(0,0,0,0.5)" }} />
       </div>
       {tags.map((t, i) => (
         <div key={i} style={{ ...W, left: t.x, top: t.y }}>
-          <Tag text={t.t} at={t.at} bg={t.bg} color={(t as any).c ?? C.ink} size={52} />
+          <Tag text={t.t} at={t.at} bg={t.bg} color={(t as any).c ?? C.ink} size={44} />
         </div>
       ))}
       {tags.map((t, i) => (
@@ -609,8 +593,8 @@ const Partners: React.FC = () => {
     { t: "Viettel Post", at: L("partners", "partners", 148.24), a: 340, r: 560, col: C.yellow },
     { t: "Smartlog", at: L("partners", "partners", 149.2), a: 25, r: 520, col: C.yellow },
     { t: "MISA", at: L("partners", "partners", 150.02), a: 150, r: 520, col: C.white },
-    { t: "TDS", at: L("partners", "partners", 150.68), a: 115, r: 500, col: C.white },
-    { t: "Đối tác Marketing", at: L("partners", "partners", 151.62), a: 70, r: 420, col: C.coral },
+    { t: "Vietnamobile", at: L("partners", "partners", 150.35), a: 115, r: 500, col: C.white },
+    { t: "Đối tác Marketing", at: L("partners", "partners2", 151.62), a: 70, r: 420, col: C.coral },
   ];
   const pos = (a: number, r: number) => [cx + Math.cos((a * Math.PI) / 180) * r * 1.25, cy + Math.sin((a * Math.PI) / 180) * r * 0.62];
   return (
@@ -661,10 +645,10 @@ const Questions: React.FC = () => {
   const tQ = L("questions", "questions", 157.84);
   const out1 = ease(f, tQ - 0.2, tQ + 0.4);
   const acts = [
-    { t: "Tham quan doanh nghiệp", at: L("questions", "questions", 154.04), src: "slide/s27.jpg", x: 480, y: 290, rot: -2 },
-    { t: "Kiến tập", at: L("questions", "questions", 155.14), src: "slide/s26.jpg", x: 1400, y: 280, rot: 2 },
-    { t: "Thực tập", at: L("questions", "questions", 155.8), src: "slide/s24.jpg", x: 560, y: 790, rot: 2 },
-    { t: "Tọa đàm chuyên môn", at: L("questions", "questions", 156.64), src: "slide/s28.jpg", x: 1420, y: 780, rot: -2 },
+    { t: "Tham quan doanh nghiệp", at: L("questions", "questions", 154.04), src: "slide/s27.jpg", x: 520, y: 250, rot: -1.5 },
+    { t: "Kiến tập", at: L("questions", "questions", 155.14), src: "slide/s26.jpg", x: 1400, y: 250, rot: 1.5 },
+    { t: "Thực tập", at: L("questions", "questions", 155.8), src: "slide/s24.jpg", x: 520, y: 690, rot: 1.5 },
+    { t: "Tọa đàm chuyên môn", at: L("questions", "questions", 156.64), src: "slide/s28.jpg", x: 1400, y: 690, rot: -1.5 },
   ];
   const qs = [
     { t: "Mình đang học gì?", at: L("questions", "questions", 159.86) },
@@ -674,12 +658,12 @@ const Questions: React.FC = () => {
   return (
     <AbsoluteFill>
       <Bg tone="navy" />
-      <AbsoluteFill style={{ opacity: 1 - out1, transform: `scale(${1 + 0.1 * out1})` }}>
+      <AbsoluteFill style={{ opacity: 1 - out1 }}>
         {acts.map((a, i) => (
           <React.Fragment key={i}>
-            <FitCard src={a.src} at={a.at} cx={a.x} cy={a.y} maxW={640} maxH={400} rot={a.rot} from={i % 2 ? "right" : "left"} />
-            <div style={{ ...W, left: a.x - 200, top: a.y + 150 }}>
-              <Tag text={a.t} at={a.at + 0.15} size={40} />
+            <FitCard src={a.src} at={a.at} cx={a.x} cy={a.y} maxW={560} maxH={300} rot={a.rot} from={i % 2 ? "right" : "left"} />
+            <div style={{ ...W, left: a.x - 400, width: 800, top: a.y + 170, display: "flex", justifyContent: "center" }}>
+              <Tag text={a.t} at={a.at + 0.15} size={36} />
             </div>
           </React.Fragment>
         ))}
@@ -791,17 +775,17 @@ const Outro: React.FC = () => {
 // ---------------------------------------------------------------------------
 const Cheer: React.FC = () => {
   const f = useCurrentFrame();
-  const p = pop(f, 0.6, FPS, 14);
+  const p = pop(f, 1.2, FPS, 14);
   const end = interpolate(f, [sec(3.6), sec(4.3)], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
     <AbsoluteFill style={{ backgroundColor: C.navy }}>
-      <MediaFill m={{ src: "clip/v4_cheer.mp4", kind: "video", startFrom: 5.2 }} dur={sec(4.3)} />
+      <MediaFill m={{ src: "clip/v4_cheer.mp4", kind: "video", startFrom: 1.6, still: true, inset: 128 }} dur={sec(4.3)} />
       <Sequence from={0} layout="none">
-        <Audio src={staticFile("kds/clip/v4_cheer.mp4")} startFrom={sec(5.2)} volume={(fr) => interpolate(fr, [0, 6, sec(3.4), sec(4.3)], [0, 0.85, 0.85, 0], { extrapolateRight: "clamp" })} />
+        <Audio src={staticFile("kds/clip/v4_cheer.mp4")} startFrom={sec(1.6)} volume={(fr) => interpolate(fr, [0, 6, sec(3.4), sec(4.3)], [0, 0.85, 0.85, 0], { extrapolateRight: "clamp" })} />
       </Sequence>
       <AbsoluteFill style={{ background: "linear-gradient(0deg, rgba(10,26,74,0.85) 0%, rgba(10,26,74,0) 40%)" }} />
-      <div style={{ ...W, left: 0, right: 0, bottom: 90, textAlign: "center", opacity: p, transform: `translateY(${(1 - p) * 40}px)` }}>
-        <div style={{ fontFamily: FONT, fontWeight: 900, fontSize: 84, color: C.white }}>
+      <div style={{ ...W, left: 0, right: 0, bottom: 22, textAlign: "center", opacity: p, transform: `translateY(${(1 - p) * 20}px)` }}>
+        <div style={{ fontFamily: FONT, fontWeight: 900, fontSize: 60, color: C.white }}>
           Chào mừng đến với <span style={{ color: C.yellow }}>Kinh doanh số!</span>
         </div>
       </div>
@@ -838,8 +822,80 @@ const musicVol = (fr: number) => {
     const k = interpolate(t, [a - 0.35, a, b, b + 0.5], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
     duck = Math.max(duck, k);
   }
-  const fadeTail = interpolate(t, [114.5, 116.5], [1, 0.25], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-  return (1 - 0.45 * duck) * fadeTail;
+  const fadeTail = interpolate(t, [114.1, 116.1], [1, 0.25], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const hook = interpolate(t, [0, 3.2, 3.6], [0.25, 0.25, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  return (1 - 0.45 * duck) * fadeTail * hook;
+};
+
+// ---------------------------------------------------------------------------
+// Subtitles (corrected spelling; timed from the narration word timings)
+// ---------------------------------------------------------------------------
+const CUE_SRC: [string, number, string][] = [
+  ["name", 11.0, "Khoa Kinh doanh số – Trường Kinh tế, Đại học Công nghiệp Hà Nội"],
+  ["found", 20.2, "Thành lập ngày 1/7/2024,"],
+  ["found", 23.0, "Khoa Kinh doanh số tiếp nối những nền tảng đã được vun đắp từ trước"],
+  ["found", 26.1, "và mở ra một hướng đi rõ ràng:"],
+  ["found", 28.4, "đào tạo nhân lực cho nền kinh tế số."],
+  ["majors", 30.915, "Ba ngành học: Marketing,"],
+  ["majors", 32.6, "Logistics và Quản lý chuỗi cung ứng,"],
+  ["majors", 34.55, "Phân tích dữ liệu kinh doanh."],
+  ["faculty", 49.45, "Khoa có 19 giảng viên, gồm 7 tiến sĩ và 12 thạc sĩ,"],
+  ["faculty", 53.3, "cùng đội ngũ được đào tạo tại Mỹ, Anh, Pháp, Trung Quốc"],
+  ["faculty", 56.3, "và các giảng viên thỉnh giảng quốc tế từ Úc, Canada."],
+  ["learn", 65.8, "Ở Kinh doanh số, học không chỉ để biết,"],
+  ["learn", 68.1, "học là để hiểu, để làm"],
+  ["learn", 69.65, "và để sẵn sàng bước vào thế giới nghề nghiệp."],
+  ["research", 76.7, "Nghiên cứu khoa học cũng là một phần quan trọng của đời sống học thuật."],
+  ["research", 79.6, "Hơn 50 bài báo ISI và Scopus,"],
+  ["research", 82.05, "khoảng 125 sinh viên và 25 đề tài mỗi năm."],
+  ["life", 93.66, "Thanh xuân đại học không chỉ có giờ lên lớp,"],
+  ["life", 95.95, "đó còn là cuộc thi, workshop, hoạt động ngoại khóa và những người bạn."],
+  ["logi", 100.38, "HaUI LogiMaster bắt đầu từ năm 2022, đã trải qua 4 mùa,"],
+  ["logi", 104.8, "trung bình khoảng 25 đội và gần 100 sinh viên mỗi mùa."],
+  ["mj", 122.5, "Marketing Journey phát triển từ hơn 65 đội ở mùa đầu"],
+  ["mj", 125.3, "lên 124 đội với hơn 360 thí sinh,"],
+  ["mj", 128.8, "thu hút sinh viên từ nhiều trường đại học tại Hà Nội."],
+  ["partners", 141.66, "Tri thức ý nghĩa hơn khi được kết nối với thực tiễn."],
+  ["partners", 144.7, "Khoa đồng hành cùng các hiệp hội, cộng đồng chuyên môn và doanh nghiệp"],
+  ["partners", 147.9, "như Viettel Post, Smartlog, MISA"],
+  ["partners2", 151.12, "cùng nhiều đối tác trong lĩnh vực Marketing."],
+  ["questions", 153.72, "Từ tham quan doanh nghiệp, kiến tập, thực tập đến tọa đàm chuyên môn,"],
+  ["questions", 157.8, "sinh viên dần trả lời 3 câu hỏi:"],
+  ["questions", 159.8, "Mình đang học gì? Mình có thể làm gì?"],
+  ["questions", 162.1, "Và mình muốn trở thành ai trong tương lai?"],
+  ["outcomes", 164.86, "Ba chương trình đào tạo đã có hơn 1.000 sinh viên tốt nghiệp,"],
+  ["outcomes", 168.2, "trên 90% có việc làm sau 6 tháng."],
+  ["outro", 187.3, "Khoa Kinh doanh số – Trường Kinh tế, Đại học Công nghiệp Hà Nội:"],
+  ["outro", 191.05, "nơi chúng ta học tập, trải nghiệm và trưởng thành."],
+];
+const CUES: Cue[] = CUE_SRC.map(([id, t, text], i) => {
+  const next = CUE_SRC[i + 1];
+  const segEnd = SEGS[id].at + SEGS[id].dur;
+  const to = next && next[0] === id ? bt(id as any, next[1]) : segEnd + 0.25;
+  return { from: bt(id as any, t), to, text };
+});
+
+/** cinematic bars: life montage + final chant */
+const Bars: React.FC = () => {
+  const t = useCurrentFrame() / FPS;
+  const a = Math.max(
+    interpolate(t, [SC.life[0] - 0.3, SC.life[0] + 0.2, SC.life[1] - 0.2, SC.life[1] + 0.3], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
+    interpolate(t, [SC.cheer[0] - 0.4, SC.cheer[0] + 0.1, B_TOTAL], [0, 1, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
+  );
+  return <Letterbox amount={a} />;
+};
+
+/** small channel bug, hidden on the cold open and the closing cards */
+const Bug: React.FC = () => {
+  const t = useCurrentFrame() / FPS;
+  const o = interpolate(t, [SC.name[0], SC.name[0] + 0.6, SC.outro[0] - 0.4, SC.outro[0]], [0, 0.85, 0.85, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  return (
+    <div style={{ position: "absolute", right: 44, top: 34, opacity: o, fontFamily: FONT, color: "#fff", textAlign: "right", textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}>
+      <div style={{ fontWeight: 800, fontSize: 24, letterSpacing: 2 }}>
+        <span style={{ color: C.yellow }}>HaUI</span> · KHOA KINH DOANH SỐ
+      </div>
+    </div>
+  );
 };
 
 export const VersionB: React.FC = () => {
@@ -854,17 +910,21 @@ export const VersionB: React.FC = () => {
           </Sequence>
         );
       })}
-      {/* wipes over each scene boundary (except into/out of the fast hook/life/cheer cuts) */}
-      {(["name", "found", "majors", "faculty", "learn", "research", "life", "logi", "mj", "partners", "questions", "outcomes", "outro"] as SceneId[]).map((id, i) => (
-        <Sequence key={`w${id}`} from={sec(SC[id][0]) - 7} durationInFrames={18}>
-          <Wipe color={i % 2 ? C.yellow : C.coral} color2={i % 2 ? C.blue : C.yellow} />
+      {/* cinematic light-leak transitions on every cut */}
+      {(Object.keys(SC) as SceneId[]).filter((id) => id !== "hook").map((id, i) => (
+        <Sequence key={`ll${id}`} from={sec(SC[id][0]) - 12} durationInFrames={30}>
+          <LightLeak hue={i % 2 ? "gold" : "warm"} />
         </Sequence>
       ))}
       {(["found", "faculty", "life", "mj", "questions", "outro"] as SceneId[]).map((id) => (
         <Sfx key={`ws${id}`} at={SC[id][0] - 0.25} name="whoosh" vol={0.18} />
       ))}
       <Grade />
-      <Audio src={staticFile("kds/audio/voice_b.wav")} volume={1} />
+      <Grain opacity={0.05} />
+      <Bars />
+      <Bug />
+      <Captions cues={CUES} />
+      <Audio src={staticFile("kds/audio/voice_b3.wav")} volume={1} />
       <Audio src={staticFile("kds/audio/music_b.wav")} volume={musicVol} />
     </AbsoluteFill>
   );

@@ -15,7 +15,8 @@ import { feature } from "topojson-client";
 import world from "world-atlas/countries-110m.json";
 import PLAN from "./plan_c.json";
 import { Fonts, MediaFill } from "./common";
-import { Bg, C, Counter, FONT, Icon, KImg, PhotoCard, Rise, Sfx, Tag, Wipe, ease, pop, sec } from "./bkit";
+import { Bg, C, Counter, FONT, Icon, KImg, FitCard, Rise, Sfx, Tag, Wipe, ease, pop, sec } from "./bkit";
+import { Img } from "remotion";
 import { CamDrift, Grade, Grain, Letterbox, LightLeak, LightSweep } from "./Cine";
 import { Actor, SchoolGate, Whiteboard, Bulb, Bubble, Trophy, ChibiSweep } from "./Actors";
 
@@ -56,8 +57,8 @@ const Caption: React.FC<{ text: string; at: number; x: number; y: number }> = ({
 // ---------------------------------------------------------------------------
 const Open: React.FC = () => {
   const cuts = [
-    { src: "clip/v3_dance.mp4", from: 1.1, to: 3.1, start: 0.3 },
-    { src: "clip/v5_banner.mp4", from: 3.1, to: 4.4 },
+    { src: img(5), from: 1.1, to: 3.1 },
+    { src: slide(1), from: 3.1, to: 4.4 },
     { src: img(18), from: 4.4, to: 5.6 },
     { src: img(10), from: 5.6, to: 7.7 },
   ];
@@ -75,7 +76,7 @@ const Open: React.FC = () => {
       </Sequence>
       {cuts.map((c, i) => (
         <Sequence key={i} from={sec(c.from)} durationInFrames={sec(c.to - c.from) + (i < cuts.length - 1 ? 5 : 0)}>
-          <MediaFill m={{ src: c.src, kind: c.src.endsWith(".mp4") ? "video" : "img", startFrom: (c as any).start }} dur={sec(c.to - c.from)} />
+          <MediaFill m={{ src: c.src, kind: c.src.endsWith(".mp4") ? "video" : "img", startFrom: (c as any).start, still: true, inset: 128 }} dur={sec(c.to - c.from)} />
         </Sequence>
       ))}
       <AbsoluteFill style={{ backgroundColor: "#000", opacity: 1 - fadeIn }} />
@@ -215,7 +216,7 @@ const Found: React.FC = () => {
                   <Actor v={(["ponytail", "boy", "longHair"] as const)[i]} x={175} y={20} height={320} popAt={lt + 0.1} base={(["megaphone", "holdFront", "present"] as const)[i]} rHold={(["megaphone", "box", "tablet"] as const)[i]} acts={i === 2 ? [{ at: lt + 0.6, kind: "point", dur: 2.4 }] : []} hop={i === 1} seed={i} />
                 </div>
                 <div style={{ height: 150, backgroundColor: "#fff", padding: 6 }}>
-                  <KImg src={m.logo} style={{ width: "100%", height: "100%" }} zoom={0.02} fit="contain" />
+                  <KImg src={m.logo} style={{ width: "100%", height: "100%" }} zoom={0} fit="contain" />
                 </div>
                 <div style={{ padding: "20px 36px", display: "flex", flexDirection: "column", gap: 8 }}>
                   <div style={{ fontFamily: FONT, fontWeight: 800, fontSize: 42, color: C.white, lineHeight: 1.12 }}>{m.name}</div>
@@ -232,7 +233,7 @@ const Found: React.FC = () => {
       {/* C: common aim */}
       <Sequence from={sec(tAim)}>
         <Bg tone="navy" />
-        <PhotoCard src={slide(7)} at={0.05} x={110} y={170} w={860} h={580} rot={-2} from="left" />
+        <FitCard src={slide(7)} at={0.05} cx={540} cy={460} maxW={860} maxH={580} rot={-2} from="left" />
         <div style={{ ...W, left: 1040, top: 150, width: 760 }}>
           <Rise text="Ba hướng đi, một mục tiêu chung" at={0.2} size={58} />
           <div style={{ display: "flex", flexDirection: "column", gap: 20, marginTop: 36 }}>
@@ -298,8 +299,8 @@ const Faculty: React.FC = () => {
         <div style={{ ...W, left: 50, top: 150 }}>
           <Whiteboard progress={ease(f, 0.2, 3.2)} />
         </div>
-        <PhotoCard src={slide(11)} at={0.6} x={1080} y={90} w={740} h={500} rot={-3} from="up" />
-        <PhotoCard src={slide(8)} at={1.1} x={1200} y={470} w={620} h={400} rot={3} from="right" />
+        <FitCard src={slide(11)} at={0.6} cx={1450} cy={340} maxW={740} maxH={500} rot={-3} from="up" />
+        <FitCard src={slide(8)} at={1.1} cx={1510} cy={670} maxW={620} maxH={400} rot={3} from="right" />
         <div style={{ ...W, left: 60, top: 900, width: 1400 }}>
           <Rise text="Đằng sau mỗi giờ học là những người thầy, người cô" at={0.3} size={42} weight={700} stagger={0.04} style={{ whiteSpace: "nowrap" }} />
         </div>
@@ -312,9 +313,9 @@ const Faculty: React.FC = () => {
       {/* C: diverse perspectives */}
       <Sequence from={sec(tViews)} durationInFrames={sec(tLearn - tViews) + 8}>
         <Bg tone="cream" />
-        <PhotoCard src={slide(12)} at={0.05} x={90} y={120} w={880} h={520} rot={-2} from="left" border={C.navy} />
-        <PhotoCard src={img(17)} at={0.4} x={1000} y={90} w={420} h={560} rot={3} from="up" border={C.navy} pos="50% 60%" />
-        <PhotoCard src={slide(30)} at={0.8} x={1450} y={160} w={400} h={470} rot={-2} from="right" border={C.navy} />
+        <FitCard src={slide(12)} at={0.05} cx={530} cy={380} maxW={880} maxH={520} rot={-2} from="left" border={C.navy} />
+        <FitCard src={img(17)} at={0.4} cx={1210} cy={370} maxW={420} maxH={560} rot={3} from="up" border={C.navy} />
+        <FitCard src={slide(30)} at={0.8} cx={1650} cy={395} maxW={400} maxH={470} rot={-2} from="right" border={C.navy} />
         <div style={{ ...W, left: 110, top: 740, display: "flex", gap: 22 }}>
           <Tag text="Góc nhìn đa dạng" at={L("faculty", "views", 59.62) - tViews} bg={C.navy} color={C.white} size={44} />
           <Tag text="Kiến thức mới" at={L("faculty", "views", 60.76) - tViews} bg={C.blue} color={C.white} size={44} />
@@ -415,7 +416,7 @@ const Research: React.FC = () => {
     <AbsoluteFill>
       <Sequence durationInFrames={sec(tR) + 8}>
         <Bg tone="cream" />
-        <PhotoCard src={slide(15)} at={0.05} x={90} y={110} w={1060} h={700} rot={-1.5} from="left" border={C.navy} />
+        <FitCard src={slide(15)} at={0.05} cx={620} cy={460} maxW={1060} maxH={700} rot={-1.5} from="left" border={C.navy} />
         <div style={{ ...W, left: 1210, top: 200, width: 640 }}>
           <Rise text="Giờ học khuyến khích sinh viên" at={0.3} size={46} weight={700} color={C.navy} />
           <div style={{ display: "flex", flexDirection: "column", gap: 18, marginTop: 30, alignItems: "flex-start" }}>
@@ -431,8 +432,8 @@ const Research: React.FC = () => {
       </Sequence>
       <Sequence from={sec(tR)}>
         <Bg tone="navy" />
-        <PhotoCard src={slide(38)} at={0.1} x={1120} y={90} w={700} h={520} rot={2.5} from="right" pos="50% 70%" />
-        <PhotoCard src={slide(16)} at={0.9} x={1180} y={560} w={600} h={400} rot={-3} from="down" />
+        <FitCard src={slide(38)} at={0.1} cx={1470} cy={350} maxW={700} maxH={520} rot={2.5} from="right" />
+        <FitCard src={slide(16)} at={0.9} cx={1480} cy={760} maxW={600} maxH={400} rot={-3} from="down" />
         <div style={{ ...W, left: 110, top: 120, width: 960 }}>
           <Rise text="Nghiên cứu khoa học" at={0.2} size={80} highlight={["khoa", "học"]} accent={C.sky} style={{ whiteSpace: "nowrap" }} />
           <Rise text="một phần quan trọng của đời sống học thuật" at={1.0} size={36} weight={600} color="rgba(255,255,255,0.75)" stagger={0.04} />
@@ -465,7 +466,7 @@ const Contests: React.FC = () => {
   const tMj = L("contests", "mj", 122.5) - 0.2;
   const lifeCuts = [
     { src: img(20), from: 0, to: L("contests", "life", 96.42), portrait: true },
-    { src: "clip/v5_banner.mp4", from: L("contests", "life", 96.42), to: L("contests", "life", 97.84) },
+    { src: img(1), from: L("contests", "life", 96.42), to: L("contests", "life", 97.84) },
     { src: img(19), from: L("contests", "life", 97.84), to: L("contests", "life", 98.82), portrait: true },
     { src: img(7), from: L("contests", "life", 98.82), to: tLogi },
   ];
@@ -476,7 +477,7 @@ const Contests: React.FC = () => {
         <AbsoluteFill style={{ backgroundColor: C.navy }}>
           {lifeCuts.map((c, i) => (
             <Sequence key={i} from={sec(c.from)} durationInFrames={Math.max(1, sec(c.to - c.from)) + 5}>
-              <MediaFill m={{ src: c.src, kind: c.src.endsWith(".mp4") ? "video" : "img", portrait: (c as any).portrait }} dur={sec(c.to - c.from)} />
+              <MediaFill m={{ src: c.src, kind: c.src.endsWith(".mp4") ? "video" : "img", portrait: (c as any).portrait, still: true, autoFit: true }} dur={sec(c.to - c.from)} />
             </Sequence>
           ))}
           <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(10,26,74,0.75) 0%, rgba(10,26,74,0) 40%), linear-gradient(0deg, rgba(10,26,74,0.7) 0%, rgba(10,26,74,0) 35%)" }} />
@@ -498,7 +499,7 @@ const Contests: React.FC = () => {
       {/* C: MC8 + clubs */}
       <Sequence from={sec(tMc8)} durationInFrames={sec(tMj - tMc8) + 8}>
         <Bg tone="navy" />
-        <PhotoCard src={slide(19)} at={0.1} x={980} y={130} w={840} h={500} rot={2} from="right" />
+        <FitCard src={slide(19)} at={0.1} cx={1400} cy={380} maxW={840} maxH={500} rot={2} from="right" />
         <div style={{ ...W, left: 110, top: 150, width: 820 }}>
           <Tag text="Với sinh viên Marketing" at={0.05} bg={C.coral} color={C.white} size={32} />
           <Rise text="CLB MC8 & Marketing Journey" at={L("contests", "mc8", 115.84) - tMc8} size={70} style={{ marginTop: 26 }} />
@@ -529,7 +530,7 @@ const ClubLogo: React.FC<{ src: string; at: number; name: string }> = ({ src, at
   return (
     <div style={{ width: 540, opacity: p, transform: `translateY(${(1 - p) * 60}px)` }}>
       <div style={{ height: 200, borderRadius: 22, overflow: "hidden", border: `5px solid ${C.white}` }}>
-        <KImg src={src} style={{ width: "100%", height: "100%" }} zoom={0.04} />
+        <KImg src={src} style={{ width: "100%", height: "100%", backgroundColor: "#fff" }} zoom={0} fit="contain" />
       </div>
       <div style={{ fontFamily: FONT, fontWeight: 700, fontSize: 30, color: C.white, marginTop: 10 }}>{name}</div>
     </div>
@@ -551,7 +552,7 @@ const LogiMaster: React.FC<{ base: number; t2: number; s0: number }> = ({ base, 
     <AbsoluteFill>
       <Bg tone="cream" />
       <AbsoluteFill style={{ opacity: 1 - phase2 }}>
-        <PhotoCard src={slide(18)} at={0.1} x={980} y={120} w={840} h={560} rot={2.5} from="right" border={C.navy} />
+        <FitCard src={slide(18)} at={0.1} cx={1400} cy={400} maxW={840} maxH={560} rot={2.5} from="right" border={C.navy} />
         <div style={{ ...W, left: 110, top: 130, width: 840 }}>
           <Tag text="Với sinh viên Logistics" at={0.05} bg={C.navy} color={C.white} size={32} />
           <Rise text="HaUI LogiMaster" at={tTitle} size={100} color={C.navy} style={{ marginTop: 26 }} highlight={["LogiMaster"]} accent={C.blue} />
@@ -584,8 +585,8 @@ const LogiMaster: React.FC<{ base: number; t2: number; s0: number }> = ({ base, 
         </div>
       </AbsoluteFill>
       <AbsoluteFill style={{ opacity: phase2 }}>
-        <PhotoCard src={slide(22)} at={t2 - base} x={110} y={140} w={900} h={700} rot={-2} from="left" border={C.navy} />
-        <PhotoCard src={slide(17)} at={t2 - base + 0.5} x={1060} y={110} w={760} h={420} rot={2} from="right" border={C.navy} />
+        <FitCard src={slide(22)} at={t2 - base} cx={560} cy={490} maxW={900} maxH={700} rot={-2} from="left" border={C.navy} />
+        <FitCard src={slide(17)} at={t2 - base + 0.5} cx={1440} cy={320} maxW={760} maxH={420} rot={2} from="right" border={C.navy} />
         <div style={{ ...W, left: 1080, top: 590, display: "flex", flexDirection: "column", gap: 18, alignItems: "flex-start" }}>
           <Tag text="Tình huống thực tế" at={t2l(110.24)} bg={C.navy} color={C.white} size={44} />
           <Tag text="Giải quyết vấn đề" at={t2l(111.88)} bg={C.blue} color={C.white} size={44} />
@@ -623,7 +624,7 @@ const MarketingJourney: React.FC<{ base: number }> = ({ base }) => {
         <div style={{ ...W, left: 0, bottom: 68, width: 600, height: 4, backgroundColor: "rgba(255,255,255,0.4)" }} />
       </div>
       <Actor v="ponytail" x={770} y={600} height={400} popAt={tl(124.06)} rHold="megaphone" base="megaphone" acts={[{ at: tl(125.6) + 0.3, kind: "cheer", dur: 2 }]} seed={10} />
-      <PhotoCard src={slide(20)} at={tl(127.32) - 0.6} x={1060} y={170} w={760} h={330} rot={-2} from="right" />
+      <FitCard src={slide(20)} at={tl(127.32) - 0.6} cx={1440} cy={335} maxW={760} maxH={330} rot={-2} from="right" />
       <div style={{ ...W, left: 1060, top: 560 }}>
         <div style={{ display: "flex", alignItems: "baseline", gap: 20 }}>
           <Counter to={360} at={tl(127.32)} dur={0.9} size={124} color={C.yellow} suffix="+" />
@@ -657,10 +658,10 @@ const Experience: React.FC = () => {
     <AbsoluteFill style={{ backgroundColor: C.navy }}>
       {/* first lines: two real moments */}
       <Sequence durationInFrames={sec(L("experience", "pieces", 133.5)) + 5}>
-        <MediaFill m={{ src: slide(17), kind: "img" }} dur={sec(2.6)} />
+        <MediaFill m={{ src: slide(17), kind: "img", still: true, autoFit: true }} dur={sec(2.6)} />
       </Sequence>
       <Sequence from={sec(L("experience", "pieces", 133.5))} durationInFrames={sec(L("experience", "pieces", 135.2) - L("experience", "pieces", 133.5)) + 5}>
-        <MediaFill m={{ src: img(2), kind: "img" }} dur={sec(2)} />
+        <MediaFill m={{ src: img(2), kind: "img", still: true, autoFit: true }} dur={sec(2)} />
       </Sequence>
       <AbsoluteFill style={{ background: "linear-gradient(0deg, rgba(10,26,74,0.8) 0%, rgba(10,26,74,0) 40%)", opacity: f < sec(L("experience", "pieces", 135.2)) ? 1 : 0 }} />
       <div style={{ ...W, left: 110, bottom: 90, opacity: f < sec(L("experience", "pieces", 135.2)) ? 1 : 0 }}>
@@ -671,13 +672,10 @@ const Experience: React.FC = () => {
       <Sequence from={sec(L("experience", "pieces", 135.2))} durationInFrames={sec(montageStart - L("experience", "pieces", 135.2)) + 6}>
         <AbsoluteFill style={{ backgroundColor: C.navy }}>
           {tiles.map((src, i) => {
-            const p = pop(f - sec(L("experience", "pieces", 135.2)), i * 0.16, FPS, 14);
-            const col = i % 3;
+                        const col = i % 3;
             const row = Math.floor(i / 3);
             return (
-              <div key={i} style={{ ...W, left: 30 + col * 630, top: 30 + row * 345, width: 610, height: 330, transform: `scale(${p}) rotate(${(1 - p) * (i % 2 ? 8 : -8)}deg)`, opacity: p }}>
-                <KImg src={src} style={{ width: "100%", height: "100%", borderRadius: 18 }} zoom={0.1} />
-              </div>
+              <FitCard key={i} src={src} at={i * 0.16} cx={30 + col * 630 + 305} cy={30 + row * 345 + 165} maxW={590} maxH={315} rot={i % 2 ? 2 : -2} from="scale" border={C.white} />
             );
           })}
           <AbsoluteFill style={{ alignItems: "center", justifyContent: "center" }}>
@@ -690,7 +688,7 @@ const Experience: React.FC = () => {
       {/* music-only montage */}
       {cuts.map((src, i) => (
         <Sequence key={i} from={sec(montageStart + i * each)} durationInFrames={sec(each) + 4}>
-          <MediaFill m={{ src, kind: src.endsWith(".mp4") ? "video" : "img", zoom: i % 2 ? "out" : "in" }} dur={sec(each)} />
+          <MediaFill m={{ src, kind: src.endsWith(".mp4") ? "video" : "img", still: true, inset: 128 }} dur={sec(each)} />
         </Sequence>
       ))}
       <div style={{ ...W, right: 60, bottom: 50, opacity: f > sec(montageStart) ? 1 : 0 }}>
@@ -716,8 +714,8 @@ const Partners: React.FC = () => {
     { t: "Viettel Post", at: L("partners", "partners", 148.24), a: 340, r: 520, col: C.yellow },
     { t: "Smartlog", at: L("partners", "partners", 149.2), a: 25, r: 480, col: C.yellow },
     { t: "MISA", at: L("partners", "partners", 150.02), a: 150, r: 470, col: C.white },
-    { t: "TDS", at: L("partners", "partners", 150.68), a: 115, r: 450, col: C.white },
-    { t: "Đối tác Marketing", at: L("partners", "partners", 151.62), a: 68, r: 400, col: C.coral },
+    { t: "Vietnamobile", at: L("partners", "partners", 150.35), a: 115, r: 450, col: C.white },
+    { t: "Đối tác Marketing", at: L("partners", "partners2", 151.62), a: 68, r: 400, col: C.coral },
   ];
   const pos = (a: number, r: number) => [cx + Math.cos((a * Math.PI) / 180) * r * 1.2, cy + Math.sin((a * Math.PI) / 180) * r * 0.62];
   const acts = [
@@ -737,7 +735,7 @@ const Partners: React.FC = () => {
       <Sequence durationInFrames={sec(tQ0) + 8}>
         <Bg tone="navy" />
         <AbsoluteFill style={{ opacity: 1 - fade1 }}>
-          <KImg src={slide(24)} style={{ position: "absolute", inset: 0 }} pos="50% 35%" />
+          <FitCard src={slide(24)} at={0} cx={1560} cy={540} maxW={620} maxH={720} rot={2} from="right" />
           <AbsoluteFill style={{ background: "linear-gradient(90deg, rgba(10,26,74,0.95) 0%, rgba(10,26,74,0.7) 60%, rgba(10,26,74,0.2) 100%)" }} />
           <div style={{ ...W, left: 110, top: 330, width: 1100 }}>
             <Rise text="Tri thức ý nghĩa hơn" at={L("partners", "partners", 141.78)} size={100} />
@@ -773,11 +771,11 @@ const Partners: React.FC = () => {
       </Sequence>
       <Sequence from={sec(tQ0)}>
         <Bg tone="navy" />
-        <AbsoluteFill style={{ opacity: 1 - out1, transform: `scale(${1 + 0.1 * out1})` }}>
+        <AbsoluteFill style={{ opacity: 1 - out1 }}>
           {acts.map((a, i) => (
             <React.Fragment key={i}>
-              <PhotoCard src={a.src} at={a.at - tQ0} x={a.x} y={a.y} w={700} h={400} rot={a.rot} from={i % 2 ? "right" : "left"} />
-              <div style={{ ...W, left: a.x + 30, top: a.y + 320 }}>
+              <FitCard src={a.src} at={a.at - tQ0} cx={a.x + 350} cy={a.y + 160} maxW={560} maxH={300} rot={a.rot} from={i % 2 ? "right" : "left"} />
+              <div style={{ ...W, left: a.x - 50, width: 800, top: a.y + 330, display: "flex", justifyContent: "center" }}>
                 <Tag text={a.t} at={a.at - tQ0 + 0.15} size={38} />
               </div>
             </React.Fragment>
@@ -817,7 +815,7 @@ const Outcomes: React.FC = () => {
   const circ = 2 * Math.PI * R;
   return (
     <AbsoluteFill>
-      <KImg src={slide(29)} style={{ position: "absolute", inset: 0 }} pos="50% 35%" zoom={0.08} />
+      <KImg src={slide(29)} style={{ position: "absolute", inset: 0 }} zoom={0} />
       <AbsoluteFill style={{ background: "linear-gradient(0deg, rgba(10,26,74,0.97) 0%, rgba(10,26,74,0.9) 50%, rgba(10,26,74,0.35) 100%)" }} />
       <div style={{ ...W, left: 110, top: 110 }}>
         <Tag text="Thành quả" at={0.05} size={36} />
@@ -869,14 +867,9 @@ const Outro: React.FC = () => {
   const panel = pop(f, tName - 0.1, FPS, 16);
   return (
     <AbsoluteFill style={{ backgroundColor: C.navy }}>
-      {pics.map((src, i) => {
-        const p = pop(f, i * 0.05, FPS, 14);
-        return (
-          <div key={i} style={{ ...W, left: (i % cols) * cw, top: Math.floor(i / cols) * ch, width: cw, height: ch, transform: `scale(${p})`, opacity: p, padding: 6 }}>
-            <KImg src={src} style={{ width: "100%", height: "100%", borderRadius: 16 }} zoom={0.12} />
-          </div>
-        );
-      })}
+      {pics.map((src, i) => (
+        <FitCard key={i} src={src} at={i * 0.05} cx={(i % cols) * cw + cw / 2} cy={Math.floor(i / cols) * ch + ch / 2} maxW={cw - 50} maxH={ch - 50} rot={i % 2 ? 2.5 : -2.5} from="scale" />
+      ))}
       <AbsoluteFill style={{ backgroundColor: `rgba(10,26,74,${0.6 * panel})` }} />
       <AbsoluteFill style={{ alignItems: "center", justifyContent: "center" }}>
         <div style={{ backgroundColor: C.navy, borderRadius: 40, padding: "56px 90px", transform: `scale(${0.85 + 0.15 * panel})`, opacity: panel, textAlign: "center", boxShadow: "0 40px 100px rgba(0,0,0,0.5)", border: `5px solid ${C.yellow}` }}>
@@ -905,7 +898,7 @@ const Chant: React.FC = () => {
   const end = interpolate(f, [sec(len - 0.7), sec(len)], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
     <AbsoluteFill style={{ backgroundColor: C.navy }}>
-      <MediaFill m={{ src: "clip/v4_cheer.mp4", kind: "video", startFrom: 0 }} dur={sec(len)} />
+      <MediaFill m={{ src: "clip/v4_cheer.mp4", kind: "video", startFrom: 0, still: true, inset: 128 }} dur={sec(len)} />
       <Audio src={staticFile("kds/clip/v4_cheer.mp4")} volume={(fr) => interpolate(fr, [0, 4, sec(len - 0.8), sec(len)], [0, 0.9, 0.9, 0], { extrapolateRight: "clamp" })} />
       <AbsoluteFill style={{ background: "linear-gradient(0deg, rgba(10,26,74,0.85) 0%, rgba(10,26,74,0) 40%)", opacity: p }} />
       <div style={{ ...W, left: 0, right: 0, bottom: 80, textAlign: "center", opacity: p, transform: `translateY(${(1 - p) * 40}px)` }}>
@@ -954,9 +947,7 @@ export const VersionC: React.FC = () => (
     <Fonts />
     {SCENES.map(([id, Comp]) => (
       <Sequence key={id} from={sec(SC[id][0])} durationInFrames={sec(SC[id][1]) - sec(SC[id][0])}>
-        <CamDrift dir={SCENES.findIndex((x) => x[0] === id) % 2 ? -1 : 1}>
-          <Comp />
-        </CamDrift>
+        <Comp />
       </Sequence>
     ))}
     {SWEEPS.map((id) => (

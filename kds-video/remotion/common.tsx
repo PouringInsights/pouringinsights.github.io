@@ -55,6 +55,7 @@ export type Media = {
   focusY?: number; // object-position Y in % for cover crops
   still?: boolean; // no Ken Burns scale/pan
   autoFit?: boolean; // contain (with blurred fill) whenever a cover fit would crop
+  inset?: number; // keep the whole picture inside a letterboxed band (px top & bottom)
 };
 
 /** One still or clip filling the frame, with a slow Ken Burns move. */
@@ -67,6 +68,8 @@ export const MediaFill: React.FC<{ m: Media; dur: number }> = ({ m, dur }) => {
   const scale = m.still ? 1 : zoomIn ? 1.04 + 0.08 * t : 1.12 - 0.08 * t;
   const panPx = m.still ? 0 : 40 * (t - 0.5);
   if (m.autoFit && m.kind === "img" && needsContain(m.src)) m = { ...m, portrait: true };
+  if (m.inset) m = { ...m, portrait: true };
+  const inset = m.inset ?? 0;
   const tx = m.pan === "left" ? -panPx : m.pan === "right" ? panPx : 0;
   const ty = m.pan === "up" ? -panPx : 0;
   const src = staticFile(`kds/${m.src}`);
@@ -113,7 +116,7 @@ export const MediaFill: React.FC<{ m: Media; dur: number }> = ({ m, dur }) => {
         />
       ) : null}
       <AbsoluteFill
-        style={{ transform: `translate(${tx}px, ${ty}px) scale(${scale})` }}
+        style={{ transform: `translate(${tx}px, ${ty}px) scale(${scale})`, top: inset, bottom: inset, height: "auto" }}
       >
         {body}
       </AbsoluteFill>

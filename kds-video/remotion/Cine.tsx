@@ -74,3 +74,35 @@ export const LightSweep: React.FC = () => {
     </AbsoluteFill>
   );
 };
+
+/** Burned-in subtitles for sound-off viewing (most social video is watched muted). */
+export type Cue = { from: number; to: number; text: string };
+export const Captions: React.FC<{ cues: Cue[]; fps?: number }> = ({ cues, fps = 30 }) => {
+  const f = useCurrentFrame();
+  const t = f / fps;
+  const cue = cues.find((c) => t >= c.from && t < c.to);
+  if (!cue) return null;
+  const o = Math.min(1, (t - cue.from) * 8, (cue.to - t) * 8);
+  return (
+    <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", paddingBottom: 30, pointerEvents: "none" }}>
+      <div
+        style={{
+          opacity: o,
+          maxWidth: 1560,
+          textAlign: "center",
+          fontFamily: "'Be Vietnam Pro', sans-serif",
+          fontWeight: 600,
+          fontSize: 38,
+          lineHeight: 1.3,
+          color: "#fff",
+          background: "rgba(5,8,20,0.62)",
+          padding: "8px 22px",
+          borderRadius: 12,
+          textShadow: "0 2px 6px rgba(0,0,0,0.6)",
+        }}
+      >
+        {cue.text}
+      </div>
+    </AbsoluteFill>
+  );
+};

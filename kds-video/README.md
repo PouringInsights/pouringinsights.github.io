@@ -23,4 +23,4 @@ Mã nguồn dựng hai phiên bản video bằng [OpenMontage](https://github.co
 - Nhân vật nữ dẫn chương trình được vẽ bằng SVG có khớp xương: đi, chỉ tay, giới thiệu, vẫy tay. Môi cử động theo âm lượng giọng đọc.
 - Chuyển cảnh: nhân vật đi ngang màn hình kéo màn sang cảnh mới.
 - Ảnh lấy từ file slide gốc (`KDS_da_chinh_sua_v2-1.pptx`) kết hợp ảnh và video trải nghiệm thật. Video kết bằng tiếng hô của cả nhóm.
-- Thành phẩm: `output/KDS_C_cinematic_1080p.mp4` (3:11): nhóm nhân vật chibi (`Chibi.tsx`, `Actors.tsx`) cùng lớp hoàn thiện điện ảnh (`Cine.tsx`: chỉnh màu, hạt phim, khung letterbox, vệt lóa sáng, máy quay trôi chậm).
+- Thành phẩm: `output/KDS_C_cinematic_v3.mp4` (3:11): nhóm nhân vật chibi (`Chibi.tsx`, `Actors.tsx`) cùng lớp hoàn thiện điện ảnh (`Cine.tsx`: chỉnh màu, hạt phim, khung letterbox, vệt lóa sáng, máy quay trôi chậm).

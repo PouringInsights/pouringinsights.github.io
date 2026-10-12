@@ -32,22 +32,11 @@ export const FONT = "'Be Vietnam Pro', sans-serif";
 // Narration plan: each segment of the v1 voice and where it lands in Version B.
 // bt(id, t) converts a v1 timestamp (word timing) into Version B seconds.
 // ---------------------------------------------------------------------------
-export const SEGS: Record<string, { src: number; at: number; dur: number }> = {
-  name: { src: 11.0, at: 3.6, dur: 3.065 },
-  found: { src: 20.2, at: 7.565, dur: 10.22 },
-  majors: { src: 30.915, at: 18.385, dur: 5.105 },
-  faculty: { src: 49.45, at: 24.49, dur: 9.77 },
-  learn: { src: 65.8, at: 35.16, dur: 6.4 },
-  research: { src: 76.7, at: 42.46, dur: 8.45 },
-  life: { src: 93.66, at: 51.91, dur: 5.96 },
-  logi: { src: 99.8, at: 58.77, dur: 8.28 },
-  mj: { src: 122.5, at: 67.85, dur: 8.9 },
-  partners: { src: 141.66, at: 77.75, dur: 11.64 },
-  questions: { src: 153.72, at: 90.19, dur: 11.14 },
-  outcomes: { src: 164.86, at: 101.83, dur: 5.78 },
-  outro: { src: 187.3, at: 108.81, dur: 6.6 },
-};
-export const B_TOTAL = 119.91;
+import PLAN_B from "./plan_b.json";
+export const SEGS: Record<string, { src: number; at: number; dur: number }> = Object.fromEntries(
+  (PLAN_B as any).segments.map((x: any) => [x.id, { src: x.src, at: x.at, dur: x.dur }]),
+);
+export const B_TOTAL: number = (PLAN_B as any).total;
 export const bt = (id: keyof typeof SEGS, t: number) =>
   SEGS[id].at + (t - SEGS[id].src);
 
