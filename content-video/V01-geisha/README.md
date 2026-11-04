@@ -37,21 +37,39 @@
 
 Về Marketing 7.0 (Kotler, Kartajaya, Setiawan, Wiley 2026): agent mới dựa vào mô tả của nhà xuất bản, chưa đọc toàn văn.
 
-## Màu sắc
+## Màu sắc (v2: watercolor)
 
-Palette chọn theo color theory: split-complementary quanh màu đỏ quả cà phê, theo tỉ lệ 60-30-10.
+Bản v1 nền gần đen với một màu cam-đỏ (đã đổi tên thành `geisha-v1-dark.mp4`) bị loại. Lý do: theo [impeccable](https://github.com/pbakaus/impeccable) và [taste-skill](https://github.com/Leonxlnx/taste-skill), bản này mắc nhiều dấu hiệu "AI slop":
+- nền gần đen kèm một màu neon
+- tông gần terracotta
+- nhãn chữ in hoa nhỏ giãn chữ
+- chữ nghiêng serif cho từng từ
+- hiệu ứng nảy (bounce)
 
-| Vai trò | Mã màu | Ý nghĩa | Tương phản trên nền |
-|---|---|---|---|
-| Nền 60% | Roast `#16100D` | Cà phê rang | — |
-| Phụ 30% | Mocha `#A47864` | Họ Pantone 2025 Mocha Mousse | 4,9:1 |
-| Chữ | Cloud `#F0EEE9` | Họ Pantone 2026 Cloud Dancer | 16,3:1 |
-| Nhấn 10% | Cherry `#FF5A3C` | Quả cà phê, giá tiền, hook | 6,1:1 |
-| Bù màu | Jade `#1FB59A` | Rừng Gesha, sự thật | 7,3:1 |
-| Highlight | Jasmine `#FFE6A7` | Hương hoa, chữ đang đọc | 15,4:1 |
+Bản v2 là trang giấy vẽ màu nước. Mỗi màu là một pigment thật, chọn theo nội dung câu chuyện. Mỗi cảnh sở hữu một trường màu, sáng tối xen kẽ như các chương.
 
-- Màu nhấn đều đạt chuẩn WCAG AA trên nền tối.
-- Font: Be Vietnam Pro (sans, hỗ trợ đầy đủ dấu tiếng Việt) kết hợp Fraunces italic (soft serif).
+| Pigment | Mã | Dùng cho |
+|---|---|---|
+| Giấy (stone, độ bão hòa < 15%) | `#F3F2EE` | Nền sáng |
+| Payne's grey | `#26303A` | Chữ, trường màu tối (cảnh bị bỏ quên) |
+| Sap green | `#2E5E3E` | Rừng Gesha, khung kết |
+| Quinacridone crimson | `#B0183F` | Quả cà phê, giá tiền |
+| Cerulean | `#3B8FC2` | Đại dương trên quả địa cầu |
+| Hansa yellow | `#F2C94C` | Hoa nhài, chữ đang được đọc |
+| Leaf green / blue-grey | `#8DB33A` / `#5E86A8` | Bergamot / Earl Grey |
+| Burnt sienna | `#9C4A26` | Chỉ dùng cho vết gỉ sắt |
+
+**Thứ tự trường màu:** giấy → xanh rừng → giấy (quả địa cầu) → xám Payne → giấy (3 lớp màu chồng) → crimson → giấy → xanh rừng.
+
+**Kỹ thuật:**
+- Mỗi vệt màu được vẽ bằng SVG filter: turbulence làm mép loang, pigment đọng đậm ở viền, hạt màu lắng vào vân giấy.
+- Các vệt màu chồng lên nhau bằng chế độ multiply, giống cách phủ lớp màu nước.
+
+**Font:** chỉ một họ chữ (Be Vietnam Pro), viết hoa theo câu, 5 cỡ chữ cách xa nhau.
+
+**Chuyển động:** có một chuyển động đặc trưng là vệt màu loang mở mỗi cảnh, cộng với chữ "I" rơi khỏi GEISHA. Không dùng spring nảy.
+
+Chi tiết ở `art-direction.md`.
 
 ## Giọng đọc
 
