@@ -1,4 +1,37 @@
-# Barista sính ngoại: loạt video watercolor
+# Barista sính ngoại: loạt video
+
+## Bản craft-book (bản chính để đăng)
+
+Cả 6 video đã được làm lại theo nhận diện kênh. Phong cách chi tiết ở `V13-crema/README.md`:
+- Giấy kem sọc dọc, nét mực vẽ tay, mảng be lốm đốm.
+- Địa cầu màu nước xanh dương và xanh lá là màu nhấn.
+- Font Anaktoria, chuyển cảnh lật trang.
+- Khung kết là logo kênh.
+
+Mã nguồn chung nằm trong `_craft-engine/` (`kit.tsx` và các file trong `films/`). Bản watercolor cũ vẫn giữ trong từng thư mục.
+
+Kịch bản viết lại cho **người đã rành cà phê, muốn hiểu thêm về cà phê nước ngoài**. Mỗi video thêm một ý mà người trong nghề có thể chưa biết:
+
+| Thư mục | File | Thời lượng | Ý mới cho dân trong nghề | Nguồn bổ sung |
+|---|---|---|---|---|
+| `V01-geisha` | `geisha-craft.mp4` | 52,5s | Mẫu CATIE mang mã T2722; kiểm tra di truyền của World Coffee Research cho thấy nhiều cây gọi là "Gesha" không khớp mẫu này | [Wikipedia](https://en.wikipedia.org/wiki/Geisha_(coffee)), [Daily Coffee News](https://dailycoffeenews.com/2019/02/07/the-coffee-roasters-complete-guide-to-coffee-varieties-and-cultivars/) |
+| `V01-v60` | `v60-craft.mp4` | 47,4s | Nón và đáy phẳng khác nhau ở độ dày lớp bột; lỗ to gần như không hãm dòng, nên tốc độ chảy do cỡ xay và cách rót quyết định | [Hario](https://global.hario.com/sp_v60series.html) |
+| `V05-melitta` | `melitta-craft.mp4` | 47,5s | Giấy lọc năm 1908 là tờ tròn đặt phẳng; túi lọc hình nón mãi khoảng 1936–37 mới ra, tức mất gần 30 năm | [DPMA](https://www.dpma.de/english/our_office/publications/ingeniouswomen/melittabentz/index.html), [Wikipedia Melitta](https://en.wikipedia.org/wiki/Melitta) |
+| `V13-crema` | `crema-craft.mp4` | 58,7s | Cơ chế CO2 → tụt áp → bọt; Robusta trong blend Naples; Ý mua cà phê Việt | `V13-crema/README.md` |
+| `V14-bach` | `bach-craft.mp4` | 49,0s | Từ năm 1729, quán cà phê Zimmermann là phòng hòa nhạc của dàn Collegium Musicum do Bach chỉ huy | [Wikipedia Café Zimmermann](https://en.wikipedia.org/wiki/Caf%C3%A9_Zimmermann), [Library of Congress](https://blogs.loc.gov/nls-music-notes/2019/03/bach-and-the-coffee-cantata/) |
+| `V16-sweden` | `sweden-craft.mp4` | 50,8s | Lý do kinh tế của lệnh cấm: hạt phải nhập khẩu, tiền chảy ra nước ngoài | `../README.md` (phần Thụy Điển) |
+
+**Vòng tự phản biện cho bản craft:** người xem rành cà phê có dừng lại không?
+- **Geisha:** hook bằng con số, nối với chuyện "tên bị viết chệch". Phần T2722 là thông tin mới cho người trong nghề. Đạt.
+- **V60:** hook "tổ tiên là phễu phòng lab". Phần lỗ to không hãm dòng gắn với mẹo chỉnh cỡ xay. Đạt.
+- **Melitta:** hook ngược đời ("giấy lọc đầu tiên không phải hình nón") hợp với người đã biết pour-over. Đạt.
+- **Bach:** đổi hook từ "Bach viết vở hài" sang "quán cà phê là phòng hòa nhạc", để nói về văn hóa quán cà phê châu Âu. Đạt.
+- **Thụy Điển:** mở bằng ngày cụ thể, thêm lý do kinh tế. Giai thoại sinh đôi vẫn ghi rõ là giai thoại. Đạt.
+- **Đã sửa khi soát hình:** cảnh Thụy Điển ban đầu vẽ đường Stockholm → Brazil. Đường này sai lịch sử, vì thế kỷ 18 Thụy Điển chưa nhập cà phê Brazil, nên đã thay bằng hình đồng xu chảy ra ngoài.
+
+---
+
+## Bản watercolor (bản cũ)
 
 Tất cả video:
 - Khổ dọc 1080×1920, 30fps, dưới 60 giây, âm lượng −14 LUFS.
