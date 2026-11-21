@@ -1,0 +1,32 @@
+{
+  "name": "motion-lab",
+  "version": "1.0.0",
+  "description": "Motion, 3D and video libraries for Claude Code work",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": "true",
+  "dependencies": {
+    "@react-three/drei": "10.7.9",
+    "@react-three/fiber": "9.8.2",
+    "@react-three/postprocessing": "3.2.2",
+    "@react-three/rapier": "2.2.0",
+    "@remotion/captions": "4.0.545",
+    "@remotion/cli": "4.0.545",
+    "@tweakpane/plugin-essentials": "0.2.1",
+    "gsap": "3.15.1",
+    "lottie-web": "5.13.0",
+    "motion": "14.14.0",
+    "postprocessing": "6.39.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.545",
+    "three": "0.187.0",
+    "three.quarks": "0.18.0",
+    "tweakpane": "4.0.5"
+  }
+}
