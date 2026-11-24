@@ -14,7 +14,10 @@ for n in $LESSONS; do
     fi
   fi
   if [ $GEM_OK = 0 ] || [ -f "audio/b$n/.manus" ]; then
-    mkdir -p "audio/b$n"; touch "audio/b$n/.manus"
+    mkdir -p "audio/b$n"
+    # reuse the backup made in parallel (audio_manus/) when it is complete
+    if [ -f "audio_manus/b$n/.complete" ]; then rm -rf "audio/b$n"; cp -r "audio_manus/b$n" "audio/b$n"; fi
+    touch "audio/b$n/.manus"
     ( . vn311/bin/activate; SIMPLE=1 python tools/narrate.py "$S" $n 2>&1 | grep --line-buffered -E "^done|Error|Traceback" )
   fi
   voice=$([ -f "audio/b$n/.manus" ] && echo manus || echo aoede)

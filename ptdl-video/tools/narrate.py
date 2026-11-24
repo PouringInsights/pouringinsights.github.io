@@ -12,7 +12,7 @@ only = None
 if '--only' in sys.argv:
     only = {int(x) for x in sys.argv[sys.argv.index('--only') + 1].split(',')}
 script = json.load(open(f"{W}/scripts/b{N}_script.json"))
-out = f"{W}/audio/b{N}"; os.makedirs(out, exist_ok=True)
+out = f"{W}/{os.environ.get('AUDIO_DIR', 'audio')}/b{N}"; os.makedirs(out, exist_ok=True)
 REF = f"{W}/manus/ref48.wav"
 SR = 48000
 
