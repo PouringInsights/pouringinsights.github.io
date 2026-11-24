@@ -1,0 +1,158 @@
+[
+ {
+  "slide": 1,
+  "text": "Xin chào các bạn và chào mừng các bạn đã đến với bài số tám của học phần Phân tích dữ liệu marketing. Trong bài học hôm nay, chúng ta sẽ cùng nhau tìm hiểu phân tích hồi quy nâng cao, và đặc biệt là mô hình cấu trúc tuyến tính. Nếu bài bảy giúp các bạn đo xem mỗi kênh mang lại bao nhiêu, thì bài này sẽ giúp các bạn trả lời một câu hỏi sâu hơn. Đó là vì sao chi tiền cho marketing lại dẫn tới hành vi mua hàng."
+ },
+ {
+  "slide": 2,
+  "text": "Bài học này hướng tới chuẩn đầu ra mã el một của học phần. Đó là ứng dụng kiến thức về thuật toán và thống kê vào phân tích dữ liệu, kết hợp với kiến thức kinh tế và kinh doanh. Mục tiêu cuối cùng là đưa ra những khuyến nghị chiến lược về sản phẩm, khách hàng và nghiên cứu thị trường cho doanh nghiệp. Mức độ yêu cầu là u, tức mức vận dụng. Nói cách khác, sau bài này các bạn cần tự thiết kế và kiểm định được một mô hình nghiên cứu nhỏ."
+ },
+ {
+  "slide": 3,
+  "text": "Bài học hôm nay gồm bốn phần. Phần tám chấm một, chúng ta so sánh hai cách nghĩ về cùng một câu hỏi marketing. Vì sao cách nối thẳng chi quảng cáo với doanh thu hay thất bại, và mô hình cấu trúc tuyến tính, viết tắt là ét e em, thay nó bằng gì. Phần tám chấm hai đi từ mô hình lý thuyết tới bảng hỏi, gồm cách kế thừa thang đo, viết câu hỏi, chọn thang li-cơ và xác định cỡ mẫu. Phần tám chấm ba giới thiệu sáu loại biến trong một mô hình. Phần tám chấm bốn là bốn bước kiểm định, từ phân tích nhân tố khám phá, đến độ tin cậy, phân tích nhân tố khẳng định, và cuối cùng là ét e em. Xuyên suốt bài, chúng ta dùng một bộ dữ liệu khảo sát bốn trăm hai mươi quan sát, chạy thật từ đầu đến cuối."
+ },
+ {
+  "slide": 4,
+  "text": "Chúng ta bắt đầu bằng một tình huống mở đầu. Một nhóm sinh viên nhận dữ liệu ba mươi sáu tháng của một thương hiệu mỹ phẩm, gồm chi phí quảng cáo và doanh thu mỗi tháng. Các bạn ấy chạy hồi quy doanh thu theo chi phí quảng cáo, và nhận được a-rờ bình phương bằng không phẩy không ba sáu. Tức là chi phí quảng cáo giải thích được chưa tới ba phẩy sáu phần trăm biến thiên của doanh thu. Từ đó nhóm kết luận rằng quảng cáo không có tác động, doanh nghiệp nên cắt ngân sách. Phép tính không sai, nhưng kết luận thì sai, và sai ở chỗ rất cơ bản. Mô hình nối thẳng tiền bỏ ra với tiền thu về, bỏ qua toàn bộ những gì xảy ra trong đầu khách hàng ở giữa. Chỉ cần thêm độ trễ một tháng, a-rờ bình phương đã lên không phẩy hai không chín. Các bạn hãy suy nghĩ ba câu hỏi trên màn hình. Giữa chi tiền quảng cáo và khách hàng rút ví có những bước nào? Dữ liệu nào đo được các bước ở giữa đó? Và nếu được hỏi khách hàng mười hai câu, các bạn sẽ hỏi gì?"
+ },
+ {
+  "slide": 5,
+  "text": "Trước khi đi tiếp, mình cùng nhau thảo luận nhanh một câu hỏi. A-rờ bình phương thấp có nghĩa là không có tác động, hay có nghĩa là mô hình đang thiếu thứ gì đó? Các bạn thử nghĩ xem, một biến có thể tác động mạnh mà vẫn cho a-rờ bình phương thấp không? Câu trả lời là có. Khi doanh thu chịu ảnh hưởng của rất nhiều yếu tố khác, thì phần do quảng cáo giải thích có thể nhỏ, dù tác động của nó vẫn có thật và đáng kể. Câu hỏi thứ hai, dữ liệu bán hàng có cho biết khách hàng nghĩ gì về quảng cáo không? Rõ ràng là không. Và câu hỏi thứ ba, nếu cắt ngân sách vì a-rờ bình phương bằng không phẩy không ba sáu, rủi ro lớn nhất là gì? Đó là doanh nghiệp có thể cắt đi một hoạt động đang tạo ra doanh thu. Chỉ là doanh thu đó đến muộn hơn, hoặc đi qua một con đường mà mô hình không nhìn thấy."
+ },
+ {
+  "slide": 6,
+  "text": "Vậy thì chúng ta đi vào phần tám chấm một, hai cách nghĩ về cùng một câu hỏi marketing. Cùng là câu hỏi quảng cáo có hiệu quả không, nhưng có thể tiếp cận bằng dữ liệu thứ cấp, hoặc bằng dữ liệu sơ cấp và mô hình cấu trúc."
+ },
+ {
+  "slide": 7,
+  "text": "Cách nghĩ thứ nhất là tư duy trên dữ liệu thứ cấp. Mình đặt x là chi phí marketing, y là doanh thu, rồi đi tìm mối quan hệ giữa hai đầu. Cách này hay thất bại vì bốn lý do, xếp theo mức độ thường gặp. Thứ nhất là độ trễ. Người xem quảng cáo hôm nay có thể tháng sau mới mua, nên nối cùng tháng với cùng tháng là so sai thời điểm. Trong case mở đầu, chỉ thêm độ trễ một tháng đã đưa a-rờ bình phương từ không phẩy không ba sáu lên không phẩy hai không chín. Thứ hai, nội dung quảng cáo không nằm trong dữ liệu. Chi năm trăm triệu cho một nội dung dở và năm trăm triệu cho một nội dung hay đều ra cùng một con số. Thứ ba là nhiễu từ bên ngoài, như mùa vụ, đối thủ giảm giá, biến động giá nguyên liệu. Thứ tư là quan hệ ngược chiều, khi doanh nghiệp chi quảng cáo nhiều hơn lúc doanh thu đang xấu. Bốn lý do này có một điểm chung. Cơ chế nằm ở giữa, còn mô hình thì chỉ nhìn hai đầu. Muốn biết cơ chế, phải đo cơ chế."
+ },
+ {
+  "slide": 8,
+  "text": "Đó chính là lúc cách nghĩ thứ hai xuất hiện. Mô hình cấu trúc tuyến tính, ét e em, không hỏi chi bao nhiêu thì thu bao nhiêu. Ét e em hỏi rằng nội dung quảng cáo làm thay đổi điều gì trong đầu khách hàng, và sự thay đổi đó có dẫn tới hành vi hay không. Vì vậy, ét e em cần một loại dữ liệu khác hẳn. Đó là dữ liệu sơ cấp, do chính người nghiên cứu thu thập bằng bảng hỏi khảo sát khách hàng."
+ },
+ {
+  "slide": 9,
+  "text": "Bảng này so sánh hai cách tiếp cận trên sáu tiêu chí. Các bạn đọc theo từng hàng. Về câu hỏi, mô hình hộp đen hỏi chi bao nhiêu thì thu về bao nhiêu, còn ét e em hỏi vì sao chi tiền lại dẫn tới mua hàng. Về dữ liệu, mô hình hộp đen dùng dữ liệu có sẵn như báo cáo nội bộ, Google Ads hay sàn thương mại điện tử. Ét e em thì phải tự đi thu bằng bảng hỏi. Về biến, một bên đo trực tiếp tiền, lượt nhấp, đơn hàng. Bên kia đo cảm nhận, thái độ, ý định, và phải đo gián tiếp qua nhiều câu hỏi. Mô hình hộp đen chỉ có một bước, từ x sang y. Ét e em có nhiều bước, từ x qua biến trung gian rồi mới tới y, và có thể thêm biến điều tiết. Mô hình hộp đen mạnh về quyết định ngân sách ngắn hạn, nhưng không nói được vì sao. Ét e em giải thích được cơ chế, nhưng không chứng minh được nhân quả. Hai cách này không loại trừ nhau. Một nghiên cứu tốt thường dùng ét e em để hiểu cơ chế, rồi dùng dữ liệu thứ cấp để kiểm tra cơ chế đó có hiện ra trong doanh số không."
+ },
+ {
+  "slide": 10,
+  "text": "Chúng ta chuyển sang phần tám chấm hai, từ mô hình lý thuyết tới bảng hỏi. Đây là khâu quyết định chất lượng của cả nghiên cứu. Một bảng hỏi tồi thì không phương pháp thống kê nào cứu được."
+ },
+ {
+  "slide": 11,
+  "text": "Câu hỏi đầu tiên là làm thế nào để đo được cách khách hàng cảm nhận về sản phẩm hay thương hiệu? Các bạn để ý, không ai trả lời được câu giá trị cảm nhận của bạn là mấy điểm. Nhưng ai cũng trả lời được câu sản phẩm này có đáng đồng tiền không. Vì vậy, ta hỏi nhiều câu cụ thể, rồi từ đó suy ra cái trừu tượng. Một điểm rất quan trọng là chiều mũi tên trong hình. Tức là khái niệm gây ra câu trả lời, chứ không phải các câu trả lời cộng lại thành khái niệm. Đó là lý do các câu hỏi trong cùng một nhóm phải tương quan với nhau."
+ },
+ {
+  "slide": 12,
+  "text": "Vậy thang đo lấy ở đâu? Ở bước hai của quy trình, các bạn luôn phải trả lời được câu hỏi, thang đo này lấy ở đâu, đã có ai kiểm định chưa. Nguyên tắc là không tự sáng chế thang đo nếu chưa có lý do chính đáng. Hãy tìm các nghiên cứu đã công bố, kế thừa thang đo của họ, và trích dẫn đầy đủ. Lý do rất thực tế. Tự xây một thang đo mới là cả một công trình riêng, thường mất vài tháng, và cần ít nhất hai mẫu độc lập để kiểm định. Việc đó không thể làm được trong phạm vi một bài tiểu luận."
+ },
+ {
+  "slide": 13,
+  "text": "Vậy tìm thang đo kế thừa ở đâu? Có ba nguồn, xếp theo thứ tự nên thử. Thứ nhất là Google Scholar, gõ tên khái niệm bằng tiếng Anh, kèm các từ như thang đo, đo lường, câu hỏi, viết bằng tiếng Anh. Thứ hai là các bài tổng quan về chính khái niệm đó, thường liệt kê mọi thang đo đã từng dùng. Thứ ba là luận án tiến sĩ trong nước, vì phụ lục thường in nguyên bảng hỏi tiếng Việt. Khi đọc một bài, các bạn cần lấy đúng bốn thứ. Một là nguyên văn các câu hỏi, không chỉ tên khái niệm. Hai là số câu trong thang đo gốc, nếu lấy bớt thì phải giải thích. Ba là loại thang, năm mức hay bảy mức. Bốn là hệ số Cronbach an-pha mà bài gốc báo cáo, để sau này so sánh. Nếu bài không in nguyên văn câu hỏi, hãy tra tiếp bài mà nó trích dẫn."
+ },
+ {
+  "slide": 14,
+  "text": "Đây là ba thang đo dùng cho mô hình trong bài. Mỗi hàng là một khái niệm, kèm mã, các câu hỏi rút gọn và hệ số an-pha được báo cáo. Khái niệm nội dung quảng cáo gồm bốn câu, chẳng hạn nội dung quảng cáo cung cấp thông tin hữu ích, dễ hiểu, đáng tin. Giá trị cảm nhận gồm bốn câu, như sản phẩm đáng đồng tiền, chất lượng tương xứng với giá. Ý định mua cũng gồm bốn câu, như tôi dự định sẽ mua, sẵn sàng giới thiệu cho người khác. Cả ba thang đo đều có an-pha khoảng không phẩy tám sáu đến không phẩy tám bảy. Vì sao mỗi khái niệm đúng bốn câu? Dưới ba câu thì không kiểm định độ tin cậy cho tử tế được, còn trên sáu câu thì người trả lời bắt đầu bấm bừa. Tất cả đều đo bằng thang li-cơ năm mức, từ một là rất không đồng ý đến năm là rất đồng ý. Các bạn lưu ý giúp mình, bộ dữ liệu bốn trăm hai mươi quan sát trong bài là dữ liệu mô phỏng cho mục đích giảng dạy. Các con số kiểm định là thật, nhưng không được trích dẫn như một phát hiện nghiên cứu."
+ },
+ {
+  "slide": 15,
+  "text": "Tiếp theo là khâu dễ hỏng nhất, dịch và hiệu chỉnh thang đo. Dịch thẳng từ tiếng Anh sang tiếng Việt gần như luôn ra những câu hỏi khó hiểu. Quy trình chuẩn gồm ba bước. Bước một là dịch xuôi, hai người dịch độc lập rồi đối chiếu và chốt một bản. Bước hai là dịch ngược, một người thứ ba chưa đọc bản gốc dịch bản tiếng Việt ngược lại tiếng Anh. Bước ba là khảo sát thử với hai mươi đến ba mươi người giống đối tượng thật, hỏi lại họ hiểu từng câu như thế nào. Ngoài ra còn phần hiệu chỉnh bối cảnh. Các bạn cần đổi đối tượng cho đúng, ví dụ thay cụm từ thương hiệu này bằng tên thương hiệu cụ thể. Bỏ những câu không áp dụng được ở Việt Nam, và ghi rõ trong báo cáo đã bỏ câu nào, vì sao. Và cuối cùng, hãy dùng đúng ngôn ngữ mà đối tượng khảo sát thật sự nói."
+ },
+ {
+  "slide": 16,
+  "text": "Slide này tổng hợp bảy quy tắc viết câu hỏi. Mỗi hàng gồm quy tắc, một câu dễ gây hiểu lầm, và cách sửa. Ví dụ, quy tắc một là mỗi câu chỉ hỏi một ý. Câu quảng cáo này hay và đáng tin đang hỏi hai ý cùng lúc, người trả lời có thể thấy hay nhưng không tin. Nên sửa thành quảng cáo này đáng tin. Quy tắc ba là không dùng phủ định kép. Câu tôi không nghĩ sản phẩm này là không đáng mua khiến người đọc phải dừng lại suy nghĩ. Các quy tắc còn lại là không hỏi dẫn dắt, tránh từ mơ hồ, không dùng thuật ngữ, hỏi về trải nghiệm thật và giữ câu ngắn. Các bạn để ý dòng cuối slide. Một câu vi phạm quy tắc một hoặc ba sẽ hiện ra ở bước phân tích nhân tố, dưới dạng hệ số tải thấp hoặc tải chéo. Sửa ở khâu viết bảng hỏi rẻ hơn rất nhiều so với sửa sau khi đã thu xong dữ liệu."
+ },
+ {
+  "slide": 17,
+  "text": "Tiếp theo là chọn thang li-cơ và xác định cỡ mẫu. Thang năm mức dễ trả lời, phù hợp khảo sát đại trà và phổ biến nhất ở Việt Nam. Thang bảy mức phân biệt tinh hơn, hay dùng trong nghiên cứu học thuật quốc tế. Tuyệt đối không trộn năm mức và bảy mức trong cùng một bảng hỏi, vì điểm trung bình sẽ trở nên vô nghĩa. Về cỡ mẫu, có ba cách ước lượng và ta lấy giá trị lớn nhất. Cách thứ nhất theo số câu hỏi, tối thiểu năm quan sát cho mỗi câu, nên có mười. Với mười hai câu, ta cần tối thiểu sáu mươi, tốt hơn là một trăm hai mươi. Cách thứ hai, phân tích nhân tố khám phá không nên dưới một trăm quan sát. Cách thứ ba, tối thiểu mười quan sát cho mỗi mũi tên đi vào một biến tiềm ẩn. Mẫu bốn trăm hai mươi của chúng ta vượt cả ba ngưỡng. Nhưng cỡ mẫu lớn không cứu được bảng hỏi viết dở. Một nghìn người trả lời một câu hỏi tối nghĩa vẫn cho ra một thang đo hỏng."
+ },
+ {
+  "slide": 18,
+  "text": "Bây giờ là phần thảo luận. Trên màn hình có bốn câu hỏi, mỗi câu vi phạm ít nhất một quy tắc. Các bạn hãy chỉ ra lỗi và viết lại. Ví dụ câu đầu tiên đang hỏi cả chất lượng lẫn giá cả trong một câu. Câu thứ hai vừa dẫn dắt vừa gài người trả lời bằng cụm từ người tiêu dùng thông minh. Câu thứ ba dùng phủ định kép, còn câu thứ tư dùng thuật ngữ chuyên ngành. Một mẹo rất hữu ích là đọc to từng câu với bạn học. Nếu phải đọc lại lần thứ hai mới hiểu, hoặc có thể đồng ý với vế này mà không đồng ý với vế kia, thì câu đó cần viết lại."
+ },
+ {
+  "slide": 19,
+  "text": "Chúng ta chuyển sang phần tám chấm ba, sáu loại biến trong một mô hình. Các bạn để ý, hiểu đúng vai trò từng biến là điều kiện để vẽ mô hình đúng, và để diễn giải kết quả cho đúng."
+ },
+ {
+  "slide": 20,
+  "text": "Trước hết là biến tiềm ẩn và biến quan sát. Biến tiềm ẩn được vẽ bằng hình bầu dục. Đó là khái niệm không đo trực tiếp được, như giá trị cảm nhận, niềm tin hay ý định mua. Biến quan sát được vẽ bằng hình chữ nhật, là từng câu hỏi cụ thể, mỗi câu cho một con số từ một đến năm. Tiếp theo là biến độc lập, điểm xuất phát của mô hình, không có mũi tên nào đi vào nó. Ở đây là nội dung quảng cáo. Tiêu chí chọn biến độc lập là đó phải là thứ doanh nghiệp thay đổi được. Chọn thu nhập của khách hàng làm biến độc lập thì kết luận sẽ không hành động được. Cuối cùng là biến mục tiêu, đích đến của mọi mũi tên, ở đây là ý định mua. Vì sao đo ý định mà không đo hành vi thật? Vì bảng hỏi không quan sát được hành vi. Thuyết hành vi có kế hoạch của Ai-dần, năm một nghìn chín trăm chín mươi mốt, coi ý định là tiền đề trực tiếp của hành vi. Nhưng các bạn phải nói rõ giới hạn này trong báo cáo, vì ý định mua không bằng hành vi mua."
+ },
+ {
+  "slide": 21,
+  "text": "Biến trung gian trả lời câu hỏi vì sao. Nó nằm trên đường truyền tác động. X làm thay đổi biến trung gian, rồi biến trung gian làm thay đổi y. Trong mô hình của chúng ta, nội dung quảng cáo làm tăng giá trị cảm nhận, gọi là đường a. Giá trị cảm nhận lại làm tăng ý định mua, gọi là đường b. Tác động gián tiếp chính là tích của a và b. Đây chính là cơ chế mà mô hình hộp đen ở phần tám chấm một không nhìn thấy. Về cách kiểm định, phương pháp được chấp nhận rộng rãi hiện nay là bốt-trép. Ta lấy mẫu lặp lại hàng nghìn lần, mỗi lần tính lại tích a nhân b, rồi dựng khoảng tin cậy. Nếu khoảng tin cậy không chứa số không, ta kết luận có tác động trung gian."
+ },
+ {
+  "slide": 22,
+  "text": "Biến điều tiết thì trả lời câu hỏi với ai, hay trong điều kiện nào. Khác với biến trung gian, biến điều tiết không nằm trên đường truyền. Nó làm cho đường truyền dốc hơn hoặc thoải hơn. Ví dụ, với người hoài nghi quảng cáo, cùng một mức giá trị cảm nhận có thể dẫn tới ý định mua thấp hơn hẳn, tức là đường b yếu đi. Biến điều tiết thường là biến nhân khẩu hoặc đặc điểm cá nhân, như giới tính, độ tuổi, mức độ am hiểu sản phẩm, hay mức độ hoài nghi quảng cáo. Mình có một mẹo phân biệt nhanh cho các bạn. Nếu câu hỏi là vì sao, thì đó là biến trung gian. Còn nếu câu hỏi là với ai, hoặc trong điều kiện nào, thì đó là biến điều tiết."
+ },
+ {
+  "slide": 23,
+  "text": "Loại biến tiếp theo là biến kiểm soát, giúp giữ cho kết quả sạch. Đây là biến ta không quan tâm về mặt lý thuyết, nhưng vẫn đưa vào để nó không làm sai lệch các hệ số mình quan tâm. Trong hình, hai biến kiểm soát là tuổi và số giờ dùng mạng xã hội mỗi ngày, cùng trỏ vào ý định mua. Vì sao lại là số giờ dùng mạng xã hội? Vì người dùng nhiều vừa tiếp xúc quảng cáo nhiều hơn, vừa có xu hướng mua trực tuyến nhiều hơn. Nếu không kiểm soát, một phần tác động của biến này sẽ bị gán nhầm cho nội dung quảng cáo. Khi chọn biến kiểm soát, các bạn nhớ ba điều. Phải có lý do lý thuyết, không nhét bừa mọi biến nhân khẩu. Biến đó phải có khả năng ảnh hưởng tới biến mục tiêu. Và tuyệt đối không kiểm soát một biến nằm trên đường truyền tác động, vì làm vậy là tự xoá mất chính tác động mình muốn đo. Khi báo cáo, hãy trình bày hai mô hình, có và không có biến kiểm soát."
+ },
+ {
+  "slide": 24,
+  "text": "Bảng này tổng hợp lại sáu loại biến. Mỗi hàng cho biết vai trò của biến, câu hỏi nó trả lời, và ví dụ trong bài. Ví dụ, biến trung gian nằm trên đường truyền tác động, trả lời câu hỏi vì sao x dẫn tới y, và trong bài là giá trị cảm nhận. Biến điều tiết làm đổi độ dốc của một đường, trả lời câu hỏi với ai thì mạnh hơn, ví dụ mức độ hoài nghi quảng cáo. Biến kiểm soát trả lời câu hỏi còn gì khác chen vào, ví dụ tuổi và giờ dùng mạng xã hội. Các bạn chú ý dòng cuối. Vai trò của một biến do mô hình quy định, chứ không phải bản thân biến đó. Cùng là giá trị cảm nhận, trong nghiên cứu này là trung gian, nhưng trong nghiên cứu khác hoàn toàn có thể là biến mục tiêu."
+ },
+ {
+  "slide": 25,
+  "text": "Chúng ta cùng thảo luận một tình huống. Một thương hiệu thời trang muốn biết vì sao chương trình livestream bán hàng hiệu quả với nhóm khách này mà không hiệu quả với nhóm khác. Nhóm nghiên cứu thu thập một loạt biến. Đó là mức độ hấp dẫn của người dẫn, niềm tin vào thương hiệu, và ý định đặt hàng trong buổi live. Ngoài ra còn một câu hỏi cụ thể về việc tin người dẫn nói thật, số lần đã mua qua livestream, và thu nhập hàng tháng. Nhiệm vụ của các bạn là gán mỗi biến vào một trong sáu loại, và quan trọng hơn là giải thích vì sao. Gợi ý là hãy bắt đầu từ câu hỏi nghiên cứu, cụ thể là cụm từ với nhóm khách này mà không với nhóm khác. Số lần đã mua qua livestream nên là biến điều tiết hay biến kiểm soát? Câu trả lời phụ thuộc vào việc nhóm nghiên cứu có quan tâm về mặt lý thuyết đến việc nó làm thay đổi độ mạnh của tác động hay không."
+ },
+ {
+  "slide": 26,
+  "text": "Chúng ta đến phần cuối cùng, tám chấm bốn, bốn bước kiểm định. Đầu tiên là phân tích nhân tố khám phá, viết tắt e ép a. Tiếp theo là kiểm định độ tin cậy. Sau đó là phân tích nhân tố khẳng định, viết tắt xê ép a. Và cuối cùng mới là ét e em."
+ },
+ {
+  "slide": 27,
+  "text": "Hình trên màn hình thể hiện bốn bước kiểm định theo đúng thứ tự. Bước một, e ép a kiểm tra các câu hỏi có gom đúng nhóm không. Bước hai kiểm tra độ tin cậy của từng thang đo. Bước ba, xê ép a khẳng định mô hình đo lường có khớp với dữ liệu không. Bước bốn mới ước lượng các đường dẫn trong mô hình cấu trúc. Các bạn ghi nhớ một điều, thứ tự này là bắt buộc. Thang đo hỏng mà vẫn chạy ét e em thì mọi hệ số đường dẫn chỉ là những con số đẹp của một phép đo sai."
+ },
+ {
+  "slide": 28,
+  "text": "Bước đầu tiên là e ép a. Nó trả lời một câu hỏi duy nhất. Mười hai câu hỏi này có tự gom thành đúng ba nhóm như mình nghĩ không, hay chúng gom theo kiểu khác? Trước khi chạy, có hai kiểm định điều kiện, không đạt thì dừng. Thứ nhất là chỉ số ca em âu, phải từ không phẩy sáu trở lên. Ở đây ca em âu bằng khoảng không phẩy chín, rất tốt. Thứ hai là kiểm định Bát-lét, giá trị pi phải nhỏ hơn không phẩy không năm, và kết quả ở đây đạt. Khi đọc kết quả, có bốn ngưỡng. Một, giữ các nhân tố có giá trị riêng lớn hơn một, và ở đây ra đúng ba nhân tố, khớp lý thuyết. Hai, tổng phương sai trích từ năm mươi phần trăm trở lên, ở đây là sáu mươi hai phẩy bốn phần trăm. Ba, hệ số tải của mỗi câu từ không phẩy năm trở lên. Bốn, không tải chéo, tức chênh lệch hệ số tải giữa hai nhân tố phải lớn hơn không phẩy ba. Về phép xoay, dùng va-ri-mắc khi giả định các nhân tố độc lập, dùng prô-mắc khi chấp nhận chúng tương quan."
+ },
+ {
+  "slide": 29,
+  "text": "Đây là ma trận hệ số tải, kết quả thật từ bộ dữ liệu. Cách đọc như sau. Mỗi hàng là một câu hỏi, mỗi cột là một nhân tố. Ô trống nghĩa là hệ số tải dưới không phẩy ba, đã được ẩn đi cho dễ nhìn. Đây cũng là cách trình bày chuẩn trong báo cáo. Các bạn thấy bốn câu nội dung quảng cáo cùng tải lên nhân tố hai. Bốn câu giá trị cảm nhận tải lên nhân tố ba, và bốn câu ý định mua tải lên nhân tố một. Không câu nào tải chéo, không câu nào tải dưới không phẩy năm. Thứ tự nhân tố do phần mềm đánh, không mang ý nghĩa gì. Cột cuối là phần biến thiên của câu hỏi được ba nhân tố giải thích, nên trên không phẩy năm. Ở đây giá trị thấp nhất là không phẩy năm trăm bốn mươi tám, vẫn đạt."
+ },
+ {
+  "slide": 30,
+  "text": "Bước thứ hai là đánh giá độ tin cậy và giá trị hội tụ, qua ba chỉ số. Bảng trên màn hình cho từng thang đo số câu, khoảng hệ số tải, và ba chỉ số, cùng hàng ngưỡng cần đạt ở dưới cùng. Chỉ số thứ nhất là Cronbach an-pha, đo xem bốn câu trong cùng một nhóm có nhất quán với nhau không. Dưới không phẩy bảy là thang đo không đáng tin. Nhưng an-pha trên không phẩy chín lăm cũng là dấu hiệu xấu, vì các câu hỏi gần như trùng nhau. Chỉ số thứ hai là độ tin cậy tổng hợp, viết tắt xê a-rờ. Nó có trọng số theo hệ số tải nên chính xác hơn an-pha, và nên được ưu tiên trong báo cáo hiện nay. Chỉ số thứ ba là phương sai trích trung bình, viết tắt a vê e. A vê e lớn hơn không phẩy năm nghĩa là khái niệm giải thích được hơn một nửa biến thiên của các câu hỏi đo nó. Đây chính là bằng chứng về giá trị hội tụ. Trong bài, cả ba thang đo đều vượt ngưỡng. Nếu không đạt, ta loại câu có hệ số tải thấp nhất rồi chạy lại, nhưng không được để thang đo còn dưới ba câu."
+ },
+ {
+  "slide": 31,
+  "text": "Tiếp theo là giá trị phân biệt, kiểm tra bằng tiêu chuẩn Pho-nen và La-cơ. Câu hỏi của bước này là ba khái niệm có thực sự khác nhau không, hay ta đang đo cùng một thứ ba lần dưới ba cái tên. Cách đọc ma trận như sau. Các số trên đường chéo là căn bậc hai của a vê e của từng khái niệm. Các ô ngoài đường chéo là hệ số tương quan giữa hai khái niệm. Điều kiện đạt là mỗi số trên đường chéo phải lớn hơn mọi số cùng hàng và cùng cột với nó. Ví dụ, hàng giá trị cảm nhận có số trên đường chéo là không phẩy bảy tám ba. Con số này lớn hơn cả hai hệ số tương quan không phẩy bốn tám hai và không phẩy năm ba hai. Kiểm tra cả ba hàng đều đạt. Các bạn lưu ý thêm, nhiều tạp chí hiện nay yêu cầu bổ sung chỉ số hát tê em tê, phải nhỏ hơn không phẩy tám lăm. Lý do là tiêu chuẩn Pho-nen và La-cơ bị cho là thiếu nhạy khi hai khái niệm rất giống nhau."
+ },
+ {
+  "slide": 32,
+  "text": "Bước thứ ba là xê ép a, kiểm tra mô hình đo lường có khớp với dữ liệu không. Khác biệt giữa e ép a và xê ép a chỉ nằm ở một chữ. E ép a là khám phá, ta thả mười hai câu hỏi vào và để phần mềm tự quyết định chúng gom thành mấy nhóm. Xê ép a là khẳng định, ta nói trước câu nào thuộc nhân tố nào, rồi hỏi dữ liệu có chấp nhận cấu trúc đó không. Các chỉ số phù hợp cần báo cáo gồm tỷ số khi bình phương trên bậc tự do, nên dưới ba, lý tưởng dưới hai. Chỉ số xê ép i và tê eo i từ không phẩy chín trở lên, tốt là từ không phẩy chín lăm. Chỉ số a-rờ em ét e a không quá không phẩy không tám, tốt là không quá không phẩy không sáu. Và ét a-rờ em a-rờ không quá không phẩy không tám. Về công cụ, e ép a và an-pha chạy được bằng ét pi ét ét. Còn xê ép a và ét e em thì cần phần mềm chuyên dụng như a-mốt, hoặc các gói trên a-rờ và Python. Riêng phương pháp pi eo ét ét e em thì không dùng các chỉ số phù hợp kiểu này."
+ },
+ {
+  "slide": 33,
+  "text": "Bước cuối cùng là đọc kết quả mô hình cấu trúc. Hình trên màn hình thể hiện các hệ số đường dẫn giữa ba khái niệm. Đường a, từ nội dung quảng cáo tới giá trị cảm nhận, có hệ số khoảng không phẩy bốn tám. Đường b, từ giá trị cảm nhận tới ý định mua, có hệ số khoảng không phẩy bốn tư. Tác động gián tiếp đi qua giá trị cảm nhận chiếm khoảng năm mươi bảy phần trăm tổng tác động. Phần còn lại là tác động trực tiếp của nội dung quảng cáo lên ý định mua. Ba dấu sao bên cạnh hệ số nghĩa là giá trị pi nhỏ hơn không phẩy không không một. Nhưng các bạn nhớ, ý nghĩa thống kê không bằng ý nghĩa thực tiễn. Với mẫu bốn trăm hai mươi, một hệ số rất nhỏ vẫn có thể có ý nghĩa thống kê. Hãy nhìn vào độ lớn của hệ số, chứ không chỉ đếm dấu sao."
+ },
+ {
+  "slide": 34,
+  "text": "Slide này là bảng tra ngưỡng kiểm định, các bạn có thể lưu lại để dùng khi làm bài tập. Mỗi hàng gồm bước kiểm định, chỉ số, ngưỡng cần đạt, và việc cần làm nếu không đạt. Ví dụ, ở bước e ép a, nếu hệ số tải của một câu dưới không phẩy năm, hãy loại câu có hệ số tải thấp nhất rồi chạy lại. Nếu chênh lệch tải chéo không đủ không phẩy ba, đó thường là câu hỏi hai ý hoặc mơ hồ và cần loại. Ở bước xê ép a, nếu các chỉ số phù hợp chưa đạt, các bạn có thể xem chỉ số hiệu chỉnh, nhưng tuyệt đối không sửa bừa theo gợi ý của máy. Dòng cuối cùng rất quan trọng. Ở bước ét e em, nếu một đường dẫn không có ý nghĩa, hãy báo cáo trung thực. Không có ý nghĩa cũng là một kết quả nghiên cứu."
+ },
+ {
+  "slide": 35,
+  "text": "Để khép lại phần kiểm định, chúng ta điểm qua sáu sai lầm thường gặp khi làm ét e em. Một là chạy ét e em mà bỏ qua e ép a và độ tin cậy. Hai là loại câu hỏi cho đến khi các chỉ số đạt ngưỡng. Loại một hai câu có lý do thì được, còn loại tới khi đẹp thì đó là ép dữ liệu. Ba là kết luận nhân quả từ dữ liệu cắt ngang. Khảo sát đo tất cả cùng một lúc, nên các bạn chỉ được viết có liên hệ với, không được viết gây ra. Bốn là nhầm biến trung gian với biến điều tiết. Hãy hỏi lại, nó nằm trên đường truyền, hay nó làm đổi độ dốc của đường truyền? Năm là vẽ mô hình trước, tìm lý thuyết sau. Mỗi mũi tên phải có ít nhất một nghiên cứu trước hoặc một lập luận lý thuyết đứng sau. Sáu là khảo sát mẫu thuận tiện rồi khái quát cho cả thị trường. Bốn trăm hai mươi sinh viên trong một trường không đại diện cho người tiêu dùng Việt Nam. Sai lầm thứ ba và thứ sáu là hai lỗi bị trừ điểm nhiều nhất, nhưng cũng dễ tránh nhất, chỉ cần viết đúng một đoạn về giới hạn nghiên cứu."
+ },
+ {
+  "slide": 36,
+  "text": "Bây giờ chúng ta quay lại tình huống mở đầu. Nhóm sinh viên chạy hồi quy doanh thu theo chi phí quảng cáo cùng tháng, nhận được a-rờ bình phương rất thấp, và đề xuất cắt ngân sách quảng cáo. Với những gì vừa học về mô hình cấu trúc, các bạn hãy thử trả lời lại ba câu hỏi. Các bước ở giữa là gì, dữ liệu nào đo được chúng, và mười hai câu hỏi cần hỏi khách hàng là gì."
+ },
+ {
+  "slide": 37,
+  "text": "Đây là lời giải. Phép tính đúng, dữ liệu đúng, nhưng kết luận sai. A-rờ bình phương bằng không phẩy không ba sáu chỉ trả lời câu hỏi chi phí quảng cáo cùng tháng giải thích được bao nhiêu biến thiên doanh thu. Nó không trả lời câu hỏi quảng cáo có tác động hay không. Bằng chứng là thêm độ trễ một tháng, a-rờ bình phương lên không phẩy hai không chín. Tác động vẫn ở đó, chỉ là nó đến muộn hơn. Về câu một, các bước ở giữa là nhìn thấy quảng cáo, chú ý, hiểu thông điệp, thấy sản phẩm đáng tiền, có ý định mua, tìm hiểu thêm, rồi mới mua. Về câu hai, dữ liệu bán hàng chỉ đo được hai đầu. Các bước giữa phải đo bằng khảo sát, hoặc gián tiếp qua thời gian xem video, tỷ lệ xem hết, tỷ lệ lưu bài. Về câu ba, mười hai câu hỏi hợp lý chính là mô hình ta vừa chạy. Kết quả cho thấy khoảng năm mươi bảy phần trăm tác động đi qua giá trị cảm nhận. Vì vậy khuyến nghị đúng không phải là cắt ngân sách, mà là sửa nội dung quảng cáo để nói được giá trị sản phẩm, vì đòn bẩy nằm ở đường a."
+ },
+ {
+  "slide": 38,
+  "text": ""
+ },
+ {
+  "slide": 39,
+  "text": "Như vậy, trong bài học hôm nay, chúng ta đã thấy vì sao mô hình hộp đen nối thẳng chi phí với doanh thu dễ dẫn tới kết luận sai. Chúng ta đã học cách đi từ mô hình lý thuyết tới bảng hỏi, phân biệt sáu loại biến, và thực hiện bốn bước kiểm định theo đúng thứ tự. Điều quan trọng nhất là thang đo phải đạt trước, rồi mới đến các đường dẫn, và mọi kết luận phải đi kèm giới hạn nghiên cứu. Cảm ơn các bạn đã theo dõi, và hẹn gặp lại các bạn trong video tiếp theo."
+ }
+]

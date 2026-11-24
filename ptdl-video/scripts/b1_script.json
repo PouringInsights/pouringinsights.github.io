@@ -1,0 +1,130 @@
+[
+ {
+  "slide": 1,
+  "text": "Xin chào các bạn và chào mừng các bạn đã đến với bài số một của học phần Phân tích dữ liệu marketing. Trước khi vào bài, mình xin giới thiệu ngắn gọn về học phần này. Đây là học phần giúp các bạn biết cách dùng dữ liệu để trả lời những câu hỏi rất thực tế của marketing. Ví dụ như khách hàng của chúng ta là ai, kênh nào đang thực sự mang lại doanh thu, và ngân sách nên được phân bổ ra sao. Xuyên suốt học phần, chúng ta sẽ đi từ dữ liệu, qua các phương pháp phân tích, cho tới các chỉ số đánh giá hiệu quả và dashboard báo cáo. Mục tiêu cuối cùng là các bạn có thể đưa ra khuyến nghị cho doanh nghiệp dựa trên bằng chứng, chứ không chỉ dựa trên cảm tính. Trong bài học hôm nay, chúng ta sẽ cùng nhau tìm hiểu tổng quan về phân tích dữ liệu marketing. Đây là bài nền tảng, giúp các bạn có một bức tranh chung trước khi đi sâu vào từng kỹ thuật ở các bài sau."
+ },
+ {
+  "slide": 2,
+  "text": "Đầu tiên, chúng ta cùng nhìn qua chuẩn đầu ra và mục tiêu của bài học. Bài học này gắn với chuẩn đầu ra eo một của học phần. Chuẩn đầu ra này yêu cầu các bạn ứng dụng kiến thức về thuật toán và thống kê vào phân tích dữ liệu. Song song với đó là kiến thức kinh tế và kinh doanh, để đưa ra khuyến nghị chiến lược về sản phẩm, khách hàng và nghiên cứu thị trường. Mức độ yêu cầu ở đây là mức ứng dụng, tức là không chỉ biết, mà phải làm được. Cụ thể với bài hôm nay, sau khi học xong, các bạn cần đạt được bốn điều. Thứ nhất, giải thích được khái niệm, phạm vi và vai trò của phân tích dữ liệu marketing. Thứ hai, phân biệt được nó với những lĩnh vực gần gũi, như nghiên cứu thị trường, phân tích số, trí tuệ kinh doanh hay khoa học dữ liệu. Thứ ba, nhận diện được các loại dữ liệu, các nguồn dữ liệu và hệ sinh thái công cụ. Và thứ tư, các bạn có thể phản biện được những quan niệm sai lệch phổ biến về phân tích dữ liệu marketing."
+ },
+ {
+  "slide": 3,
+  "text": "Để đạt được những mục tiêu đó, bài học hôm nay gồm bốn phần chính. Phần một chấm một, chúng ta sẽ khái quát về phân tích dữ liệu marketing. Phần một chấm hai, chúng ta tìm hiểu về dữ liệu marketing, bao gồm nguồn, loại hình và hệ sinh thái công cụ. Phần một chấm ba sẽ bàn về những hiểu lầm phổ biến khi làm phân tích dữ liệu marketing. Và cuối cùng, phần một chấm bốn, chúng ta sẽ điểm qua những xu hướng đang định hình lĩnh vực này."
+ },
+ {
+  "slide": 4,
+  "text": "Trước khi vào nội dung, chúng ta cùng bắt đầu với một tình huống thực tế, đó là câu chuyện của i-bay. Vào khoảng năm hai nghìn không trăm mười hai, i-bay chi hàng chục triệu đô la Mỹ mỗi năm cho quảng cáo tìm kiếm trả tiền. Báo cáo từ nền tảng quảng cáo cho thấy, các từ khóa có chứa tên thương hiệu i-bay mang về rất nhiều lượt truy cập và đơn hàng. Không chỉ vậy, chi phí trên mỗi chuyển đổi của nhóm từ khóa này còn là thấp nhất. Nhìn vào báo cáo như vậy, hầu hết chúng ta sẽ kết luận rằng đây là một kênh cực kỳ hiệu quả. Thế nhưng, bộ phận phân tích của i-bay lại đặt ra một câu hỏi khác. Nếu ngừng hẳn quảng cáo này, thì doanh thu có thực sự giảm hay không? Để trả lời, họ tắt quảng cáo tìm kiếm thương hiệu ở một số bang, và giữ nguyên ở các bang còn lại để làm nhóm đối chứng. Sau đó, họ so sánh kết quả giữa hai nhóm. Các bạn hãy dừng lại một chút và suy nghĩ về ba câu hỏi trên màn hình. Một là, doanh thu tại các bang bị tắt quảng cáo sẽ thay đổi thế nào. Hai là, vì sao báo cáo của nền tảng quảng cáo lại cho thấy kênh này rất hiệu quả. Và ba là, doanh nghiệp cần dữ liệu gì, cách làm nào, để trả lời đúng câu hỏi này. Chúng ta sẽ quay lại tình huống này ở cuối bài học."
+ },
+ {
+  "slide": 5,
+  "text": "Bây giờ, chúng ta cùng khởi động với một câu hỏi rất cơ bản. Theo các bạn, phân tích dữ liệu marketing là gì? Các bạn hãy thử tự định nghĩa bằng lời của mình. Có thể bạn sẽ nghĩ đến việc đọc báo cáo quảng cáo, có thể là làm khảo sát khách hàng, hoặc là xây dựng dashboard. Tất cả những ý đó đều đúng một phần. Chúng ta sẽ cùng nhau ghép các mảnh đó lại thành một khái niệm đầy đủ trong phần tiếp theo."
+ },
+ {
+  "slide": 6,
+  "text": "Và đó cũng chính là nội dung của phần một chấm một, khái quát về phân tích dữ liệu marketing. Trong phần này, chúng ta sẽ xem marketing đã chuyển dịch như thế nào, từ dựa vào kinh nghiệm sang dựa vào dữ liệu. Sau đó, chúng ta sẽ đi đến khái niệm và vai trò của phân tích dữ liệu marketing trong doanh nghiệp."
+ },
+ {
+  "slide": 7,
+  "text": "Chúng ta bắt đầu từ marketing truyền thống. Trước đây, khi chưa có nhiều dữ liệu số, các quyết định marketing phần lớn dựa trên kinh nghiệm và trực giác của người làm marketing. Doanh nghiệp chạy quảng cáo trên truyền hình, đặt biển quảng cáo ngoài trời, in tờ rơi hay đăng báo. Vậy thì, các bạn hãy thảo luận hai câu hỏi trên màn hình. Thứ nhất, với những hoạt động như vậy, doanh nghiệp có thể đánh giá hiệu quả bằng cách nào? Thường thì họ sẽ nhìn vào doanh số trước và sau chiến dịch, làm khảo sát mức độ nhận biết thương hiệu, hoặc ước tính số người đã nhìn thấy quảng cáo. Thứ hai, điểm hạn chế chung của các cách đo lường này là gì? Các bạn để ý là hầu hết chúng đều gián tiếp, chậm, và rất khó tách bạch được đâu là tác động của riêng hoạt động marketing. Doanh số tăng có thể do quảng cáo, nhưng cũng có thể do mùa vụ, do đối thủ hay do giá cả."
+ },
+ {
+  "slide": 8,
+  "text": "Hạn chế đó được tóm gọn rất hay trong một câu nói nổi tiếng của John Wanamaker, một doanh nhân bán lẻ người Mỹ. Ông nói rằng, một nửa số tiền tôi chi cho quảng cáo là lãng phí, vấn đề là tôi không biết đó là nửa nào. Câu nói này phản ánh đúng nỗi băn khoăn của rất nhiều nhà quản lý trong thời kỳ marketing truyền thống. Tuy nhiên, khi chuyển sang marketing dựa trên dữ liệu, câu chuyện đã khác đi. Mỗi lượt hiển thị, mỗi cú nhấp chuột, mỗi đơn hàng đều có thể được ghi nhận lại. Nhờ vậy, câu hỏi nửa nào lãng phí không còn là một câu hỏi bỏ ngỏ, mà trở thành một bài toán có thể đo lường được. Tất nhiên, đo lường được không có nghĩa là đo lường đúng, và đây là điều chúng ta sẽ còn quay lại nhiều lần trong bài."
+ },
+ {
+  "slide": 9,
+  "text": "Các bạn có thể thấy trên màn hình sự khác biệt giữa hai cách làm marketing. Một bên là marketing dựa trên kinh nghiệm, quyết định chủ yếu đến từ cảm nhận và các báo cáo tổng hợp chậm. Bên còn lại là marketing dựa trên dữ liệu, nơi mỗi quyết định đều được kiểm chứng bằng số liệu, và có thể điều chỉnh liên tục. Sự chuyển dịch này chính là bối cảnh ra đời của phân tích dữ liệu marketing."
+ },
+ {
+  "slide": 10,
+  "text": "Vậy thì, phân tích dữ liệu marketing là gì? Chúng ta có thể hiểu đây là quá trình thu thập, xử lý, phân tích và diễn giải dữ liệu marketing. Các bạn để ý là quá trình này gồm bốn bước, và bước diễn giải ở cuối cùng là rất quan trọng. Có số liệu mà không diễn giải được ý nghĩa thì cũng chưa giúp được gì cho doanh nghiệp. Quá trình này hướng tới bốn mục đích chính. Thứ nhất là đo lường hiệu quả của các hoạt động đã triển khai, ví dụ một chiến dịch quảng cáo mang về bao nhiêu khách hàng mới. Thứ hai là hiểu rõ khách hàng và thị trường, chẳng hạn khách hàng của chúng ta là ai, họ mua gì và mua khi nào. Thứ ba là dự báo xu hướng, ví dụ dự báo nhu cầu cho mùa cao điểm sắp tới. Và thứ tư, cũng là mục đích bao trùm, đó là hỗ trợ ra quyết định dựa trên bằng chứng, thay vì dựa trên cảm tính."
+ },
+ {
+  "slide": 11,
+  "text": "Tiếp theo, chúng ta cùng xem phân tích dữ liệu marketing đóng vai trò gì với từng bộ phận trong doanh nghiệp. Với ban lãnh đạo, phân tích dữ liệu giúp chứng minh và bảo vệ ngân sách marketing. Công cụ để làm điều đó là các chỉ số như a-rờ âu em ai, tức là tỷ suất lợi nhuận trên chi phí marketing. Tiếp đến là xê a xê, tức là chi phí để có được một khách hàng, và xê eo vê, tức là giá trị vòng đời khách hàng. Nhờ những chỉ số này, marketing không còn bị nhìn như một khoản chi, mà trở thành một khoản đầu tư có thể đánh giá được. Với bộ phận marketing, phân tích dữ liệu giúp phân khúc khách hàng, chọn thông điệp và kênh phù hợp, và tối ưu ngân sách chiến dịch. Ngoài ra, các phương án thiết kế, ví dụ hai mẫu trang đích khác nhau, có thể được kiểm định bằng thử nghiệm a bê. Còn với các bộ phận khác, vai trò của phân tích dữ liệu marketing cũng rất rõ. Bộ phận sản xuất và chuỗi cung ứng cần dự báo nhu cầu. Bộ phận tài chính cần đánh giá dòng tiền tương lai từ khách hàng. Còn bộ phận bán hàng cần biết nên ưu tiên nguồn lực cho nhóm khách hàng nào."
+ },
+ {
+  "slide": 12,
+  "text": "Chúng ta chuyển sang phần một chấm hai, dữ liệu marketing, gồm nguồn, loại hình và hệ sinh thái công cụ. Dữ liệu là nguyên liệu đầu vào của mọi phân tích. Vì vậy, trước khi học bất kỳ kỹ thuật nào, chúng ta cần biết mình đang có những loại dữ liệu gì, đến từ đâu, và dùng công cụ nào để khai thác."
+ },
+ {
+  "slide": 13,
+  "text": "Các bạn hãy thử trả lời câu hỏi trên màn hình. Có những loại dữ liệu nào có thể sử dụng trong phân tích dữ liệu marketing? Hãy nghĩ đến một doanh nghiệp quen thuộc, ví dụ một chuỗi cà phê hay một sàn thương mại điện tử. Họ có dữ liệu đơn hàng, dữ liệu thành viên, dữ liệu truy cập website, bình luận trên mạng xã hội, kết quả khảo sát, và còn nhiều nữa. Như vậy, dữ liệu marketing rất đa dạng, và chúng ta cần có cách phân loại để quản lý và sử dụng cho hiệu quả."
+ },
+ {
+  "slide": 14,
+  "text": "Cách phân loại đầu tiên là theo chủ sở hữu, hay nói cách khác là dữ liệu đến từ đâu. Nhóm thứ nhất là dữ liệu do chính khách hàng chủ động cung cấp, ví dụ khi họ điền phiếu khảo sát hay khai báo sở thích. Loại này phụ thuộc vào mức độ sẵn sàng chia sẻ của khách hàng, nên thường có khối lượng nhỏ và khó mở rộng nhanh. Nhóm thứ hai là dữ liệu do doanh nghiệp tự thu thập qua các nền tảng của mình, như website, ứng dụng hay hệ thống bán hàng. Đây là loại dữ liệu có độ tin cậy cao nhất và bền vững nhất, vì doanh nghiệp nắm quyền kiểm soát. Nhóm thứ ba là dữ liệu doanh nghiệp có được từ các đối tác trực tiếp, dựa trên thỏa thuận hợp tác giữa hai bên. Ví dụ, một hãng hàng không chia sẻ dữ liệu với một chuỗi khách sạn liên kết. Nhóm cuối cùng là dữ liệu do bên trung gian tổng hợp lại rồi bán lại. Loại này có độ chính xác khó kiểm chứng, và đặc biệt nhạy cảm với các vấn đề pháp lý về dữ liệu cá nhân, điều mà chúng ta sẽ bàn ở cuối bài."
+ },
+ {
+  "slide": 15,
+  "text": "Ngoài cách phân loại theo chủ sở hữu, dữ liệu marketing còn có thể được phân loại theo nhiều tiêu chí khác. Theo hình thức đo lường, chúng ta có dữ liệu định lượng, tức là các con số như doanh thu hay số lượt truy cập. Bên cạnh đó là dữ liệu định tính, như ý kiến, cảm nhận hay bình luận của khách hàng. Theo mức độ tổ chức, chúng ta có dữ liệu có cấu trúc, như bảng tính hay cơ sở dữ liệu. Tiếp theo là dữ liệu bán cấu trúc, như các tệp nhật ký hệ thống. Ngoài ra còn có dữ liệu phi cấu trúc, như hình ảnh, video hay văn bản tự do. Theo nội dung phản ánh, dữ liệu được chia thành bốn nhóm nội dung chính, như các bạn thấy trên màn hình. Và cuối cùng là phân loại theo bản chất của dữ liệu. Các bạn để ý là một tập dữ liệu có thể thuộc nhiều nhóm cùng lúc. Ví dụ, bình luận của khách hàng trên mạng xã hội vừa là dữ liệu định tính, vừa là dữ liệu phi cấu trúc."
+ },
+ {
+  "slide": 16,
+  "text": "Tiếp theo, bảng trên màn hình tổng hợp các nguồn dữ liệu marketing điển hình. Cách đọc bảng như sau, mỗi dòng là một nhóm nguồn dữ liệu, kèm theo các chỉ số điển hình và công cụ thường dùng để khai thác. Ví dụ, với dữ liệu hành vi trên web và ứng dụng, chúng ta có các chỉ số như số phiên truy cập, tỷ lệ thoát và tỷ lệ chuyển đổi. Công cụ phổ biến là Google Analytics bốn. Với nền tảng quảng cáo, chúng ta quan tâm đến chi phí, lượt hiển thị, tỷ lệ nhấp, chi phí mỗi lượt nhấp, và doanh thu trên chi phí quảng cáo. Bảng cũng liệt kê các nhóm khác như dữ liệu quản trị quan hệ khách hàng, dữ liệu giao dịch và tài chính. Ngoài ra còn có dữ liệu khảo sát và nghiên cứu định tính, và dữ liệu bên ngoài như thị phần hay chỉ số ngành. Điều mình muốn các bạn chú ý nhất là dòng ghi chú ở cuối bảng. Nhóm dữ liệu tài chính, như doanh thu, giá vốn và biên lợi nhuận, thường bị bỏ qua nhiều nhất. Nhưng chính nhóm dữ liệu này quyết định một phân tích có kết luận được về hiệu quả kinh tế, hay chỉ dừng lại ở hiệu quả truyền thông. Một chiến dịch có rất nhiều lượt nhấp, nhưng nếu không mang lại lợi nhuận, thì chưa thể gọi là hiệu quả."
+ },
+ {
+  "slide": 17,
+  "text": "Để khai thác các nguồn dữ liệu trên, chúng ta cần một hệ sinh thái công cụ hỗ trợ. Nhóm công cụ đầu tiên phục vụ cho các phân tích thống kê, bao gồm thống kê mô tả, kiểm định giả thuyết và hồi quy cơ bản. Đây là những kỹ thuật nền tảng mà các bạn sẽ sử dụng rất nhiều trong học phần này. Kèm theo slide là đường dẫn tới một video hướng dẫn. Các bạn hãy tự xem video đó sau buổi học, để làm quen với cách thao tác trên công cụ."
+ },
+ {
+  "slide": 18,
+  "text": "Nhóm công cụ thứ hai dùng để phân tích hành vi người dùng trên website và các ứng dụng. Với nhóm công cụ này, chúng ta có thể theo dõi người dùng đến từ đâu, họ xem những trang nào, và họ có hoàn thành mua hàng hay không. Từ đó, chúng ta có thể xây dựng các dashboard theo dõi hiệu quả của từng chiến dịch, từng kênh. Tương tự như slide trước, các bạn có đường dẫn tới một chuỗi video hướng dẫn. Mình khuyến khích các bạn xem và thực hành trước, vì chúng ta sẽ dùng lại những kỹ năng này ở các bài sau."
+ },
+ {
+  "slide": 19,
+  "text": "Chúng ta chuyển sang phần một chấm ba, những hiểu lầm phổ biến về phân tích dữ liệu marketing. Phần này rất quan trọng, vì nhiều sai lầm trong thực tế không đến từ việc thiếu dữ liệu, mà đến từ việc hiểu sai cách dùng dữ liệu."
+ },
+ {
+  "slide": 20,
+  "text": "Những hiểu lầm này đến từ cả hai phía, người làm marketing và người làm phân tích. Từ phía người làm marketing, có năm hiểu lầm thường gặp. Thứ nhất, cho rằng đo lường chỉ đơn giản là đếm lượt nhấp hay lượng truy cập. Thứ hai, bỏ qua dữ liệu tài chính, trong khi các chỉ số quan trọng như xê a xê, xê eo vê hay a-rờ âu em ai đều cần đến nó. Thứ ba, nhầm lẫn tương quan với nhân quả. Hai thứ cùng tăng không có nghĩa là cái này gây ra cái kia, và để kết luận nhân quả, chúng ta cần thử nghiệm a bê hay phân tích theo vùng. Thứ tư, coi lần chạm cuối cùng trước khi mua là toàn bộ đóng góp của một kênh. Thực tế, khách hàng đi qua cả một phễu marketing, nên cần theo dõi đóng góp ở từng giai đoạn. Thứ năm, cho rằng cứ có dữ liệu lớn là sẽ ra quyết định đúng. Thực ra, nguyên tắc nên theo là ít nhưng tinh. Còn từ phía người làm phân tích, có hai hiểu lầm chính. Một là nghĩ rằng chỉ cần mô hình đủ tốt, không cần hiểu bối cảnh marketing. Trong khi đó, marketing có những đặc thù như độ trễ của quảng cáo, tính mùa vụ, hay việc các sản phẩm ăn mòn doanh số của nhau. Hai là coi dữ liệu marketing giống như mọi dữ liệu kỹ thuật khác. Thực tế, dữ liệu marketing thường là tự khai báo, mẫu bị lệch vì chỉ đo được người đồng ý theo dõi. Hơn nữa, cùng một chỉ số lại có thể được định nghĩa khác nhau giữa các nền tảng."
+ },
+ {
+  "slide": 21,
+  "text": "Vậy làm sao để hai góc nhìn này gặp nhau? Bảng trên màn hình so sánh góc nhìn marketing thuần túy, góc nhìn phân tích dữ liệu, và điểm giao thoa giữa hai bên, qua bốn vấn đề. Ví dụ, về thước đo thành công, người làm marketing thường nhìn vào độ tiếp cận, tương tác và thương hiệu. Người làm phân tích lại quan tâm đến độ chính xác của mô hình và chất lượng dữ liệu. Điểm giao thoa là các chỉ số phải gắn với quyết định, và quy đổi được ra tác động tài chính. Một ví dụ khác là kết luận nhân quả. Marketing hay suy luận từ kinh nghiệm, phân tích thì kiểm định trên dữ liệu sẵn có, còn điểm giao thoa là thiết kế thử nghiệm có đối chứng. Tương tự, với dữ liệu tài chính, điểm giao thoa là coi nó là điều kiện bắt buộc để kết luận về hiệu quả kinh tế. Còn với dữ liệu định tính, cách kết hợp hợp lý là dùng định tính để tạo giả thuyết, và dùng định lượng để kiểm định."
+ },
+ {
+  "slide": 22,
+  "text": "Để hiện thực hóa điểm giao thoa đó, chúng ta có ba nguyên tắc. Nguyên tắc thứ nhất, bắt đầu từ câu hỏi kinh doanh, thay vì bắt đầu từ tập dữ liệu hay từ công cụ. Câu hỏi này nên được viết thành văn bản, và được cả bên marketing lẫn bên phân tích xác nhận. Nguyên tắc thứ hai, thống nhất định nghĩa chỉ số. Doanh nghiệp nên có một từ điển chỉ số chung, ghi rõ công thức, nguồn dữ liệu, phạm vi thời gian và cách xử lý ngoại lệ. Nguyên tắc thứ ba, quy đổi khuyến nghị về tác động tài chính. Đây là ngôn ngữ chung duy nhất mà marketing, phân tích và ban lãnh đạo đều hiểu như nhau. Ba nguyên tắc này cũng khớp với quy trình phân tích dữ liệu crít-pi đê em mà các bạn thấy trên màn hình. Quy trình này bắt đầu từ việc hiểu bài toán kinh doanh, rồi mới đến hiểu dữ liệu, chuẩn bị dữ liệu, xây dựng mô hình, đánh giá và triển khai."
+ },
+ {
+  "slide": 23,
+  "text": "Chúng ta đến với phần cuối cùng, phần một chấm bốn, những xu hướng đang định hình phân tích dữ liệu marketing. Lĩnh vực này thay đổi rất nhanh, do công nghệ, hành vi người dùng và cả khung pháp lý đều đang dịch chuyển. Mình sẽ điểm qua những xu hướng nổi bật nhất."
+ },
+ {
+  "slide": 24,
+  "text": "Xu hướng thứ nhất là sự chuyển dịch trong đo lường, từ phía trình duyệt sang phía máy chủ. Các bạn có thể đã nghe về xu hướng không cookie. Ở đây cần nói cho chính xác, cookie của bên thứ ba hiện vẫn chưa bị xóa bỏ trên trình duyệt Chrome. Tuy nhiên, tín hiệu đo lường vẫn đang suy giảm rõ rệt, vì nhiều lý do. Các trình duyệt khác đã chặn cookie bên thứ ba, các cơ chế xin phép người dùng ngày càng chặt chẽ, trình chặn quảng cáo phổ biến hơn. Thêm vào đó, các quy định pháp lý yêu cầu phải có sự đồng ý của người dùng. Kết quả là dữ liệu thu được từ trình duyệt ngày càng thiếu hụt, và doanh nghiệp phải tìm cách đo lường khác."
+ },
+ {
+  "slide": 25,
+  "text": "Để hiểu rõ xu hướng này, chúng ta cần nắm hai khái niệm cơ bản. Thứ nhất là cookie, đó là một tệp nhỏ mà trình duyệt lưu lại để ghi nhớ người dùng, ví dụ ghi nhớ giỏ hàng hay trạng thái đăng nhập. Thứ hai là pixel, đó là một đoạn mã gắn trên website, có thể là mã javascript hoặc một hình ảnh ẩn rất nhỏ. Pixel dùng để ghi nhận hành vi của người dùng, và truyền dữ liệu sự kiện về nền tảng quảng cáo. Các bạn để ý điểm mấu chốt ở đây, đó là pixel truyền thống vẫn dựa vào cookie để nhận diện người dùng. Vì vậy, khi cookie bị hạn chế, pixel truyền thống cũng bị ảnh hưởng theo."
+ },
+ {
+  "slide": 26,
+  "text": "Slide này so sánh hạn chế của cách đo lường dựa trên cookie với ưu điểm của cách đo lường mới. Với cookie, dữ liệu có thể bị chặn, bị xóa thủ công, hoặc tự động bị xóa khi người dùng dọn lịch sử duyệt web hay dùng chế độ ẩn danh. Cookie cũng mất tính liên tục khi người dùng chuyển sang thiết bị khác, và chỉ hoạt động trên trình duyệt web. Ngược lại, cách đo lường mới, gửi dữ liệu từ phía máy chủ, khó bị xóa hay tắt hơn do tính chất ẩn của nó. Dữ liệu được gửi về máy chủ theo thời gian thực, và có thể nhúng vào cả website lẫn email marketing. Đây là lý do nhiều doanh nghiệp đang chuyển dần sang đo lường phía máy chủ, kết hợp với dữ liệu tự thu thập của chính mình."
+ },
+ {
+  "slide": 27,
+  "text": "Bây giờ, chúng ta cùng thảo luận một tình huống giả định. Nếu ngày mai mọi trình duyệt đều chặn cookie bên thứ ba, thì doanh nghiệp sẽ đo lường bằng cách nào? Các bạn hãy suy nghĩ theo ba gợi ý. Thứ nhất, dữ liệu nào doanh nghiệp vẫn còn trong tay, ví dụ dữ liệu đơn hàng hay dữ liệu thành viên. Thứ hai, làm sao để thuyết phục khách hàng chủ động để lại thông tin, có thể bằng ưu đãi, chương trình thành viên hay nội dung có giá trị. Và thứ ba, chỉ số nào sẽ mất độ tin cậy trước tiên. Các bạn hãy ghi lại câu trả lời của mình, vì đây là vấn đề mà rất nhiều doanh nghiệp đang thực sự phải đối mặt."
+ },
+ {
+  "slide": 28,
+  "text": "Bên cạnh đó, còn một số xu hướng khác đáng chú ý. Thứ nhất là sự trở lại của mô hình marketing hỗn hợp, hay em em em. Mô hình này dùng dữ liệu tổng hợp theo tuần, không cần định danh từng cá nhân, nên ít rủi ro pháp lý. Hiện đã có các công cụ nguồn mở như Robyn của Meta và Meridian của Google. Thứ hai là đo lường mức tăng thêm, tức là đo xem hoạt động marketing thực sự tạo thêm được bao nhiêu kết quả. Cách làm phổ biến là thử nghiệm theo vùng địa lý, để xác lập quan hệ nhân quả. Thứ ba là nền tảng dữ liệu khách hàng, gọi tắt là xê đê pi, và phòng dữ liệu sạch. Nền tảng dữ liệu khách hàng giúp hợp nhất hồ sơ của một khách hàng từ nhiều nguồn khác nhau. Còn phòng dữ liệu sạch cho phép nhiều bên, chủ yếu là các đối tác, đối chiếu và cùng phân tích dữ liệu, mà không làm lộ thông tin định danh thô của người dùng."
+ },
+ {
+  "slide": 29,
+  "text": "Xu hướng tiếp theo là trí tuệ nhân tạo tạo sinh trong phân tích. Về cơ hội, ây ai tạo sinh có thể giúp sinh mã, tóm tắt phản hồi khách hàng, phân tích cảm xúc và soạn báo cáo nhanh hơn rất nhiều. Nhưng nó cũng có giới hạn, như hiện tượng ảo giác thông tin, mô hình hộp đen khó giải thích, và rủi ro lộ dữ liệu cá nhân. Vì vậy, các bạn luôn cần kiểm tra lại kết quả, chứ không nên tin tuyệt đối. Cuối cùng là khung pháp lý tại Việt Nam, điều mà người làm phân tích dữ liệu bắt buộc phải nắm. Luật Bảo vệ dữ liệu cá nhân số chín mươi mốt, năm hai nghìn không trăm hai mươi lăm, có hiệu lực từ ngày một tháng một năm hai nghìn không trăm hai mươi sáu. Đi kèm là Nghị định ba trăm năm mươi sáu, năm hai nghìn không trăm hai mươi lăm, thay thế cho Nghị định mười ba, năm hai nghìn không trăm hai mươi ba. Có hai điểm các bạn cần nhớ. Một là, sự đồng ý của người dùng phải rõ ràng, chủ động và theo mục đích cụ thể, im lặng không được coi là đồng ý. Hai là, việc mua bán dữ liệu cá nhân bị cấm, trừ những trường hợp luật cho phép."
+ },
+ {
+  "slide": 30,
+  "text": "Và bây giờ, chúng ta cùng quay trở lại với tình huống của i-bay ở đầu bài. Sau khi đã đi qua các nội dung về đo lường, tương quan và nhân quả, cũng như những hiểu lầm phổ biến, các bạn hãy thử trả lời lại ba câu hỏi thảo luận. Doanh thu tại các bang bị tắt quảng cáo sẽ thay đổi thế nào? Vì sao báo cáo của nền tảng lại cho thấy kênh này rất hiệu quả? Và doanh nghiệp cần dữ liệu gì, cách làm nào để trả lời đúng câu hỏi? Các bạn hãy so sánh câu trả lời bây giờ với suy nghĩ ban đầu của mình, xem đã có gì thay đổi."
+ },
+ {
+  "slide": 31,
+  "text": "Chúng ta cùng xem kết quả thực tế. Khi i-bay tắt quảng cáo tìm kiếm thương hiệu, lưu lượng truy cập gần như không thay đổi. Khoảng chín mươi chín phẩy năm phần trăm lượng truy cập mất đi từ quảng cáo đã được thay thế bằng kết quả tìm kiếm tự nhiên. Nói cách khác, những người tìm từ khóa i-bay vốn đã có ý định vào i-bay, dù có quảng cáo hay không. Vậy vì sao báo cáo của nền tảng vẫn đẹp? Lý do là quảng cáo được hiển thị đúng cho những người đã sẵn có ý định mua. Đồng thời, cách quy kết theo lần chạm cuối đã gán toàn bộ công trạng cho quảng cáo. Đây chính là hiểu lầm số bốn mà chúng ta đã bàn, coi lần chạm cuối là đóng góp của kênh. Còn về câu hỏi thứ ba, bài học ở đây là doanh nghiệp cần thiết kế thử nghiệm có đối chứng, như cách i-bay so sánh giữa các bang. Kết hợp với dữ liệu doanh thu thực tế, đó mới là cách đo lường mức tăng thêm, và trả lời được câu hỏi nhân quả."
+ },
+ {
+  "slide": 32,
+  "text": "Như vậy, chúng ta đã cùng nhau đi qua tổng quan về phân tích dữ liệu marketing. Chúng ta đã tìm hiểu khái niệm và vai trò của phân tích dữ liệu marketing, các loại dữ liệu, nguồn dữ liệu và hệ sinh thái công cụ. Chúng ta cũng đã nhận diện những hiểu lầm phổ biến từ cả hai phía, và những xu hướng đang định hình lĩnh vực này. Bài học quan trọng nhất từ tình huống của i-bay là, đo lường được chưa chắc đã là đo lường đúng. Hãy luôn bắt đầu từ câu hỏi kinh doanh, và quy đổi kết quả phân tích về tác động tài chính. Cảm ơn các bạn đã theo dõi, và hẹn gặp lại các bạn trong video tiếp theo."
+ }
+]

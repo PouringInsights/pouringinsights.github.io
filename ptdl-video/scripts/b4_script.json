@@ -1,0 +1,170 @@
+[
+ {
+  "slide": 1,
+  "text": "Xin chào các bạn và chào mừng các bạn đã đến với bài số bốn của học phần Phân tích dữ liệu marketing. Trong bài học hôm nay, chúng ta sẽ cùng nhau tìm hiểu cách phân tích khách hàng và sản phẩm bằng phân tích kết hợp. Cụ thể, chúng ta sẽ xem khách hàng nhận thức như thế nào về thuộc tính sản phẩm, và từ đó doanh nghiệp nên định giá ra sao."
+ },
+ {
+  "slide": 2,
+  "text": "Trước tiên, mình cùng xem qua chuẩn đầu ra và mục tiêu của bài. Bài học tiếp tục gắn với chuẩn đầu ra eo một của học phần. Đó là vận dụng thuật toán và thống kê, kết hợp với kiến thức kinh doanh, để đưa ra khuyến nghị về sản phẩm, khách hàng và thị trường. Sau bài học, các bạn cần giải thích được khái niệm và ý nghĩa của phân tích nhận thức khách hàng. Các bạn cần áp dụng được phương pháp phân tích đa chiều, viết tắt là em đê ét, để xây dựng và diễn giải bản đồ nhận thức thương hiệu. Các bạn cần vận dụng được phân tích kết hợp để đo giá trị cảm nhận và mức sẵn sàng chi trả. Và cuối cùng, các bạn cần hiểu và áp dụng được chiến lược định giá dựa trên giá trị cảm nhận."
+ },
+ {
+  "slide": 3,
+  "text": "Bài học hôm nay gồm ba phần. Phần thứ nhất là phân tích nhận thức khách hàng về thuộc tính sản phẩm, với phương pháp em đê ét, bản đồ nhận thức và hồi quy đo lường thuộc tính. Phần thứ hai là phân tích kết hợp. Phần này gồm giá trị bộ phận của từng thuộc tính, thiết kế phương án, tầm quan trọng tương đối, mức sẵn sàng chi trả và mô phỏng thị phần. Phần thứ ba là định giá dựa trên giá trị cảm nhận, với các nội dung về sàn chi phí, trần sẵn sàng chi trả, phương pháp Van Uét-xtơn-đóp và định giá phân biệt."
+ },
+ {
+  "slide": 4,
+  "text": "Chúng ta mở đầu bằng một case study kinh điển, đó là Niu Cốc năm một nghìn chín trăm tám mươi lăm, khi dữ liệu đúng lại dẫn tới quyết định sai. Đầu thập niên tám mươi, Cô-ca Cô-la mất dần thị phần vào tay Pép-si. Công ty đã tổ chức một chương trình nghiên cứu khổng lồ, với khoảng hai trăm nghìn lượt nếm thử mù. Trong các lượt thử này, người tham gia không biết mình đang uống nhãn nào. Kết quả rất rõ ràng và nhất quán. Công thức mới, ngọt hơn, được ưa thích hơn cả Cô-ca Cô-la nguyên bản lẫn Pép-si. Dựa trên bằng chứng đó, vào tháng tư năm một nghìn chín trăm tám mươi lăm, công ty thay hẳn công thức cũ bằng Niu Cốc. Thế nhưng phản ứng của thị trường lại hoàn toàn ngược lại. Hàng trăm nghìn cuộc gọi và thư phản đối, các nhóm tẩy chay được lập ra. Chỉ bảy mươi chín ngày sau, công ty buộc phải đưa công thức cũ trở lại, với tên gọi Cô-ca Cô-la Cla-xích. Các bạn hãy suy nghĩ ba câu hỏi. Dữ liệu nếm thử mù không hề sai, vậy điều gì đã bị đo thiếu? Khách hàng mua một lon Cô-ca là mua cái gì, ngoài vị ngọt? Và nếu là nhà phân tích của công ty năm một nghìn chín trăm tám mươi tư, các bạn sẽ đề nghị đo thêm những gì?"
+ },
+ {
+  "slide": 5,
+  "text": "Trước khi vào nội dung, chúng ta cùng thảo luận một câu hỏi mở đầu. Vì sao hai sản phẩm gần như giống hệt nhau về thông số lại được khách hàng định giá rất khác nhau? Các bạn hãy tự hỏi, khách hàng đang trả tiền cho thuộc tính, hay cho nhận thức của họ về thuộc tính đó? Các bạn cũng thử kể ra một sản phẩm mà mình sẵn sàng trả thêm tiền, dù không giải thích được bằng thông số kỹ thuật. Ví dụ, một chai nước của thương hiệu nổi tiếng so với một chai nước không tên tuổi. Và câu hỏi cuối cùng, doanh nghiệp đo giá trị cảm nhận bằng cách nào? Đây chính là câu hỏi mà toàn bộ bài học hôm nay sẽ trả lời."
+ },
+ {
+  "slide": 6,
+  "text": "Chúng ta đi vào phần thứ nhất, phân tích nhận thức khách hàng về thuộc tính sản phẩm."
+ },
+ {
+  "slide": 7,
+  "text": "Phân tích nhận thức khách hàng là quá trình thu thập, xử lý và diễn giải. Cụ thể, chúng ta tìm hiểu cách người tiêu dùng cảm nhận, đánh giá và ra quyết định mua đối với một sản phẩm hoặc thương hiệu. Có hai điểm làm nên toàn bộ bài học này. Điểm thứ nhất, nhận thức là tổng hoà của cảm xúc, trải nghiệm và kỳ vọng. Nó có thể lệch khỏi thuộc tính khách quan của sản phẩm, và chính cái lệch đó mới quyết định hành vi mua. Điểm thứ hai, giá không chỉ là số tiền khách hàng trả, mà còn là một tín hiệu về giá trị. Giá quá thấp có thể làm giảm giá trị cảm nhận, chứ không làm tăng lượng mua. Từ đó, chúng ta đi tới chiến lược định giá dựa trên giá trị cảm nhận. Case Niu Cốc là một ví dụ điển hình. Dữ liệu về vị giác là đúng, nhưng ý nghĩa của thương hiệu trong tâm trí khách hàng đã không được đưa vào mô hình."
+ },
+ {
+  "slide": 8,
+  "text": "Vậy có những phương pháp nào để phân tích nhận thức khách hàng? Bảng trên màn hình tổng hợp bốn phương pháp chính. Thứ nhất là phân tích đa chiều em đê ét. Phương pháp này trực quan hoá vị thế cạnh tranh. Dữ liệu đầu vào là đánh giá mức độ tương đồng giữa từng cặp thương hiệu. Ứng dụng đặc thù là bản đồ nhận thức, định vị và tái định vị thương hiệu. Thứ hai là phân tích kết hợp. Phương pháp này đo giá trị của từng thuộc tính và mức sẵn sàng chi trả, dựa trên khảo sát lựa chọn hoặc xếp hạng các tổ hợp sản phẩm. Nó thường dùng cho định giá và phát triển sản phẩm mới. Thứ ba là hồi quy tuyến tính, giúp xác định thuộc tính nào chi phối sự hài lòng hoặc ý định mua, với dữ liệu khảo sát trên thang Li-kớt. Thứ tư là thảo luận nhóm và phỏng vấn sâu. Đây là dữ liệu định tính, giúp khám phá động cơ và cảm xúc đằng sau con số. Các bạn để ý, phương pháp định tính này còn có vai trò tìm ra thuộc tính để đưa vào ba phương pháp định lượng kia."
+ },
+ {
+  "slide": 9,
+  "text": "Chúng ta bắt đầu với phân tích đa chiều. Trước tiên, các bạn hãy nghĩ xem, ngoài em đê ét, còn kỹ thuật nào liên quan tới chiều và khoảng cách? Gợi ý là phân tích thành phần chính, giúp giảm chiều dữ liệu, và phân cụm mà chúng ta đã học ở bài ba. Vậy em đê ét là gì? Đây là kỹ thuật đưa nhận thức của khách hàng về các thương hiệu cạnh tranh lên một bản đồ hai hoặc ba chiều. Mỗi điểm là một thương hiệu, và khoảng cách giữa hai điểm phản ánh mức độ khác biệt trong nhận thức của người tiêu dùng. Thuật toán tìm toạ độ sao cho khoảng cách trên bản đồ sát nhất với khoảng cách trong dữ liệu khảo sát. Phần sai lệch không khử được gọi là độ căng, đóng vai trò giống chỉ số xi-lu-ét trong phân cụm. Điểm mạnh của em đê ét là đáp viên chỉ phải trả lời hai thương hiệu này giống nhau đến đâu. Nhờ vậy, phương pháp không áp đặt khung suy nghĩ của người nghiên cứu, và có thể phát hiện những chiều mà doanh nghiệp chưa nghĩ tới. Cái giá phải trả là hai trục thu được không có tên sẵn, người phân tích phải tự đặt tên. Ví dụ xuyên suốt phần này là sáu thương hiệu nước ngọt có ga. Sáu thương hiệu đã tạo ra mười lăm cặp, và số cặp tăng rất nhanh khi thêm thương hiệu. Vì vậy, thực tế hiếm khi đưa quá tám đến mười thương hiệu vào một nghiên cứu."
+ },
+ {
+  "slide": 10,
+  "text": "Có hai cách để dựng một bản đồ nhận thức. Cách thứ nhất là dùng em đê ét, dựa trên đánh giá mức độ tương đồng tổng thể giữa các thương hiệu. Cách thứ hai là dựng bản đồ theo thuộc tính. Tức là chúng ta chọn sẵn hai thuộc tính, ví dụ vị và giá. Sau đó, chúng ta hỏi khách hàng chấm điểm từng thương hiệu trên hai thuộc tính đó. Vậy chọn cách nào? Chúng ta dùng em đê ét khi chưa chắc thuộc tính nào quan trọng. Còn bản đồ theo thuộc tính phù hợp khi đã có nghiên cứu định tính xác định rõ hai thuộc tính quyết định. Các bạn để ý, nếu hai bản đồ cho ra cấu trúc khác nhau, thì đó là một dấu hiệu. Nó cho thấy thuộc tính mình đã chọn không phải là thuộc tính khách hàng thực sự dùng để phân biệt các thương hiệu."
+ },
+ {
+  "slide": 11,
+  "text": "Bây giờ, chúng ta cùng đọc một bản đồ em đê ét của sáu thương hiệu nước ngọt có ga. Khi đọc, các bạn chú ý ba thứ, đó là khoảng cách, cụm và khoảng trống. Về khoảng cách, Cô-ca Cô-la và Pép-si nằm rất gần nhau. Điều đó có nghĩa là hai thương hiệu này cạnh tranh trực tiếp với nhau, chứ không phải với Sờ-prai hay Phan-ta. Vì vậy, mọi so sánh về giá, khuyến mại và truyền thông đều nên lấy nhau làm mốc. Về cụm, các thương hiệu vị chanh và các thương hiệu vị trái cây cũng tạo thành những nhóm riêng. Về khoảng trống, đó là những vùng trên bản đồ chưa có thương hiệu nào. Tuy nhiên, các bạn cần nhớ, bản đồ cho biết ta bị ai cạnh tranh và còn chỗ nào trống, nhưng không tự cho biết chỗ trống đó có khách hàng hay không."
+ },
+ {
+  "slide": 12,
+  "text": "Chúng ta cùng thảo luận một câu hỏi. Để dựng bản đồ nhận thức tách được Cô-ca Cô-la khỏi Pép-si, các bạn sẽ chọn những tiêu chí nào? Các bạn hãy suy nghĩ, khách hàng phân biệt hai thương hiệu này bằng gì, là vị, giá, bao bì, hay một thứ khác? Tiêu chí nào đo được bằng bảng hỏi, và tiêu chí nào khó đo? Làm sao biết trục mình chọn là trục của khách hàng, chứ không phải trục của chính mình? Và cuối cùng, khoảng trống vị cô-la cao cấp trên bản đồ là một cơ hội thật, hay chỉ là một vùng chết không có nhu cầu?"
+ },
+ {
+  "slide": 13,
+  "text": "Công cụ thứ hai trong phần này là hồi quy đo lường thuộc tính sản phẩm. Ở đây, biến phụ thuộc là ý định mua hoặc mức độ hài lòng, còn các biến độc lập là điểm đánh giá của khách hàng về từng thuộc tính. Hồi quy cho biết mỗi thuộc tính đóng góp bao nhiêu vào ý định mua. Trong ví dụ ngành nước ngọt có ga, kết quả cho thấy hình ảnh thương hiệu chi phối mạnh hơn hẳn so với vị. Đây đúng là điều mà phép thử nếm mù của Cô-ca Cô-la đã không đo tới. Tuy nhiên, hồi quy có một hạn chế quyết định. Nó đo trên lời khai về ý định, trong khi khách hàng không phải đánh đổi gì cả. Ai cũng muốn thiết kế đẹp, bảo hành dài, và giá rẻ cùng một lúc. Đó chính là lý do chúng ta cần đến phân tích kết hợp."
+ },
+ {
+  "slide": 14,
+  "text": "Chúng ta chuyển sang phần thứ hai, phân tích kết hợp, hay còn gọi là con-giơn a-na-li-sít. Đây là công cụ trung tâm để đo giá trị cảm nhận của từng thuộc tính sản phẩm."
+ },
+ {
+  "slide": 15,
+  "text": "Vậy phân tích kết hợp giải quyết vấn đề gì? Nguyên lý của nó là thay vì hỏi khách hàng trực tiếp về giá trị, chúng ta để khách hàng bộc lộ giá trị qua một loạt lựa chọn có đánh đổi. Sau đó, chúng ta dùng mô hình thống kê để giải mã ngược ra giá trị của từng thuộc tính. Từ đó, suy ra được mức sẵn sàng chi trả của khách hàng. Có ba khái niệm các bạn cần nắm trước khi học tiếp. Thuộc tính là tiêu chí đem ra so sánh, ví dụ nguồn gốc hạt cà phê hay giá bán. Mức độ là các giá trị cụ thể của một thuộc tính, ví dụ hạt Ê-ti-ô-pi-a hay hạt Việt Nam. Còn phương án là một cấu hình hoàn chỉnh ghép từ các mức độ đó. Điều thú vị là người trả lời chỉ làm một việc duy nhất, đó là chọn phương án mình thích. Họ không được hỏi thuộc tính nào quan trọng, cũng không được hỏi sẵn sàng trả bao nhiêu."
+ },
+ {
+  "slide": 16,
+  "text": "Vậy vì sao chỉ cần nhìn người ta chọn mà suy ra được giá trị? Bí quyết nằm ở thiết kế. Giữa hai phương án, nhà nghiên cứu chủ động cho chúng khác nhau ở một vài thuộc tính, và biết trước chênh lệch là bao nhiêu. Vì vậy, mỗi lần người ta chọn, họ đồng thời nói ra một bất đẳng thức về giá trị. Ví dụ, nếu khách chọn hộp cao cấp với giá đắt hơn, thì giá trị của hộp cao cấp với họ lớn hơn phần tiền chênh lệch. Một người trả lời cho một bất đẳng thức thì chưa đủ. Nhưng vài trăm người, mỗi người làm khoảng mười nhiệm vụ, sẽ cho ta hàng nghìn bất đẳng thức. Lúc đó, mô hình thống kê mới giải ra được con số cụ thể cho từng mức thuộc tính. Các bạn cũng để ý sự khác biệt với em đê ét. Em đê ét đánh giá tổng thể sản phẩm trước, rồi bóc tách ra các chiều nhận thức. Còn phân tích kết hợp đo giá trị của từng thuộc tính qua sự đánh đổi, rồi cộng gộp lại thành giá trị của sản phẩm."
+ },
+ {
+  "slide": 17,
+  "text": "Con số giải ra từ phân tích kết hợp được gọi là giá trị bộ phận, hay pát-uớt. Đó là giá trị cảm nhận mà khách hàng gán cho một mức độ cụ thể của một thuộc tính. Cộng các giá trị bộ phận lại, ta được tổng giá trị, hay tổng độ hữu dụng, của một cấu hình sản phẩm. Quy trình thực hiện gồm năm bước. Bước một là xác định thuộc tính, chọn từ ba đến sáu thuộc tính quan trọng nhất cùng các mức độ tương ứng. Bắt buộc phải có thuộc tính giá nếu muốn tính được mức sẵn sàng chi trả. Bước hai là thiết kế tổ hợp, dùng thiết kế nhân tố bộ phận để giảm số phương án xuống mức đáp viên trả lời được. Ví dụ, ba thuộc tính, mỗi thuộc tính ba mức, sẽ cho hai mươi bảy phương án, quá nhiều để hỏi hết. Bước ba là thu thập dữ liệu, đáp viên chấm điểm, xếp hạng hoặc chọn giữa các tổ hợp. Bước bốn là ước lượng mô hình, thường dùng hồi quy bội với biến giả để tính giá trị bộ phận của từng mức. Bước năm là phân tích và ứng dụng, gồm tầm quan trọng tương đối, mức sẵn sàng chi trả và mô phỏng thị phần. Các bạn nhớ, chất lượng của toàn bộ nghiên cứu được quyết định ở bước một. Nếu bỏ sót thuộc tính quan trọng, thì không có kỹ thuật nào ở các bước sau cứu được."
+ },
+ {
+  "slide": 18,
+  "text": ""
+ },
+ {
+  "slide": 19,
+  "text": ""
+ },
+ {
+  "slide": 20,
+  "text": ""
+ },
+ {
+  "slide": 21,
+  "text": ""
+ },
+ {
+  "slide": 22,
+  "text": ""
+ },
+ {
+  "slide": 23,
+  "text": ""
+ },
+ {
+  "slide": 24,
+  "text": ""
+ },
+ {
+  "slide": 25,
+  "text": ""
+ },
+ {
+  "slide": 26,
+  "text": ""
+ },
+ {
+  "slide": 27,
+  "text": ""
+ },
+ {
+  "slide": 28,
+  "text": "Chúng ta cùng tóm tắt phân tích kết hợp qua sáu câu hỏi. Thứ nhất, về khái niệm, đây là kỹ thuật tách giá trị cảm nhận của từng thuộc tính ra khỏi đánh giá tổng thể về sản phẩm. Thứ hai, về cơ sở, mỗi lựa chọn của đáp viên là một sự đánh đổi có thật, và hồi quy bội giải mã ngược ra giá trị bộ phận của từng mức. Thứ ba, về dữ liệu đầu vào, đó là khảo sát trên các tổ hợp được thiết kế trực giao. Thuộc tính định tính phải mã hoá thành biến giả, nhưng không cần chuẩn hoá vì thang đo đã thống nhất. Thứ tư, về tham số, chúng ta phải chọn số thuộc tính, số mức của mỗi thuộc tính, mức tham chiếu, và cách thu thập dữ liệu. Thứ năm, về kết quả, chúng ta thu được giá trị bộ phận của từng mức, tầm quan trọng tương đối của từng thuộc tính, mức sẵn sàng chi trả, và thị phần mô phỏng. Các bạn lưu ý, tầm quan trọng được tính từ khoảng dao động giữa mức cao nhất và mức thấp nhất của mỗi thuộc tính, chứ không phải từ giá trị cao nhất. Còn thuộc tính giá đóng vai trò thước đo, giúp quy đổi độ hữu dụng ra tiền. Thứ sáu, phân tích kết hợp được dùng khi thiết kế sản phẩm mới, quyết định có nên thêm tính năng, hay định giá cho một cấu hình cao cấp."
+ },
+ {
+  "slide": 29,
+  "text": "Chúng ta đi tới phần thứ ba của bài, chiến lược định giá dựa trên giá trị cảm nhận. Đây là phần biến các con số từ hai phần trước thành quyết định giá cụ thể."
+ },
+ {
+  "slide": 30,
+  "text": "Có ba cách định giá phổ biến, khác nhau ở điểm xuất phát. Cách thứ nhất là định giá theo chi phí, xuất phát từ giá vốn của doanh nghiệp, và chỉ cần dữ liệu kế toán nội bộ. Ưu điểm là đơn giản, luôn đảm bảo có lãi trên mỗi đơn vị. Nhưng rủi ro là định giá quá thấp so với giá trị, mất phần lợi nhuận đáng ra có được. Cách này phù hợp với hàng hoá phổ thông, khó khác biệt. Cách thứ hai là định giá theo cạnh tranh, xuất phát từ giá của đối thủ. Cách này dễ triển khai và ít rủi ro mất khách vì giá. Nhưng doanh nghiệp dễ bị kéo vào cuộc đua giảm giá, và từ bỏ quyền định giá cho đối thủ. Cách thứ ba là định giá theo giá trị cảm nhận, xuất phát từ giá trị trong nhận thức khách hàng. Cách này cần dữ liệu từ phân tích kết hợp và khảo sát nhận thức. Nó khai thác được toàn bộ dư địa giá và bảo vệ biên lợi nhuận. Đổi lại, nó tốn kém, chậm, và sẽ sai nếu đo giá trị cảm nhận không đúng. Cách này phù hợp với thương hiệu có khác biệt rõ và đo được giá trị khác biệt đó."
+ },
+ {
+  "slide": 31,
+  "text": "Để thấy rõ hơn, chúng ta đặt hai cách định giá cạnh nhau. Định giá theo chi phí đi từ trong ra ngoài. Doanh nghiệp tính giá vốn, cộng thêm một tỷ lệ lợi nhuận mong muốn, rồi đưa ra thị trường. Còn định giá theo giá trị đi từ ngoài vào trong. Doanh nghiệp bắt đầu từ giá trị mà khách hàng cảm nhận, xác định mức giá khách sẵn lòng trả, rồi mới kiểm tra xem chi phí có đáp ứng được không. Nói ngắn gọn, định giá theo chi phí trả lời câu hỏi ta cần bao nhiêu. Còn định giá theo giá trị trả lời câu hỏi khách hàng sẵn lòng trả bao nhiêu. Và chỉ câu hỏi thứ hai mới có giới hạn trên thật sự."
+ },
+ {
+  "slide": 32,
+  "text": "Từ đó, chúng ta có ba mốc quan trọng. Chi phí là sàn, tức là mức giá thấp nhất mà doanh nghiệp không được phép xuống dưới. Mức sẵn sàng chi trả tối đa của khách hàng là trần. Giá bán thực tế nằm đâu đó giữa sàn và trần. Phần chênh lệch giữa giá bán và chi phí là lợi nhuận của doanh nghiệp. Còn phần chênh giữa mức sẵn sàng chi trả và giá thực trả được gọi là thặng dư người tiêu dùng. Đó chính là cảm giác mua được hời. Nếu định giá sát mức trần, doanh nghiệp sẽ vét hết phần thặng dư này. Lợi nhuận của một lần mua là cao nhất, nhưng khách không còn lý do để quay lại, và dễ rời bỏ ngay khi có lựa chọn khác. Vì vậy, các bạn có thể hiểu phần thặng dư để lại cho khách chính là cái giá để mua được lòng trung thành của họ."
+ },
+ {
+  "slide": 33,
+  "text": "Vậy khi nào định giá theo giá trị cảm nhận thực sự hiệu quả? Có bốn điều kiện. Thứ nhất, sản phẩm có khác biệt thật, và khách hàng nhận ra được khác biệt đó. Nếu khách không phân biệt nổi, giá trị cảm nhận bằng không. Thứ hai, doanh nghiệp đo được giá trị cảm nhận bằng dữ liệu, chứ không phải bằng niềm tin của ban lãnh đạo. Thứ ba, thị trường có một phân khúc sẵn sàng trả giá cao, đủ lớn để nuôi quy mô sản xuất. Thứ tư, doanh nghiệp đủ sức bảo vệ vị thế đó, nhờ thương hiệu, bằng sáng chế, hệ sinh thái hoặc chi phí chuyển đổi cao. Chúng ta cùng xem hai ví dụ trái chiều. Áp-pồ định giá ai-phôn cao hơn đối thủ, không phải vì chi phí sản xuất cao tương ứng, mà vì người dùng cảm nhận giá trị vượt trội về trải nghiệm và hệ sinh thái. Ngược lại, Vin-phát giai đoạn đầu định giá thấp hơn giá trị cảm nhận, để xây dựng thị phần và nhận diện thương hiệu trước. Cả hai đều là lựa chọn chiến lược có chủ đích, không có đúng sai tuyệt đối."
+ },
+ {
+  "slide": 34,
+  "text": "Tiếp theo là một công cụ đo giá rất phổ biến, phương pháp Van Uét-xtơn-đóp, dùng để đo vùng giá chấp nhận được. Đáp viên trả lời bốn câu hỏi. Mức giá nào rẻ đến mức nghi ngờ chất lượng. Mức nào rẻ nhưng vẫn mua. Mức nào đắt nhưng vẫn mua. Và mức nào đắt đến mức không mua. Vẽ bốn đường tích luỹ lên cùng một biểu đồ, giao điểm của chúng cho ra vùng giá và điểm giá tối ưu. Cụ thể, điểm rẻ biên là giới hạn dưới. Dưới mức này, số người nghi ngờ chất lượng đã nhiều hơn số người thấy đắt, nên giảm giá tiếp là tự hại mình. Điểm đắt biên là giới hạn trên. Trên mức này, số người bỏ cuộc vì đắt đã vượt số người còn thấy hời. Giữa hai giới hạn là điểm giá tối ưu. Ngoài ra còn có điểm bàng quan, nơi số người thấy rẻ bằng số người thấy đắt. Điểm này thường trùng với giá trung vị của thị trường, hoặc giá của thương hiệu dẫn đầu."
+ },
+ {
+  "slide": 35,
+  "text": "Như vậy, chúng ta có ba cách đo mức sẵn sàng chi trả. Vậy chọn cách nào? Phân tích kết hợp trả lời được khách trả thêm bao nhiêu cho từng thuộc tính. Dữ liệu là lời khai nhưng có đánh đổi, và nó mô phỏng được cả những cấu hình chưa tồn tại. Hạn chế là thiết kế phức tạp, cỡ mẫu lớn, và dễ bị ngoại suy ra ngoài khoảng giá đã thử. Cách này nên dùng khi thiết kế hoặc định giá sản phẩm mới. Phương pháp Van Uét-xtơn-đóp cho biết vùng giá thị trường chấp nhận cho cả sản phẩm. Nó nhanh, rẻ, dễ triển khai, nhưng không cho biết vì sao, không tách được thuộc tính, và dễ bị neo giá. Cách này phù hợp khi cần một khoảng giá nhanh để ra quyết định sơ bộ. Cuối cùng là dữ liệu giao dịch, cho biết khách phản ứng thế nào ở những mức giá đã từng bán. Đây là cách đáng tin nhất vì là hành vi thật, nhưng không dự báo được cho sản phẩm mới. Cách này phù hợp khi muốn tối ưu giá cho sản phẩm đang bán."
+ },
+ {
+  "slide": 36,
+  "text": "Chúng ta cùng thảo luận một câu hỏi. Nếu đo được chính xác mức sẵn sàng chi trả tối đa, doanh nghiệp có nên định giá đúng bằng mức đó không? Các bạn hãy nghĩ tới ba khía cạnh. Khi thặng dư người tiêu dùng biến mất, khách còn lý do gì để quay lại? Điều gì xảy ra khi một đối thủ xuất hiện với mức giá thấp hơn một chút? Và mức sẵn sàng chi trả đo được hôm nay, liệu sau một năm có còn đúng không?"
+ },
+ {
+  "slide": 37,
+  "text": "Trong thực tế, các phân khúc khác nhau có mức sẵn sàng chi trả khác nhau. Nếu bán cùng một giá cho tất cả, doanh nghiệp sẽ bỏ tiền trên bàn ở phân khúc cao, và mất khách ở phân khúc thấp. Định giá phân biệt giải quyết vấn đề đó, nhưng phải có lý do mà khách hàng chấp nhận được. Bảng trên màn hình cho thấy bốn cách phân biệt. Thứ nhất là theo phiên bản sản phẩm, ví dụ bản tiêu chuẩn và bản cao cấp. Rủi ro là nếu bản rẻ tốt quá, khách của bản đắt sẽ chuyển xuống. Thứ hai là theo kênh bán, ví dụ giá ở cửa hàng tiện lợi cao hơn siêu thị vì phục vụ nhu cầu tức thời. Rủi ro là khách so giá giữa hai kênh và thấy bị đối xử bất công. Thứ ba là theo thời điểm, như giá vé máy bay hay giá phòng khách sạn theo mùa. Rủi ro là khách chờ đợt giảm giá thay vì mua ngay. Thứ tư là theo nhóm khách hàng, như giá cho sinh viên hay cho thành viên lâu năm. Rủi ro ở đây là ưu đãi bị rò rỉ sang những người không thuộc diện được hưởng."
+ },
+ {
+  "slide": 38,
+  "text": "Đến đây, chúng ta cùng nhìn lại quy trình tích hợp của toàn bài. Bước thứ nhất, bản đồ nhận thức trả lời câu hỏi, trong mắt khách hàng, ta đang đứng ở đâu so với đối thủ. Bước thứ hai, phân tích kết hợp trả lời câu hỏi, trong những thứ ta có thể thay đổi, thứ nào khách sẵn sàng trả tiền, và trả bao nhiêu. Bước thứ ba, định giá theo giá trị trả lời câu hỏi, với kết quả của hai bước trên, ta nên bán ở mức giá nào. Các bạn để ý, ba câu hỏi này nối tiếp nhau. Nếu bỏ một bước, chúng ta sẽ mất cơ sở cho bước sau."
+ },
+ {
+  "slide": 39,
+  "text": ""
+ },
+ {
+  "slide": 40,
+  "text": "Bây giờ, chúng ta quay trở lại case study Niu Cốc ở đầu bài. Các bạn nhớ lại, công ty đã có khoảng hai trăm nghìn lượt nếm thử mù, và công thức mới thắng rõ ràng. Thế nhưng chỉ bảy mươi chín ngày sau khi ra mắt, công thức cũ đã phải quay trở lại. Với những gì vừa học, các bạn hãy thử trả lời lại ba câu hỏi thảo luận, trước khi chúng ta cùng xem phần gợi ý."
+ },
+ {
+  "slide": 41,
+  "text": "Câu hỏi thứ nhất, dữ liệu nếm thử mù đã bỏ sót điều gì? Phép thử chỉ đo đúng một thứ, đó là phản ứng vị giác với một ngụm. Nó không đo trải nghiệm uống hết một lon. Quan trọng hơn, nó cố tình loại bỏ thương hiệu, tức là loại bỏ đúng biến có sức giải thích mạnh nhất đối với hành vi mua. Câu hỏi thứ hai, khách hàng mua gì ngoài vị ngọt? Họ mua ký ức, bản sắc và ý nghĩa gắn với thương hiệu. Phản ứng dữ dội của công chúng không phải về vị, mà về việc một thứ họ coi là của mình bị lấy đi. Đây chính là giá trị cảm nhận. Câu hỏi thứ ba, nên đo thêm gì? Thứ nhất là bản đồ nhận thức, để biết thương hiệu đang ở đâu trong tâm trí khách, và việc đổi công thức sẽ dịch chuyển vị trí đó đi đâu. Thứ hai là phân tích kết hợp có đưa thương hiệu vào như một thuộc tính, để đo giá trị của chính cái nhãn so với vị. Thứ ba là thử nghiệm có đối chứng trên thị trường thật ở quy mô nhỏ, trước khi thay đổi trên toàn quốc, nội dung mà chúng ta sẽ học ở bài mười một. Bài học cho người phân tích là, một phép đo đúng về kỹ thuật vẫn dẫn tới quyết định sai nếu nó đo sai thứ."
+ },
+ {
+  "slide": 42,
+  "text": "Như vậy, qua bài học hôm nay, chúng ta đã đi từ bản đồ nhận thức, qua phân tích kết hợp, tới định giá dựa trên giá trị cảm nhận. Câu hỏi quan trọng nhất các bạn cần mang theo là, số liệu này có đo đúng cái chi phối quyết định mua của khách hàng hay không. Cảm ơn các bạn đã theo dõi, và hẹn gặp lại các bạn trong video tiếp theo."
+ }
+]

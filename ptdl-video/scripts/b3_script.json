@@ -1,0 +1,118 @@
+[
+ {
+  "slide": 1,
+  "text": "Xin chào các bạn và chào mừng các bạn đã đến với bài số ba của học phần Phân tích dữ liệu marketing. Trong bài học hôm nay, chúng ta sẽ cùng nhau tìm hiểu cách phân tích khách hàng và sản phẩm theo phân khúc thị trường, bằng phương pháp phân cụm. Đây là một bài rất thực tế, vì gần như doanh nghiệp nào cũng cần biết khách hàng của mình chia thành những nhóm nào, và mỗi nhóm nên được đối xử ra sao."
+ },
+ {
+  "slide": 2,
+  "text": "Trước khi vào nội dung, mình cùng xem qua chuẩn đầu ra và mục tiêu của bài. Bài học này gắn với chuẩn đầu ra eo một của học phần. Đó là vận dụng thuật toán và thống kê, kết hợp với hiểu biết kinh doanh, để đưa ra khuyến nghị về sản phẩm và khách hàng. Sau bài học, các bạn cần trình bày được vai trò của phân tích khách hàng và sản phẩm. Các bạn cần áp dụng được mô hình a-rờ ép em để phân khúc khách hàng theo hành vi. Tiếp theo, các bạn cần giải thích được nguyên lý của phân tích phân cụm, và phân biệt được ba thuật toán là cây min, phân cụm phân cấp và đê bê ét can. Cuối cùng, các bạn cần đọc và diễn giải được một bản đồ nhận thức trong định vị thương hiệu."
+ },
+ {
+  "slide": 3,
+  "text": "Vậy thì bài học hôm nay gồm bốn phần chính. Phần đầu tiên là mục tiêu và vai trò của phân tích khách hàng và sản phẩm. Phần thứ hai là mô hình a-rờ ép em, phân khúc khách hàng theo hành vi giao dịch, với ba chỉ số, cách chấm điểm và năm phân khúc điển hình. Phần thứ ba là phân tích phân cụm, gồm thuật toán cây min, cách chọn số cụm, phân cụm phân cấp và đê bê ét can. Và phần cuối cùng là bản đồ nhận thức trong định vị thương hiệu."
+ },
+ {
+  "slide": 4,
+  "text": "Chúng ta sẽ mở đầu bằng một case study rất thú vị của Nét-phlíc. Nét-phlíc có hơn hai trăm triệu người dùng ở gần hai trăm quốc gia. Theo cách làm marketing truyền thống, họ sẽ chia người dùng theo tuổi, giới tính và quốc gia, và thực tế Nét-phlíc cũng đã từng làm đúng như vậy. Thế nhưng, vào năm hai nghìn không trăm mười tám, Nét-phlíc công bố rằng nhân khẩu học gần như vô dụng trong việc dự đoán người ta sẽ xem gì. Thay vào đó, họ chia người dùng thành khoảng hai nghìn cộng đồng thị hiếu. Các nhóm này được hình thành từ hành vi xem thực tế, chứ không phải từ hồ sơ cá nhân. Hệ quả là một sinh viên hai mươi tuổi ở Hà Nội có thể nằm chung nhóm với một kỹ sư bốn mươi lăm tuổi ở Bra-xin. Trong khi đó, hai người hàng xóm cùng tuổi lại có thể thuộc hai nhóm hoàn toàn khác nhau. Các bạn hãy suy nghĩ về ba câu hỏi. Thứ nhất, vì sao phân khúc theo tuổi và quốc gia lại kém hiệu quả ở đây. Thứ hai, Nét-phlíc đã dùng loại dữ liệu nào để tạo ra hai nghìn nhóm đó. Và thứ ba, làm sao biết nên chia thành hai nghìn nhóm, chứ không phải hai mươi hay hai trăm nghìn nhóm. Chúng ta sẽ quay lại trả lời ở cuối bài."
+ },
+ {
+  "slide": 5,
+  "text": "Bây giờ, chúng ta cùng đi vào phần thứ nhất, đó là mục tiêu và vai trò của phân tích khách hàng và sản phẩm. Phần này giúp các bạn trả lời câu hỏi, vì sao doanh nghiệp cần phân tích khách hàng và sản phẩm, trước khi đi vào các công cụ cụ thể."
+ },
+ {
+  "slide": 6,
+  "text": "Phân tích khách hàng và sản phẩm hướng tới ba nhóm mục tiêu cốt lõi. Mục tiêu thứ nhất là thấu hiểu khách hàng. Chúng ta xác định các nhóm khách hàng khác nhau dựa trên dữ liệu hành vi, nhân khẩu học, tâm lý học và địa lý. Từ đó trả lời được ai là khách hàng tiềm năng nhất, họ cần gì, và vì sao họ mua. Mục tiêu thứ hai là đánh giá và tối ưu danh mục sản phẩm. Ở đây chúng ta đánh giá hiệu suất, giá trị và vị thế của từng sản phẩm. Các công cụ thường dùng là ma trận bê xê giê, phân tích vòng đời sản phẩm, hay phân tích kết hợp thuộc tính mà chúng ta sẽ học ở bài bốn. Mục tiêu thứ ba là tối ưu hoá marketing hỗn hợp. Tức là kết nối hiểu biết về nhu cầu khách hàng với đặc tính sản phẩm, để sản phẩm phù hợp mong đợi, đồng thời được phân phối, định giá và truyền thông hiệu quả. Các bạn để ý, cả ba mục tiêu này đều phục vụ một mục tiêu tổng quát. Đó là tối đa hoá giá trị doanh nghiệp, thông qua việc hiểu và phục vụ đúng nhu cầu của khách hàng mục tiêu."
+ },
+ {
+  "slide": 7,
+  "text": "Tiếp theo, chúng ta sẽ tìm hiểu công cụ phân khúc đầu tiên, đó là mô hình a-rờ ép em, phân khúc khách hàng theo hành vi giao dịch. Đây là công cụ đơn giản nhưng rất hiệu quả, và các bạn có thể áp dụng ngay với dữ liệu bán hàng của bất kỳ doanh nghiệp nào."
+ },
+ {
+  "slide": 8,
+  "text": "Mô hình a-rờ ép em là mô hình phân khúc hành vi được dùng phổ biến nhất trong ngành bán lẻ. Điểm mạnh lớn nhất của nó là chỉ cần dữ liệu hoá đơn. Chúng ta không cần khảo sát, cũng không cần dữ liệu nhân khẩu học. Mô hình gồm ba chỉ số. Chữ a-rờ là độ gần đây của lần mua, trả lời câu hỏi khách vừa mua cách đây bao lâu. Chúng ta lấy ngày phân tích trừ đi ngày của hoá đơn gần nhất, đơn vị là ngày, và a-rờ càng nhỏ thì càng tốt. Chữ ép là tần suất mua, trả lời câu hỏi khách mua bao nhiêu lần trong kỳ. Chúng ta đếm số hoá đơn riêng biệt của khách, và ép càng lớn càng tốt. Chữ em là giá trị tiền mà khách đã chi, trả lời câu hỏi khách đã chi bao nhiêu. Chúng ta cộng giá trị tất cả hoá đơn trong kỳ, và em cũng càng lớn càng tốt. Các bạn lưu ý ba điểm. Thứ nhất, phải cố định ngày phân tích và kỳ phân tích từ trước, nếu không thì ba con số sẽ không so sánh được giữa các lần chạy. Thứ hai, a-rờ đi ngược chiều với ép và em. Thứ ba, mô hình này chỉ đo hành vi giao dịch, nó không đo thái độ hay mức độ hài lòng của khách hàng."
+ },
+ {
+  "slide": 9,
+  "text": "Vậy thì làm sao biến ba con số đó thành phân khúc? Kỹ thuật phổ biến là chấm điểm theo ngũ phân vị. Mỗi chỉ số được chia thành năm nhóm, ứng với điểm từ một đến năm. Như vậy mỗi khách hàng sẽ nhận một mã gồm ba chữ số. Các bạn nhớ là với chỉ số a-rờ, khách mua gần đây nhất, tức là a-rờ nhỏ nhất, sẽ được năm điểm. Bảng trên màn hình cho thấy năm phân khúc tiêu biểu. Nhóm năm năm năm được gọi là nhóm nhà vô địch. Đây là những khách mua gần đây, mua thường xuyên và chi nhiều, nên phù hợp với ưu đãi đặc quyền và chương trình khách hàng thân thiết cao cấp. Nhóm có mã như bốn năm năm là khách hàng trung thành, nên tập trung bán chéo, bán gia tăng và mời giới thiệu bạn bè. Nhóm năm một một là khách mới, cần chuỗi chào mừng và ưu đãi cho lần mua thứ hai. Nhóm một bốn bốn là nhóm có nguy cơ rời bỏ. Họ từng có giá trị cao nhưng đã lâu không quay lại, nên cần chiến dịch kích hoạt lại. Cuối cùng, nhóm một một một là nhóm ngủ đông hoặc đã mất, chỉ nên chăm sóc với chi phí thấp, hoặc ngừng tiếp thị."
+ },
+ {
+  "slide": 10,
+  "text": "Để nhìn năm phân khúc này trực quan hơn, chúng ta có thể dùng biểu đồ radar. Cách đọc như sau. Mỗi biểu đồ có ba trục a-rờ, ép và em, điểm từ một ở tâm cho tới năm ở ngoài rìa. Diện tích càng lớn thì khách hàng càng có giá trị. Nhưng điều quan trọng hơn là hình dạng của biểu đồ. Nhóm nhà vô địch là một tam giác đều căng ra ngoài. Nhóm khách mới thì nhọn về phía trục a-rờ. Còn nhóm có nguy cơ rời bỏ thì nhọn về phía ép và em, nhưng lại tụt hẳn ở trục a-rờ. Đó chính là dấu hiệu cảnh báo cần kích hoạt lại. Các bạn để ý, cùng một tổng điểm có thể ứng với hai hình dạng rất khác nhau. Vì vậy, chúng ta luôn phải nhìn ba trục riêng biệt, chứ không cộng gộp lại thành một con số duy nhất. Ví dụ, một khách có tổng điểm là mười một có thể là khách mới mua nhiều lần trong tuần đầu, nhưng cũng có thể là khách quen đã lâu không quay lại."
+ },
+ {
+  "slide": 11,
+  "text": "Chúng ta cùng xem một ví dụ ứng dụng tại Gác-đi-ần Việt Nam, một chuỗi nhà thuốc và mỹ phẩm. Doanh nghiệp này áp dụng mô hình a-rờ ép em để phân nhóm hơn hai triệu khách hàng trong hệ thống thành viên. Với nhóm nhà vô địch, họ dành ưu đãi đặc quyền và mời tham gia chương trình khách hàng thân thiết cao cấp. Với nhóm sắp rời bỏ, họ chạy chiến dịch email kích hoạt lại, kèm voucher được cá nhân hoá. Kết quả là tỷ lệ chuyển đổi của chiến dịch tăng ba mươi hai phần trăm, trong khi chi phí marketing giảm mười tám phần trăm so với cách tiếp cận đại trà. Bài học ở đây rất rõ ràng. Cùng một ngân sách, nhưng phân bổ theo phân khúc sẽ cho kết quả khác hẳn so với phân bổ đại trà."
+ },
+ {
+  "slide": 12,
+  "text": "Bây giờ, các bạn hãy cùng thực hành chấm điểm a-rờ ép em với một bài tập nhỏ. Ngày phân tích được cố định là ngày ba mươi tháng sáu năm hai nghìn không trăm hai mươi lăm. Bảng gồm năm khách hàng, với ngày mua gần nhất, số lần mua và tổng chi tiêu. Nhiệm vụ của các bạn là tính a-rờ theo số ngày, chấm điểm từ một đến năm cho cả ba chỉ số, rồi gán nhãn phân khúc. Ví dụ, khách hàng số một mua lần gần nhất vào ngày hai mươi lăm tháng sáu, tức là a-rờ chỉ bằng năm ngày. Khách này lại mua mười bốn lần và chi hơn mười hai triệu đồng, nên nhiều khả năng thuộc nhóm nhà vô địch. Ngược lại, khách hàng số năm đã không quay lại từ tháng mười hai năm trước, các bạn hãy tự xem khách này thuộc nhóm nào. Câu hỏi mở rộng là, nếu chỉ đủ ngân sách chăm sóc hai khách hàng trong đợt ra mắt sản phẩm mới, các bạn sẽ chọn ai, và vì sao. Gợi ý là các bạn đừng chỉ nhìn tổng chi tiêu, mà hãy cân nhắc cả khả năng khách đó quay lại và mức độ phù hợp với sản phẩm mới."
+ },
+ {
+  "slide": 13,
+  "text": "Chúng ta chuyển sang phần tiếp theo, phân tích phân cụm trong phân khúc thị trường. Ở phần này, chúng ta sẽ để cho thuật toán tự tìm ra các nhóm khách hàng, thay vì tự tay đặt ngưỡng như với mô hình a-rờ ép em."
+ },
+ {
+  "slide": 14,
+  "text": "Câu hỏi đầu tiên là, đã có a-rờ ép em rồi thì vì sao vẫn cần phân cụm? Bảng trên màn hình so sánh hai cách tiếp cận. Với a-rờ ép em, chính người phân tích quyết định ranh giới nhóm, bằng cách cắt theo ngũ phân vị. Còn với phân cụm, thuật toán sẽ tìm ranh giới sao cho các nhóm tách nhau rõ nhất. Về số biến, a-rờ ép em chỉ dùng đúng ba biến. Phân cụm thì dùng bao nhiêu biến cũng được, ví dụ thêm tuổi, kênh mua, số lần đổi trả hay số phiên dùng ứng dụng. Về số nhóm, a-rờ ép em cố định năm nhân năm nhân năm bằng một trăm hai mươi lăm ô, sau đó gộp lại thành khoảng tám đến mười một nhãn. Còn phân cụm để dữ liệu quyết định, thường từ ba đến bảy cụm. Đổi lại, a-rờ ép em rất dễ diễn giải, còn phân cụm thì người phân tích phải tự đặt tên cho từng cụm. Có thể hiểu đơn giản, a-rờ ép em là phân khúc thủ công, còn phân cụm là phân khúc tự động. Trong thực tế, hai công cụ thường đi cùng nhau. A-rờ ép em cung cấp bộ biến đầu vào, còn phân cụm đi tìm ranh giới."
+ },
+ {
+  "slide": 15,
+  "text": "Vậy thì phân tích phân cụm là gì? Đây là một kỹ thuật học không giám sát. Nghĩa là dữ liệu đưa vào không có nhãn cho trước, và thuật toán tự khám phá cấu trúc tiềm ẩn để chia đối tượng thành các nhóm. Phân cụm tối ưu đồng thời hai tiêu chí. Tiêu chí thứ nhất là tính đồng nhất nội cụm, tức là các đối tượng trong cùng một cụm phải giống nhau nhất có thể. Tiêu chí thứ hai là tính khác biệt liên cụm, tức là các cụm khác nhau phải phân biệt rõ ràng. Vậy giống nhau được đo bằng gì? Câu trả lời là bằng khoảng cách giữa hai đối tượng trong không gian các biến. Phổ biến nhất là khoảng cách Ơ-clít, ngoài ra còn có khoảng cách Man-hát-tan, hay độ tương đồng cô-sin cho dữ liệu văn bản. Chính vì dựa trên khoảng cách, nên mọi thuật toán phân cụm đều nhạy cảm với đơn vị đo của biến. Trong marketing, phân cụm là nền tảng của chiến lược phân khúc thị trường. Thay vì một chiến lược chung cho tất cả, mỗi phân khúc sẽ có chiến lược riêng."
+ },
+ {
+  "slide": 16,
+  "text": "Thuật toán đầu tiên chúng ta tìm hiểu là cây min. Thuật toán này định nghĩa một cụm là tập hợp các điểm nằm gần một tâm cụm hơn là gần mọi tâm cụm khác. Tâm cụm là điểm trung bình của các thành viên, và nó thường không trùng với bất kỳ khách hàng thật nào. Về cơ sở, cây min tìm cách tối thiểu hoá tổng bình phương khoảng cách từ mỗi điểm tới tâm cụm của nó. Mỗi vòng lặp đều làm đại lượng này giảm xuống, và thuật toán dừng khi không giảm được nữa. Từ cơ sở đó, chúng ta có ba hệ quả. Thứ nhất, vì dùng giá trị trung bình, nên cây min rất nhạy cảm với điểm ngoại lệ. Thứ hai, vì dựa trên khoảng cách tới một tâm, nên cụm luôn có xu hướng hình cầu, không phát hiện được cụm hình vòng cung hay hình chữ eo. Thứ ba, vì tâm được khởi tạo ngẫu nhiên, nên mỗi lần chạy có thể ra kết quả khác nhau. Do đó, chúng ta cần cho chạy lại ít nhất mười lần, và cố định tham số ngẫu nhiên để kết quả lặp lại được."
+ },
+ {
+  "slide": 17,
+  "text": "Một câu hỏi quan trọng với cây min là chọn bao nhiêu cụm. Có hai công cụ phổ biến. Công cụ thứ nhất là phương pháp khuỷu tay. Chúng ta vẽ tổng bình phương khoảng cách nội cụm theo số cụm, rồi chọn điểm mà đường cong bắt đầu gãy, giống như khuỷu tay. Công cụ thứ hai là chỉ số xi-lu-ét. Chỉ số này đo mức độ phù hợp của mỗi điểm với cụm được gán, so với cụm lân cận. Xi-lu-ét càng cao thì các cụm càng tách bạch. Các bạn lưu ý một điểm rất quan trọng. Tổng bình phương khoảng cách nội cụm luôn giảm khi số cụm tăng. Nếu mỗi khách hàng là một cụm, nó sẽ bằng không. Vì vậy, chúng ta không bao giờ được dùng riêng chỉ số này để chọn số cụm, mà phải kết hợp với xi-lu-ét. Trong thực hành, các bạn chạy cây min với số cụm từ hai đến khoảng mười. Với mỗi lựa chọn, các bạn ghi lại cả hai chỉ số. Sau đó, chọn số cụm nằm ở khúc gãy của đường khuỷu tay, đồng thời có xi-lu-ét tương đối cao. Nếu hai công cụ gợi ý hai con số khác nhau, các bạn hãy cân nhắc thêm khả năng diễn giải kinh doanh của từng phương án."
+ },
+ {
+  "slide": 18,
+  "text": "Sau khi chạy xong cây min, việc tiếp theo là đọc kết quả. Ở đây, chân dung cụm quan trọng hơn mọi chỉ số kỹ thuật. Kết quả chỉ có giá trị khi chúng ta đặt được tên mang nghĩa kinh doanh cho từng cụm, dựa trên giá trị trung bình của các biến trong cụm đó. Ví dụ, một cụm có độ gần đây tốt, tần suất cao và chi tiêu lớn có thể đặt tên là khách hàng giá trị cao. Từ đó, chúng ta trả lời được câu hỏi nhóm nào đáng đầu tư thêm, và nhóm nào nên giảm chi phí chăm sóc. Các bạn hãy nhớ, một cụm chỉ có ý nghĩa khi vừa tách bạch về mặt thống kê, vừa hành động được về mặt marketing. Ngược lại, nếu hai cụm có chân dung gần giống nhau, và doanh nghiệp cũng sẽ chăm sóc họ theo cùng một cách, thì việc tách chúng ra không mang lại giá trị gì. Khi đó, các bạn nên cân nhắc giảm số cụm."
+ },
+ {
+  "slide": 19,
+  "text": "Thuật toán thứ hai là phân cụm phân cấp. Thay vì chia dữ liệu thành một số nhóm ngay từ đầu, phương pháp này xây dựng một cây gồm các cụm lồng nhau, gọi là biểu đồ cây. Cách phổ biến là gộp dần từ dưới lên. Ban đầu, mỗi đối tượng là một cụm riêng. Sau đó, hai cụm gần nhau nhất được hợp lại, và quá trình lặp lại cho tới khi chỉ còn một cụm duy nhất. Ở mỗi bước, thuật toán cần biết khoảng cách giữa hai cụm là bao nhiêu, và đó chính là quy tắc liên kết. Quy tắc Uốt tối thiểu hoá mức tăng phương sai nội cụm khi hợp nhất, và đây là lựa chọn được khuyến nghị cho dữ liệu marketing. Điểm khác biệt lớn nhất so với cây min là chúng ta không cần biết trước số cụm. Số cụm được quyết định sau, bằng cách chọn một ngưỡng cắt ngang cây. Nhờ vậy, ta nhìn thấy được các phương án hai cụm, ba cụm, bốn cụm trên cùng một hình. Hạn chế là khối lượng tính toán tăng theo bình phương số đối tượng, nên thực tế chỉ chạy được với vài nghìn đối tượng. Và một khi đã hợp nhất thì không quay lui được."
+ },
+ {
+  "slide": 20,
+  "text": "Thuật toán thứ ba là đê bê ét can. Thuật toán này định nghĩa một cụm là một vùng liên thông có mật độ cao, chứ không phải vùng quanh một tâm. Cụm lớn dần bằng cách lan từ điểm lõi này sang điểm lõi khác, nên nó có thể mang hình dạng bất kỳ. Về cơ sở, đê bê ét can dùng hai tham số. Tham số thứ nhất là ép-xi-lon, tức là bán kính lân cận. Tham số thứ hai là số điểm tối thiểu phải có trong bán kính đó. Hai tham số này chia mọi điểm thành ba loại, gồm điểm lõi, điểm biên và điểm nhiễu. Các bạn để ý, đây là thuật toán duy nhất trong ba thuật toán có khái niệm điểm không thuộc cụm nào. Điều này rất hữu ích khi dữ liệu có nhiều ngoại lệ, ví dụ những đơn hàng bất thường, hay những giao dịch có dấu hiệu gian lận. Khi chọn tham số, nếu ép-xi-lon quá nhỏ thì phần lớn điểm sẽ bị coi là nhiễu. Còn nếu ép-xi-lon quá lớn thì các cụm sẽ dính liền vào nhau thành một khối."
+ },
+ {
+  "slide": 21,
+  "text": "Để thấy rõ giá trị của đê bê ét can, chúng ta xem bài toán phân vùng giao hàng. Dữ liệu ở đây là toạ độ các điểm giao hàng trên bản đồ thành phố. Các vùng có mật độ đơn hàng cao thường trải dài theo các trục đường, nên có hình dạng không đều. Khi so sánh, chỉ số xi-lu-ét của cây min cao hơn, nhưng kết quả lại kém hữu dụng hơn. Lý do là cây min cố ép các cụm thành hình cầu và ép cả điểm ngoại lệ vào cụm. Nếu lập tuyến xe theo kết quả đó, mỗi tuyến sẽ phải đi qua những điểm cách xa nhau hàng chục ki-lô-mét. Ngược lại, đê bê ét can tìm ra những vùng đơn hàng dày đặc theo đúng hình dạng thực tế, và tách riêng những điểm giao lẻ loi ra thành nhóm nhiễu. Những điểm nhiễu này có thể được giao bằng một phương án riêng, ví dụ gửi qua đơn vị vận chuyển bên ngoài. Bài học ở đây là chỉ số kỹ thuật cao chưa chắc đã là kết quả tốt cho bài toán kinh doanh."
+ },
+ {
+  "slide": 22,
+  "text": "Bây giờ, chúng ta cùng tổng hợp lại ba phương pháp trong một bảng so sánh. Về cách định nghĩa cụm, cây min coi cụm là các điểm gần một tâm. Phân cụm phân cấp coi cụm là một nhánh của cây, còn đê bê ét can coi cụm là vùng có mật độ cao. Về xử lý dữ liệu, cả ba đều cần chuẩn hoá biến khi các biến khác đơn vị, riêng cây min còn phải xử lý ngoại lệ trước. Với dữ liệu toạ độ địa lý, đê bê ét can giữ nguyên toạ độ. Về điểm ngoại lệ, hai thuật toán đầu đều ép ngoại lệ vào một cụm, còn đê bê ét can tách chúng ra thành nhóm nhiễu, và đây là ưu thế lớn nhất của nó. Về quy mô, cây min chạy tốt với dữ liệu rất lớn, phân cụm phân cấp chỉ phù hợp với dữ liệu nhỏ, dưới khoảng năm nghìn đối tượng. Từ đó, cây min phù hợp để phân khúc khách hàng quy mô lớn. Phân cụm phân cấp phù hợp để gom danh mục sản phẩm hay gom thương hiệu. Còn đê bê ét can phù hợp với marketing theo địa lý và phát hiện gian lận."
+ },
+ {
+  "slide": 23,
+  "text": "Chúng ta đi tới phần cuối cùng của bài, bản đồ nhận thức trong định vị thương hiệu. Nếu như các phần trước tập trung vào khách hàng, thì phần này sẽ chuyển góc nhìn sang thương hiệu và sản phẩm."
+ },
+ {
+  "slide": 24,
+  "text": "Vậy bản đồ nhận thức là gì? Đó là một biểu đồ hai chiều, trong đó mỗi thương hiệu hoặc mỗi sản phẩm là một điểm. Vị trí của điểm phản ánh việc khách hàng nghĩ gì về thương hiệu, trên hai thuộc tính quan trọng nhất của ngành hàng. Có hai chữ các bạn cần nhấn mạnh. Chữ thứ nhất là nhận thức. Bản đồ vẽ lại điều khách hàng tin, chứ không phải sự thật khách quan. Một chiếc xe có thể thực sự bền nhất thị trường, nhưng vẫn nằm ở góc kém bền nếu khách hàng không tin như vậy. Chữ thứ hai là bản đồ. Mục đích là so sánh vị trí tương đối giữa các thương hiệu, chứ không phải đo giá trị tuyệt đối. Các bạn cũng để ý sự khác biệt căn bản với các công cụ trước. A-rờ ép em và phân cụm nhóm các khách hàng, dựa trên dữ liệu giao dịch nội bộ. Còn bản đồ nhận thức định vị các thương hiệu, dựa trên dữ liệu khảo sát ý kiến. Đối tượng khác nhau, nguồn dữ liệu khác nhau, và câu hỏi quản trị cũng khác nhau."
+ },
+ {
+  "slide": 25,
+  "text": "Vậy thì đọc một bản đồ nhận thức như thế nào? Trước hết, các bạn xác định hai trục đại diện cho thuộc tính gì, ví dụ trục giá cả và trục chất lượng. Tiếp theo, các bạn nhìn khoảng cách giữa các điểm. Những thương hiệu nằm gần nhau là những thương hiệu bị khách hàng nhìn nhận giống nhau, tức là đang cạnh tranh trực tiếp. Sau đó, các bạn tìm những vùng trống trên bản đồ, nơi chưa có thương hiệu nào đứng. Đó có thể là cơ hội định vị mới, nhưng cũng cần kiểm tra xem vùng đó có thực sự có khách hàng hay không. Tóm lại, bản đồ giúp trả lời ba câu hỏi quản trị. Ta đang bị ai cạnh tranh trực tiếp, ta khác biệt ở điểm nào, và trên thị trường còn chỗ nào chưa ai đứng. Ở bài bốn, các bạn sẽ học cách dựng một bản đồ nhận thức từ dữ liệu khảo sát, bằng phương pháp phân tích đa chiều."
+ },
+ {
+  "slide": 26,
+  "text": "Chúng ta cùng tóm tắt lại bài học hôm nay. Thứ nhất, mô hình a-rờ ép em phân khúc khách hàng bằng ba con số lấy từ hoá đơn. Mô hình đơn giản, không cần khảo sát, nhưng ngưỡng chia là do người đặt. Thứ hai, phân tích cụm là học không giám sát, tối ưu đồng thời tính đồng nhất nội cụm và khác biệt liên cụm, để dữ liệu tự nói có mấy nhóm. Thứ ba, cây min nhanh và phổ biến, nhưng cần chọn số cụm trước, giả định cụm hình cầu và nhạy với ngoại lệ. Phân cụm phân cấp cho ta biểu đồ cây, còn đê bê ét can xử lý tốt ngoại lệ và cụm hình dạng bất kỳ. Thứ tư, chuẩn hoá biến là bước bắt buộc trước khi tính khoảng cách. Nếu bỏ qua, biến có đơn vị lớn nhất sẽ quyết định toàn bộ kết quả. Thứ năm, chọn số cụm phải kết hợp phương pháp khuỷu tay và chỉ số xi-lu-ét. Cuối cùng, bản đồ nhận thức định vị thương hiệu theo dữ liệu khảo sát, bổ sung cho các công cụ phân khúc khách hàng. Ở bài bốn, chúng ta sẽ học phân tích kết hợp, về nhận thức của khách hàng với thuộc tính sản phẩm và định giá."
+ },
+ {
+  "slide": 27,
+  "text": "Bây giờ, chúng ta quay lại case study Nét-phlíc ở đầu bài. Câu hỏi thứ nhất, vì sao nhân khẩu học kém hiệu quả? Bởi vì tuổi, giới tính và quốc gia là những biến dễ thu thập, chứ không phải những biến giải thích được hành vi. Hai người cùng hai mươi lăm tuổi ở Hà Nội có thể có thị hiếu hoàn toàn khác nhau. Câu hỏi thứ hai, Nét-phlíc đã dùng dữ liệu gì? Đó là dữ liệu hành vi, gồm nội dung đã xem, xem đến đâu thì dừng, xem vào lúc nào, trên thiết bị nào và tìm kiếm gì. Đây chính là loại biến mà a-rờ ép em và phân cụm hành vi sử dụng. Câu hỏi thứ ba, làm sao biết nên chia thành bao nhiêu nhóm? Đây chính là bài toán chọn số cụm mà chúng ta vừa học. Chia quá ít thì mỗi nhóm vẫn quá khác nhau bên trong. Chia quá nhiều thì doanh nghiệp không đủ nguồn lực để phục vụ riêng từng nhóm. Từ case này, chúng ta rút ra ba bài học. Phân khúc theo hành vi thường mạnh hơn phân khúc theo nhân khẩu học. Số cụm phải được chọn bằng dữ liệu, không theo cảm tính. Và một phân khúc chỉ có giá trị khi doanh nghiệp đủ nguồn lực để phục vụ nó một cách khác biệt."
+ },
+ {
+  "slide": 28,
+  "text": ""
+ },
+ {
+  "slide": 29,
+  "text": "Như vậy, qua bài học hôm nay, chúng ta đã đi từ mô hình a-rờ ép em, qua ba thuật toán phân cụm, tới bản đồ nhận thức trong định vị thương hiệu. Các bạn hãy ôn lại cách chấm điểm a-rờ ép em và cách chọn số cụm, vì đây là nền tảng cho các bài tiếp theo. Cảm ơn các bạn đã theo dõi, và hẹn gặp lại các bạn trong video tiếp theo."
+ }
+]
