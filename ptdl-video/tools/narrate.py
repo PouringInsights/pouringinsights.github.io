@@ -70,6 +70,17 @@ for item in script:
     m4a = f"{out}/s{s:02d}.m4a"
     if os.path.exists(m4a) and str(s) in durs: continue
     t = time.time()
+    if os.environ.get("SIMPLE") == "1":   # v1 settings (preferred by the user): one pass, no pause/pitch edits
+        a = tts.infer(text, ref_audio=REF)
+        a = np.concatenate([np.zeros(int(0.35 * SR)), a, np.zeros(int(0.6 * SR))]).astype(np.float32)
+        raw = f"{out}/s{s:02d}.wav"; write_wav(raw, a)
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", raw, "-af", "loudnorm=I=-23:TP=-3:LRA=7,aresample=44100",
+                        "-ac", "2", "-c:a", "aac", "-b:a", "320k", m4a], check=True)
+        d = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", m4a],
+                                 capture_output=True, text=True).stdout)
+        durs[str(s)] = d; json.dump(durs, open(dpath, "w"), indent=1)
+        print(f"b{N} slide {s}: {d:.1f}s audio in {time.time()-t:.0f}s", flush=True)
+        continue
     pieces = [np.zeros(int(0.35 * SR), dtype=np.float32)]
     for k, sent in enumerate(sentences(text)):
         a = tts.infer(sent, ref_audio=REF, silence_p=0.25)
