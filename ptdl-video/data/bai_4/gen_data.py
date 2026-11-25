@@ -24,7 +24,7 @@ def gen_mds(rng, n=150):
     pairs = list(combinations(range(6), 2))
     d = np.array([np.linalg.norm(P[i] - P[j]) for i, j in pairs])
     dmax = d.max()
-    bias = rng.normal(0, 0.45, len(pairs))            # lệch nhận thức chung theo cặp (không Euclid)
+    bias = rng.normal(0, 0.9, len(pairs))            # lệch nhận thức chung theo cặp (không Euclid)
     rows = []
     for r in range(1, n + 1):
         scale = rng.normal(1, 0.12)                   # mỗi người dùng thang hơi khác
@@ -53,10 +53,10 @@ def gen_mds(rng, n=150):
 def gen_hoiquy(rng, n=400):
     cols = ["hinh_anh_thuong_hieu", "vi_va_do_ga", "san_co_tai_diem_ban",
             "cam_nhan_gia_cao", "thiet_ke_bao_bi", "khuyen_mai_diem_ban"]
-    beta = np.array([0.44, 0.29, 0.26, -0.21, 0.12, 0.04]) * 1.06   # bù phần suy giảm do làm tròn thang 1–7
-    S = np.full((6, 6), 0.20)
+    beta = np.array([0.44, 0.29, 0.26, -0.21, 0.12, 0.0]) * 1.08   # bù phần suy giảm do làm tròn thang 1–7
+    S = np.full((6, 6), 0.10)
     np.fill_diagonal(S, 1.0)
-    S[0, 4] = S[4, 0] = 0.35          # hình ảnh thương hiệu – bao bì
+    S[0, 4] = S[4, 0] = 0.20          # hình ảnh thương hiệu – bao bì
     S[3, 5] = S[5, 3] = -0.10
     X = rng.multivariate_normal(np.zeros(6), S, n)
     sig = np.sqrt(1 - beta @ S @ beta)
@@ -91,11 +91,11 @@ def gen_conjoint(rng, n=200):
                           "gia": LEVELS["gia"][c - 1]} for k, (a, b, c) in enumerate(L9)])
     rows = []
     for r in range(1, n + 1):
-        a0 = rng.normal(2.35, 0.45)                         # mức "dễ tính" riêng của người chấm
-        w = np.clip(1 + rng.normal(0, 0.22, 3), 0.3, None)  # khác biệt sở thích giữa người
+        a0 = rng.normal(2.35, 0.35)                         # mức "dễ tính" riêng của người chấm
+        w = np.clip(1 + rng.normal(0, 0.18, 3), 0.3, None)  # khác biệt sở thích giữa người
         for k, (a, b, c) in enumerate(L9):
             u = (a0 + w[0] * PW["nguon_goc"][a - 1] + w[1] * PW["bao_bi"][b - 1]
-                 + w[2] * PW["gia"][c - 1] + rng.normal(0, 0.55))
+                 + w[2] * PW["gia"][c - 1] + rng.normal(0, 0.42))
             rows.append((r, k + 1, int(np.clip(np.round(u), 1, 9))))
     df = pd.DataFrame(rows, columns=["dap_vien", "to_hop", "diem"]).merge(prof, on="to_hop")
     df = df.sort_values(["dap_vien", "to_hop"]).reset_index(drop=True)
@@ -106,8 +106,8 @@ def gen_conjoint(rng, n=200):
 # 4.3.2 Van Westendorp – giá một ly cà phê, n = 320
 # ---------------------------------------------------------------------------
 def gen_vw(rng, n=320):
-    mu = np.array([32000, 42500, 61000, 78000])
-    sd = np.array([5000, 6000, 7000, 9000])
+    mu = np.array([33000, 42000, 60000, 82000])
+    sd = np.array([6000, 6000, 7000, 9000])
     rho = 0.6
     C = np.full((4, 4), rho)
     np.fill_diagonal(C, 1)

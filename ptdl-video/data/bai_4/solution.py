@@ -133,7 +133,7 @@ def U(o, p, g):
 
 
 tieu_de("3b. MÔ PHỎNG THỊ PHẦN LOGIT (cấu hình đối thủ giả định)")
-GIA_VON = 24000          # giả định giá vốn một ly, để tính lợi nhuận gộp
+GIA_VON = 30000          # giả định giá vốn một ly (biên gộp 50% ở mức 60.000 đ), để tính lợi nhuận gộp
 QUY_MO = 50000           # giả định số ly/tháng toàn thị trường
 thi_truong = {"Ta": ("Colombia", "Túi giấy", 60000), "Đối thủ A": ("Việt Nam", "Hộp nhựa", 45000),
               "Đối thủ B": ("Ethiopia", "Hộp cao cấp", 75000), "Đối thủ C": ("Việt Nam", "Túi giấy", 60000)}
