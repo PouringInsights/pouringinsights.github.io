@@ -1,0 +1,1801 @@
+﻿dap_vien,to_hop,nguon_goc,bao_bi,gia,diem
+1,1,Ethiopia,Hộp cao cấp,45000,8
+1,2,Ethiopia,Túi giấy,60000,5
+1,3,Ethiopia,Hộp nhựa,75000,5
+1,4,Colombia,Hộp cao cấp,60000,6
+1,5,Colombia,Túi giấy,75000,3
+1,6,Colombia,Hộp nhựa,45000,6
+1,7,Việt Nam,Hộp cao cấp,75000,4
+1,8,Việt Nam,Túi giấy,45000,6
+1,9,Việt Nam,Hộp nhựa,60000,3
+2,1,Ethiopia,Hộp cao cấp,45000,8
+2,2,Ethiopia,Túi giấy,60000,5
+2,3,Ethiopia,Hộp nhựa,75000,4
+2,4,Colombia,Hộp cao cấp,60000,5
+2,5,Colombia,Túi giấy,75000,3
+2,6,Colombia,Hộp nhựa,45000,5
+2,7,Việt Nam,Hộp cao cấp,75000,4
+2,8,Việt Nam,Túi giấy,45000,5
+2,9,Việt Nam,Hộp nhựa,60000,2
+3,1,Ethiopia,Hộp cao cấp,45000,8
+3,2,Ethiopia,Túi giấy,60000,7
+3,3,Ethiopia,Hộp nhựa,75000,5
+3,4,Colombia,Hộp cao cấp,60000,7
+3,5,Colombia,Túi giấy,75000,5
+3,6,Colombia,Hộp nhựa,45000,5
+3,7,Việt Nam,Hộp cao cấp,75000,6
+3,8,Việt Nam,Túi giấy,45000,6
+3,9,Việt Nam,Hộp nhựa,60000,4
+4,1,Ethiopia,Hộp cao cấp,45000,7
+4,2,Ethiopia,Túi giấy,60000,7
+4,3,Ethiopia,Hộp nhựa,75000,4
+4,4,Colombia,Hộp cao cấp,60000,5
+4,5,Colombia,Túi giấy,75000,4
+4,6,Colombia,Hộp nhựa,45000,5
+4,7,Việt Nam,Hộp cao cấp,75000,4
+4,8,Việt Nam,Túi giấy,45000,6
+4,9,Việt Nam,Hộp nhựa,60000,4
+5,1,Ethiopia,Hộp cao cấp,45000,8
+5,2,Ethiopia,Túi giấy,60000,5
+5,3,Ethiopia,Hộp nhựa,75000,4
+5,4,Colombia,Hộp cao cấp,60000,5
+5,5,Colombia,Túi giấy,75000,4
+5,6,Colombia,Hộp nhựa,45000,4
+5,7,Việt Nam,Hộp cao cấp,75000,5
+5,8,Việt Nam,Túi giấy,45000,5
+5,9,Việt Nam,Hộp nhựa,60000,3
+6,1,Ethiopia,Hộp cao cấp,45000,8
+6,2,Ethiopia,Túi giấy,60000,4
+6,3,Ethiopia,Hộp nhựa,75000,4
+6,4,Colombia,Hộp cao cấp,60000,5
+6,5,Colombia,Túi giấy,75000,3
+6,6,Colombia,Hộp nhựa,45000,5
+6,7,Việt Nam,Hộp cao cấp,75000,4
+6,8,Việt Nam,Túi giấy,45000,6
+6,9,Việt Nam,Hộp nhựa,60000,4
+7,1,Ethiopia,Hộp cao cấp,45000,8
+7,2,Ethiopia,Túi giấy,60000,8
+7,3,Ethiopia,Hộp nhựa,75000,5
+7,4,Colombia,Hộp cao cấp,60000,7
+7,5,Colombia,Túi giấy,75000,4
+7,6,Colombia,Hộp nhựa,45000,6
+7,7,Việt Nam,Hộp cao cấp,75000,5
+7,8,Việt Nam,Túi giấy,45000,6
+7,9,Việt Nam,Hộp nhựa,60000,4
+8,1,Ethiopia,Hộp cao cấp,45000,8
+8,2,Ethiopia,Túi giấy,60000,5
+8,3,Ethiopia,Hộp nhựa,75000,2
+8,4,Colombia,Hộp cao cấp,60000,6
+8,5,Colombia,Túi giấy,75000,5
+8,6,Colombia,Hộp nhựa,45000,4
+8,7,Việt Nam,Hộp cao cấp,75000,6
+8,8,Việt Nam,Túi giấy,45000,5
+8,9,Việt Nam,Hộp nhựa,60000,4
+9,1,Ethiopia,Hộp cao cấp,45000,8
+9,2,Ethiopia,Túi giấy,60000,7
+9,3,Ethiopia,Hộp nhựa,75000,4
+9,4,Colombia,Hộp cao cấp,60000,7
+9,5,Colombia,Túi giấy,75000,5
+9,6,Colombia,Hộp nhựa,45000,6
+9,7,Việt Nam,Hộp cao cấp,75000,4
+9,8,Việt Nam,Túi giấy,45000,5
+9,9,Việt Nam,Hộp nhựa,60000,5
+10,1,Ethiopia,Hộp cao cấp,45000,7
+10,2,Ethiopia,Túi giấy,60000,5
+10,3,Ethiopia,Hộp nhựa,75000,3
+10,4,Colombia,Hộp cao cấp,60000,6
+10,5,Colombia,Túi giấy,75000,4
+10,6,Colombia,Hộp nhựa,45000,4
+10,7,Việt Nam,Hộp cao cấp,75000,5
+10,8,Việt Nam,Túi giấy,45000,4
+10,9,Việt Nam,Hộp nhựa,60000,2
+11,1,Ethiopia,Hộp cao cấp,45000,7
+11,2,Ethiopia,Túi giấy,60000,5
+11,3,Ethiopia,Hộp nhựa,75000,5
+11,4,Colombia,Hộp cao cấp,60000,6
+11,5,Colombia,Túi giấy,75000,5
+11,6,Colombia,Hộp nhựa,45000,5
+11,7,Việt Nam,Hộp cao cấp,75000,4
+11,8,Việt Nam,Túi giấy,45000,6
+11,9,Việt Nam,Hộp nhựa,60000,4
+12,1,Ethiopia,Hộp cao cấp,45000,7
+12,2,Ethiopia,Túi giấy,60000,6
+12,3,Ethiopia,Hộp nhựa,75000,4
+12,4,Colombia,Hộp cao cấp,60000,6
+12,5,Colombia,Túi giấy,75000,4
+12,6,Colombia,Hộp nhựa,45000,5
+12,7,Việt Nam,Hộp cao cấp,75000,5
+12,8,Việt Nam,Túi giấy,45000,5
+12,9,Việt Nam,Hộp nhựa,60000,5
+13,1,Ethiopia,Hộp cao cấp,45000,9
+13,2,Ethiopia,Túi giấy,60000,6
+13,3,Ethiopia,Hộp nhựa,75000,2
+13,4,Colombia,Hộp cao cấp,60000,6
+13,5,Colombia,Túi giấy,75000,3
+13,6,Colombia,Hộp nhựa,45000,6
+13,7,Việt Nam,Hộp cao cấp,75000,4
+13,8,Việt Nam,Túi giấy,45000,6
+13,9,Việt Nam,Hộp nhựa,60000,4
+14,1,Ethiopia,Hộp cao cấp,45000,7
+14,2,Ethiopia,Túi giấy,60000,5
+14,3,Ethiopia,Hộp nhựa,75000,2
+14,4,Colombia,Hộp cao cấp,60000,5
+14,5,Colombia,Túi giấy,75000,3
+14,6,Colombia,Hộp nhựa,45000,4
+14,7,Việt Nam,Hộp cao cấp,75000,2
+14,8,Việt Nam,Túi giấy,45000,5
+14,9,Việt Nam,Hộp nhựa,60000,3
+15,1,Ethiopia,Hộp cao cấp,45000,6
+15,2,Ethiopia,Túi giấy,60000,6
+15,3,Ethiopia,Hộp nhựa,75000,5
+15,4,Colombia,Hộp cao cấp,60000,5
+15,5,Colombia,Túi giấy,75000,4
+15,6,Colombia,Hộp nhựa,45000,5
+15,7,Việt Nam,Hộp cao cấp,75000,3
+15,8,Việt Nam,Túi giấy,45000,5
+15,9,Việt Nam,Hộp nhựa,60000,4
+16,1,Ethiopia,Hộp cao cấp,45000,8
+16,2,Ethiopia,Túi giấy,60000,6
+16,3,Ethiopia,Hộp nhựa,75000,5
+16,4,Colombia,Hộp cao cấp,60000,7
+16,5,Colombia,Túi giấy,75000,4
+16,6,Colombia,Hộp nhựa,45000,4
+16,7,Việt Nam,Hộp cao cấp,75000,5
+16,8,Việt Nam,Túi giấy,45000,6
+16,9,Việt Nam,Hộp nhựa,60000,3
+17,1,Ethiopia,Hộp cao cấp,45000,9
+17,2,Ethiopia,Túi giấy,60000,7
+17,3,Ethiopia,Hộp nhựa,75000,3
+17,4,Colombia,Hộp cao cấp,60000,6
+17,5,Colombia,Túi giấy,75000,4
+17,6,Colombia,Hộp nhựa,45000,6
+17,7,Việt Nam,Hộp cao cấp,75000,4
+17,8,Việt Nam,Túi giấy,45000,6
+17,9,Việt Nam,Hộp nhựa,60000,4
+18,1,Ethiopia,Hộp cao cấp,45000,6
+18,2,Ethiopia,Túi giấy,60000,5
+18,3,Ethiopia,Hộp nhựa,75000,5
+18,4,Colombia,Hộp cao cấp,60000,5
+18,5,Colombia,Túi giấy,75000,4
+18,6,Colombia,Hộp nhựa,45000,4
+18,7,Việt Nam,Hộp cao cấp,75000,5
+18,8,Việt Nam,Túi giấy,45000,5
+18,9,Việt Nam,Hộp nhựa,60000,4
+19,1,Ethiopia,Hộp cao cấp,45000,8
+19,2,Ethiopia,Túi giấy,60000,5
+19,3,Ethiopia,Hộp nhựa,75000,4
+19,4,Colombia,Hộp cao cấp,60000,5
+19,5,Colombia,Túi giấy,75000,4
+19,6,Colombia,Hộp nhựa,45000,6
+19,7,Việt Nam,Hộp cao cấp,75000,3
+19,8,Việt Nam,Túi giấy,45000,7
+19,9,Việt Nam,Hộp nhựa,60000,4
+20,1,Ethiopia,Hộp cao cấp,45000,7
+20,2,Ethiopia,Túi giấy,60000,6
+20,3,Ethiopia,Hộp nhựa,75000,5
+20,4,Colombia,Hộp cao cấp,60000,6
+20,5,Colombia,Túi giấy,75000,4
+20,6,Colombia,Hộp nhựa,45000,4
+20,7,Việt Nam,Hộp cao cấp,75000,5
+20,8,Việt Nam,Túi giấy,45000,5
+20,9,Việt Nam,Hộp nhựa,60000,3
+21,1,Ethiopia,Hộp cao cấp,45000,9
+21,2,Ethiopia,Túi giấy,60000,7
+21,3,Ethiopia,Hộp nhựa,75000,4
+21,4,Colombia,Hộp cao cấp,60000,6
+21,5,Colombia,Túi giấy,75000,4
+21,6,Colombia,Hộp nhựa,45000,6
+21,7,Việt Nam,Hộp cao cấp,75000,4
+21,8,Việt Nam,Túi giấy,45000,7
+21,9,Việt Nam,Hộp nhựa,60000,4
+22,1,Ethiopia,Hộp cao cấp,45000,7
+22,2,Ethiopia,Túi giấy,60000,5
+22,3,Ethiopia,Hộp nhựa,75000,5
+22,4,Colombia,Hộp cao cấp,60000,6
+22,5,Colombia,Túi giấy,75000,5
+22,6,Colombia,Hộp nhựa,45000,5
+22,7,Việt Nam,Hộp cao cấp,75000,3
+22,8,Việt Nam,Túi giấy,45000,4
+22,9,Việt Nam,Hộp nhựa,60000,3
+23,1,Ethiopia,Hộp cao cấp,45000,7
+23,2,Ethiopia,Túi giấy,60000,6
+23,3,Ethiopia,Hộp nhựa,75000,4
+23,4,Colombia,Hộp cao cấp,60000,6
+23,5,Colombia,Túi giấy,75000,3
+23,6,Colombia,Hộp nhựa,45000,6
+23,7,Việt Nam,Hộp cao cấp,75000,4
+23,8,Việt Nam,Túi giấy,45000,6
+23,9,Việt Nam,Hộp nhựa,60000,4
+24,1,Ethiopia,Hộp cao cấp,45000,8
+24,2,Ethiopia,Túi giấy,60000,6
+24,3,Ethiopia,Hộp nhựa,75000,3
+24,4,Colombia,Hộp cao cấp,60000,7
+24,5,Colombia,Túi giấy,75000,4
+24,6,Colombia,Hộp nhựa,45000,6
+24,7,Việt Nam,Hộp cao cấp,75000,4
+24,8,Việt Nam,Túi giấy,45000,6
+24,9,Việt Nam,Hộp nhựa,60000,5
+25,1,Ethiopia,Hộp cao cấp,45000,8
+25,2,Ethiopia,Túi giấy,60000,7
+25,3,Ethiopia,Hộp nhựa,75000,4
+25,4,Colombia,Hộp cao cấp,60000,6
+25,5,Colombia,Túi giấy,75000,4
+25,6,Colombia,Hộp nhựa,45000,6
+25,7,Việt Nam,Hộp cao cấp,75000,5
+25,8,Việt Nam,Túi giấy,45000,7
+25,9,Việt Nam,Hộp nhựa,60000,4
+26,1,Ethiopia,Hộp cao cấp,45000,8
+26,2,Ethiopia,Túi giấy,60000,7
+26,3,Ethiopia,Hộp nhựa,75000,3
+26,4,Colombia,Hộp cao cấp,60000,4
+26,5,Colombia,Túi giấy,75000,3
+26,6,Colombia,Hộp nhựa,45000,4
+26,7,Việt Nam,Hộp cao cấp,75000,3
+26,8,Việt Nam,Túi giấy,45000,6
+26,9,Việt Nam,Hộp nhựa,60000,3
+27,1,Ethiopia,Hộp cao cấp,45000,7
+27,2,Ethiopia,Túi giấy,60000,5
+27,3,Ethiopia,Hộp nhựa,75000,3
+27,4,Colombia,Hộp cao cấp,60000,4
+27,5,Colombia,Túi giấy,75000,3
+27,6,Colombia,Hộp nhựa,45000,5
+27,7,Việt Nam,Hộp cao cấp,75000,3
+27,8,Việt Nam,Túi giấy,45000,5
+27,9,Việt Nam,Hộp nhựa,60000,3
+28,1,Ethiopia,Hộp cao cấp,45000,8
+28,2,Ethiopia,Túi giấy,60000,6
+28,3,Ethiopia,Hộp nhựa,75000,3
+28,4,Colombia,Hộp cao cấp,60000,7
+28,5,Colombia,Túi giấy,75000,4
+28,6,Colombia,Hộp nhựa,45000,7
+28,7,Việt Nam,Hộp cao cấp,75000,4
+28,8,Việt Nam,Túi giấy,45000,6
+28,9,Việt Nam,Hộp nhựa,60000,4
+29,1,Ethiopia,Hộp cao cấp,45000,8
+29,2,Ethiopia,Túi giấy,60000,6
+29,3,Ethiopia,Hộp nhựa,75000,4
+29,4,Colombia,Hộp cao cấp,60000,5
+29,5,Colombia,Túi giấy,75000,4
+29,6,Colombia,Hộp nhựa,45000,7
+29,7,Việt Nam,Hộp cao cấp,75000,4
+29,8,Việt Nam,Túi giấy,45000,5
+29,9,Việt Nam,Hộp nhựa,60000,4
+30,1,Ethiopia,Hộp cao cấp,45000,7
+30,2,Ethiopia,Túi giấy,60000,5
+30,3,Ethiopia,Hộp nhựa,75000,4
+30,4,Colombia,Hộp cao cấp,60000,6
+30,5,Colombia,Túi giấy,75000,4
+30,6,Colombia,Hộp nhựa,45000,5
+30,7,Việt Nam,Hộp cao cấp,75000,4
+30,8,Việt Nam,Túi giấy,45000,5
+30,9,Việt Nam,Hộp nhựa,60000,3
+31,1,Ethiopia,Hộp cao cấp,45000,8
+31,2,Ethiopia,Túi giấy,60000,6
+31,3,Ethiopia,Hộp nhựa,75000,4
+31,4,Colombia,Hộp cao cấp,60000,6
+31,5,Colombia,Túi giấy,75000,4
+31,6,Colombia,Hộp nhựa,45000,7
+31,7,Việt Nam,Hộp cao cấp,75000,4
+31,8,Việt Nam,Túi giấy,45000,6
+31,9,Việt Nam,Hộp nhựa,60000,4
+32,1,Ethiopia,Hộp cao cấp,45000,8
+32,2,Ethiopia,Túi giấy,60000,7
+32,3,Ethiopia,Hộp nhựa,75000,5
+32,4,Colombia,Hộp cao cấp,60000,8
+32,5,Colombia,Túi giấy,75000,6
+32,6,Colombia,Hộp nhựa,45000,6
+32,7,Việt Nam,Hộp cao cấp,75000,5
+32,8,Việt Nam,Túi giấy,45000,8
+32,9,Việt Nam,Hộp nhựa,60000,5
+33,1,Ethiopia,Hộp cao cấp,45000,7
+33,2,Ethiopia,Túi giấy,60000,5
+33,3,Ethiopia,Hộp nhựa,75000,3
+33,4,Colombia,Hộp cao cấp,60000,5
+33,5,Colombia,Túi giấy,75000,4
+33,6,Colombia,Hộp nhựa,45000,4
+33,7,Việt Nam,Hộp cao cấp,75000,3
+33,8,Việt Nam,Túi giấy,45000,5
+33,9,Việt Nam,Hộp nhựa,60000,3
+34,1,Ethiopia,Hộp cao cấp,45000,5
+34,2,Ethiopia,Túi giấy,60000,5
+34,3,Ethiopia,Hộp nhựa,75000,2
+34,4,Colombia,Hộp cao cấp,60000,5
+34,5,Colombia,Túi giấy,75000,3
+34,6,Colombia,Hộp nhựa,45000,4
+34,7,Việt Nam,Hộp cao cấp,75000,4
+34,8,Việt Nam,Túi giấy,45000,4
+34,9,Việt Nam,Hộp nhựa,60000,2
+35,1,Ethiopia,Hộp cao cấp,45000,9
+35,2,Ethiopia,Túi giấy,60000,8
+35,3,Ethiopia,Hộp nhựa,75000,3
+35,4,Colombia,Hộp cao cấp,60000,7
+35,5,Colombia,Túi giấy,75000,5
+35,6,Colombia,Hộp nhựa,45000,6
+35,7,Việt Nam,Hộp cao cấp,75000,5
+35,8,Việt Nam,Túi giấy,45000,7
+35,9,Việt Nam,Hộp nhựa,60000,5
+36,1,Ethiopia,Hộp cao cấp,45000,8
+36,2,Ethiopia,Túi giấy,60000,5
+36,3,Ethiopia,Hộp nhựa,75000,4
+36,4,Colombia,Hộp cao cấp,60000,6
+36,5,Colombia,Túi giấy,75000,4
+36,6,Colombia,Hộp nhựa,45000,5
+36,7,Việt Nam,Hộp cao cấp,75000,5
+36,8,Việt Nam,Túi giấy,45000,5
+36,9,Việt Nam,Hộp nhựa,60000,3
+37,1,Ethiopia,Hộp cao cấp,45000,8
+37,2,Ethiopia,Túi giấy,60000,7
+37,3,Ethiopia,Hộp nhựa,75000,5
+37,4,Colombia,Hộp cao cấp,60000,6
+37,5,Colombia,Túi giấy,75000,5
+37,6,Colombia,Hộp nhựa,45000,6
+37,7,Việt Nam,Hộp cao cấp,75000,4
+37,8,Việt Nam,Túi giấy,45000,6
+37,9,Việt Nam,Hộp nhựa,60000,5
+38,1,Ethiopia,Hộp cao cấp,45000,6
+38,2,Ethiopia,Túi giấy,60000,6
+38,3,Ethiopia,Hộp nhựa,75000,5
+38,4,Colombia,Hộp cao cấp,60000,6
+38,5,Colombia,Túi giấy,75000,4
+38,6,Colombia,Hộp nhựa,45000,4
+38,7,Việt Nam,Hộp cao cấp,75000,4
+38,8,Việt Nam,Túi giấy,45000,6
+38,9,Việt Nam,Hộp nhựa,60000,2
+39,1,Ethiopia,Hộp cao cấp,45000,6
+39,2,Ethiopia,Túi giấy,60000,4
+39,3,Ethiopia,Hộp nhựa,75000,4
+39,4,Colombia,Hộp cao cấp,60000,4
+39,5,Colombia,Túi giấy,75000,3
+39,6,Colombia,Hộp nhựa,45000,4
+39,7,Việt Nam,Hộp cao cấp,75000,3
+39,8,Việt Nam,Túi giấy,45000,3
+39,9,Việt Nam,Hộp nhựa,60000,3
+40,1,Ethiopia,Hộp cao cấp,45000,9
+40,2,Ethiopia,Túi giấy,60000,7
+40,3,Ethiopia,Hộp nhựa,75000,5
+40,4,Colombia,Hộp cao cấp,60000,7
+40,5,Colombia,Túi giấy,75000,4
+40,6,Colombia,Hộp nhựa,45000,7
+40,7,Việt Nam,Hộp cao cấp,75000,4
+40,8,Việt Nam,Túi giấy,45000,6
+40,9,Việt Nam,Hộp nhựa,60000,5
+41,1,Ethiopia,Hộp cao cấp,45000,6
+41,2,Ethiopia,Túi giấy,60000,5
+41,3,Ethiopia,Hộp nhựa,75000,3
+41,4,Colombia,Hộp cao cấp,60000,5
+41,5,Colombia,Túi giấy,75000,3
+41,6,Colombia,Hộp nhựa,45000,3
+41,7,Việt Nam,Hộp cao cấp,75000,2
+41,8,Việt Nam,Túi giấy,45000,4
+41,9,Việt Nam,Hộp nhựa,60000,2
+42,1,Ethiopia,Hộp cao cấp,45000,7
+42,2,Ethiopia,Túi giấy,60000,6
+42,3,Ethiopia,Hộp nhựa,75000,3
+42,4,Colombia,Hộp cao cấp,60000,5
+42,5,Colombia,Túi giấy,75000,4
+42,6,Colombia,Hộp nhựa,45000,6
+42,7,Việt Nam,Hộp cao cấp,75000,3
+42,8,Việt Nam,Túi giấy,45000,6
+42,9,Việt Nam,Hộp nhựa,60000,3
+43,1,Ethiopia,Hộp cao cấp,45000,7
+43,2,Ethiopia,Túi giấy,60000,5
+43,3,Ethiopia,Hộp nhựa,75000,3
+43,4,Colombia,Hộp cao cấp,60000,6
+43,5,Colombia,Túi giấy,75000,4
+43,6,Colombia,Hộp nhựa,45000,5
+43,7,Việt Nam,Hộp cao cấp,75000,5
+43,8,Việt Nam,Túi giấy,45000,6
+43,9,Việt Nam,Hộp nhựa,60000,4
+44,1,Ethiopia,Hộp cao cấp,45000,8
+44,2,Ethiopia,Túi giấy,60000,6
+44,3,Ethiopia,Hộp nhựa,75000,5
+44,4,Colombia,Hộp cao cấp,60000,7
+44,5,Colombia,Túi giấy,75000,3
+44,6,Colombia,Hộp nhựa,45000,6
+44,7,Việt Nam,Hộp cao cấp,75000,5
+44,8,Việt Nam,Túi giấy,45000,6
+44,9,Việt Nam,Hộp nhựa,60000,4
+45,1,Ethiopia,Hộp cao cấp,45000,8
+45,2,Ethiopia,Túi giấy,60000,5
+45,3,Ethiopia,Hộp nhựa,75000,4
+45,4,Colombia,Hộp cao cấp,60000,6
+45,5,Colombia,Túi giấy,75000,4
+45,6,Colombia,Hộp nhựa,45000,5
+45,7,Việt Nam,Hộp cao cấp,75000,4
+45,8,Việt Nam,Túi giấy,45000,5
+45,9,Việt Nam,Hộp nhựa,60000,5
+46,1,Ethiopia,Hộp cao cấp,45000,8
+46,2,Ethiopia,Túi giấy,60000,5
+46,3,Ethiopia,Hộp nhựa,75000,4
+46,4,Colombia,Hộp cao cấp,60000,6
+46,5,Colombia,Túi giấy,75000,5
+46,6,Colombia,Hộp nhựa,45000,6
+46,7,Việt Nam,Hộp cao cấp,75000,4
+46,8,Việt Nam,Túi giấy,45000,5
+46,9,Việt Nam,Hộp nhựa,60000,4
+47,1,Ethiopia,Hộp cao cấp,45000,8
+47,2,Ethiopia,Túi giấy,60000,7
+47,3,Ethiopia,Hộp nhựa,75000,4
+47,4,Colombia,Hộp cao cấp,60000,7
+47,5,Colombia,Túi giấy,75000,4
+47,6,Colombia,Hộp nhựa,45000,5
+47,7,Việt Nam,Hộp cao cấp,75000,5
+47,8,Việt Nam,Túi giấy,45000,6
+47,9,Việt Nam,Hộp nhựa,60000,3
+48,1,Ethiopia,Hộp cao cấp,45000,6
+48,2,Ethiopia,Túi giấy,60000,5
+48,3,Ethiopia,Hộp nhựa,75000,4
+48,4,Colombia,Hộp cao cấp,60000,5
+48,5,Colombia,Túi giấy,75000,4
+48,6,Colombia,Hộp nhựa,45000,4
+48,7,Việt Nam,Hộp cao cấp,75000,4
+48,8,Việt Nam,Túi giấy,45000,4
+48,9,Việt Nam,Hộp nhựa,60000,3
+49,1,Ethiopia,Hộp cao cấp,45000,8
+49,2,Ethiopia,Túi giấy,60000,5
+49,3,Ethiopia,Hộp nhựa,75000,4
+49,4,Colombia,Hộp cao cấp,60000,7
+49,5,Colombia,Túi giấy,75000,4
+49,6,Colombia,Hộp nhựa,45000,5
+49,7,Việt Nam,Hộp cao cấp,75000,5
+49,8,Việt Nam,Túi giấy,45000,5
+49,9,Việt Nam,Hộp nhựa,60000,5
+50,1,Ethiopia,Hộp cao cấp,45000,8
+50,2,Ethiopia,Túi giấy,60000,6
+50,3,Ethiopia,Hộp nhựa,75000,4
+50,4,Colombia,Hộp cao cấp,60000,6
+50,5,Colombia,Túi giấy,75000,3
+50,6,Colombia,Hộp nhựa,45000,6
+50,7,Việt Nam,Hộp cao cấp,75000,4
+50,8,Việt Nam,Túi giấy,45000,5
+50,9,Việt Nam,Hộp nhựa,60000,4
+51,1,Ethiopia,Hộp cao cấp,45000,7
+51,2,Ethiopia,Túi giấy,60000,5
+51,3,Ethiopia,Hộp nhựa,75000,5
+51,4,Colombia,Hộp cao cấp,60000,6
+51,5,Colombia,Túi giấy,75000,4
+51,6,Colombia,Hộp nhựa,45000,5
+51,7,Việt Nam,Hộp cao cấp,75000,4
+51,8,Việt Nam,Túi giấy,45000,4
+51,9,Việt Nam,Hộp nhựa,60000,5
+52,1,Ethiopia,Hộp cao cấp,45000,8
+52,2,Ethiopia,Túi giấy,60000,7
+52,3,Ethiopia,Hộp nhựa,75000,5
+52,4,Colombia,Hộp cao cấp,60000,7
+52,5,Colombia,Túi giấy,75000,4
+52,6,Colombia,Hộp nhựa,45000,6
+52,7,Việt Nam,Hộp cao cấp,75000,4
+52,8,Việt Nam,Túi giấy,45000,6
+52,9,Việt Nam,Hộp nhựa,60000,4
+53,1,Ethiopia,Hộp cao cấp,45000,8
+53,2,Ethiopia,Túi giấy,60000,7
+53,3,Ethiopia,Hộp nhựa,75000,3
+53,4,Colombia,Hộp cao cấp,60000,6
+53,5,Colombia,Túi giấy,75000,5
+53,6,Colombia,Hộp nhựa,45000,5
+53,7,Việt Nam,Hộp cao cấp,75000,4
+53,8,Việt Nam,Túi giấy,45000,7
+53,9,Việt Nam,Hộp nhựa,60000,3
+54,1,Ethiopia,Hộp cao cấp,45000,8
+54,2,Ethiopia,Túi giấy,60000,5
+54,3,Ethiopia,Hộp nhựa,75000,4
+54,4,Colombia,Hộp cao cấp,60000,5
+54,5,Colombia,Túi giấy,75000,3
+54,6,Colombia,Hộp nhựa,45000,5
+54,7,Việt Nam,Hộp cao cấp,75000,3
+54,8,Việt Nam,Túi giấy,45000,6
+54,9,Việt Nam,Hộp nhựa,60000,3
+55,1,Ethiopia,Hộp cao cấp,45000,8
+55,2,Ethiopia,Túi giấy,60000,6
+55,3,Ethiopia,Hộp nhựa,75000,4
+55,4,Colombia,Hộp cao cấp,60000,6
+55,5,Colombia,Túi giấy,75000,6
+55,6,Colombia,Hộp nhựa,45000,6
+55,7,Việt Nam,Hộp cao cấp,75000,4
+55,8,Việt Nam,Túi giấy,45000,6
+55,9,Việt Nam,Hộp nhựa,60000,4
+56,1,Ethiopia,Hộp cao cấp,45000,7
+56,2,Ethiopia,Túi giấy,60000,6
+56,3,Ethiopia,Hộp nhựa,75000,4
+56,4,Colombia,Hộp cao cấp,60000,5
+56,5,Colombia,Túi giấy,75000,3
+56,6,Colombia,Hộp nhựa,45000,4
+56,7,Việt Nam,Hộp cao cấp,75000,4
+56,8,Việt Nam,Túi giấy,45000,5
+56,9,Việt Nam,Hộp nhựa,60000,3
+57,1,Ethiopia,Hộp cao cấp,45000,8
+57,2,Ethiopia,Túi giấy,60000,6
+57,3,Ethiopia,Hộp nhựa,75000,4
+57,4,Colombia,Hộp cao cấp,60000,7
+57,5,Colombia,Túi giấy,75000,3
+57,6,Colombia,Hộp nhựa,45000,5
+57,7,Việt Nam,Hộp cao cấp,75000,5
+57,8,Việt Nam,Túi giấy,45000,5
+57,9,Việt Nam,Hộp nhựa,60000,4
+58,1,Ethiopia,Hộp cao cấp,45000,8
+58,2,Ethiopia,Túi giấy,60000,6
+58,3,Ethiopia,Hộp nhựa,75000,5
+58,4,Colombia,Hộp cao cấp,60000,7
+58,5,Colombia,Túi giấy,75000,4
+58,6,Colombia,Hộp nhựa,45000,6
+58,7,Việt Nam,Hộp cao cấp,75000,5
+58,8,Việt Nam,Túi giấy,45000,7
+58,9,Việt Nam,Hộp nhựa,60000,4
+59,1,Ethiopia,Hộp cao cấp,45000,7
+59,2,Ethiopia,Túi giấy,60000,6
+59,3,Ethiopia,Hộp nhựa,75000,3
+59,4,Colombia,Hộp cao cấp,60000,7
+59,5,Colombia,Túi giấy,75000,5
+59,6,Colombia,Hộp nhựa,45000,5
+59,7,Việt Nam,Hộp cao cấp,75000,4
+59,8,Việt Nam,Túi giấy,45000,6
+59,9,Việt Nam,Hộp nhựa,60000,4
+60,1,Ethiopia,Hộp cao cấp,45000,7
+60,2,Ethiopia,Túi giấy,60000,6
+60,3,Ethiopia,Hộp nhựa,75000,4
+60,4,Colombia,Hộp cao cấp,60000,6
+60,5,Colombia,Túi giấy,75000,3
+60,6,Colombia,Hộp nhựa,45000,6
+60,7,Việt Nam,Hộp cao cấp,75000,4
+60,8,Việt Nam,Túi giấy,45000,6
+60,9,Việt Nam,Hộp nhựa,60000,3
+61,1,Ethiopia,Hộp cao cấp,45000,6
+61,2,Ethiopia,Túi giấy,60000,5
+61,3,Ethiopia,Hộp nhựa,75000,3
+61,4,Colombia,Hộp cao cấp,60000,5
+61,5,Colombia,Túi giấy,75000,2
+61,6,Colombia,Hộp nhựa,45000,5
+61,7,Việt Nam,Hộp cao cấp,75000,3
+61,8,Việt Nam,Túi giấy,45000,4
+61,9,Việt Nam,Hộp nhựa,60000,3
+62,1,Ethiopia,Hộp cao cấp,45000,9
+62,2,Ethiopia,Túi giấy,60000,7
+62,3,Ethiopia,Hộp nhựa,75000,6
+62,4,Colombia,Hộp cao cấp,60000,6
+62,5,Colombia,Túi giấy,75000,4
+62,6,Colombia,Hộp nhựa,45000,6
+62,7,Việt Nam,Hộp cao cấp,75000,4
+62,8,Việt Nam,Túi giấy,45000,5
+62,9,Việt Nam,Hộp nhựa,60000,4
+63,1,Ethiopia,Hộp cao cấp,45000,7
+63,2,Ethiopia,Túi giấy,60000,5
+63,3,Ethiopia,Hộp nhựa,75000,4
+63,4,Colombia,Hộp cao cấp,60000,5
+63,5,Colombia,Túi giấy,75000,4
+63,6,Colombia,Hộp nhựa,45000,6
+63,7,Việt Nam,Hộp cao cấp,75000,4
+63,8,Việt Nam,Túi giấy,45000,5
+63,9,Việt Nam,Hộp nhựa,60000,3
+64,1,Ethiopia,Hộp cao cấp,45000,8
+64,2,Ethiopia,Túi giấy,60000,6
+64,3,Ethiopia,Hộp nhựa,75000,4
+64,4,Colombia,Hộp cao cấp,60000,6
+64,5,Colombia,Túi giấy,75000,4
+64,6,Colombia,Hộp nhựa,45000,5
+64,7,Việt Nam,Hộp cao cấp,75000,4
+64,8,Việt Nam,Túi giấy,45000,6
+64,9,Việt Nam,Hộp nhựa,60000,3
+65,1,Ethiopia,Hộp cao cấp,45000,8
+65,2,Ethiopia,Túi giấy,60000,5
+65,3,Ethiopia,Hộp nhựa,75000,4
+65,4,Colombia,Hộp cao cấp,60000,7
+65,5,Colombia,Túi giấy,75000,3
+65,6,Colombia,Hộp nhựa,45000,7
+65,7,Việt Nam,Hộp cao cấp,75000,4
+65,8,Việt Nam,Túi giấy,45000,6
+65,9,Việt Nam,Hộp nhựa,60000,4
+66,1,Ethiopia,Hộp cao cấp,45000,8
+66,2,Ethiopia,Túi giấy,60000,5
+66,3,Ethiopia,Hộp nhựa,75000,5
+66,4,Colombia,Hộp cao cấp,60000,6
+66,5,Colombia,Túi giấy,75000,4
+66,6,Colombia,Hộp nhựa,45000,6
+66,7,Việt Nam,Hộp cao cấp,75000,5
+66,8,Việt Nam,Túi giấy,45000,7
+66,9,Việt Nam,Hộp nhựa,60000,4
+67,1,Ethiopia,Hộp cao cấp,45000,8
+67,2,Ethiopia,Túi giấy,60000,5
+67,3,Ethiopia,Hộp nhựa,75000,4
+67,4,Colombia,Hộp cao cấp,60000,7
+67,5,Colombia,Túi giấy,75000,4
+67,6,Colombia,Hộp nhựa,45000,5
+67,7,Việt Nam,Hộp cao cấp,75000,3
+67,8,Việt Nam,Túi giấy,45000,6
+67,9,Việt Nam,Hộp nhựa,60000,4
+68,1,Ethiopia,Hộp cao cấp,45000,8
+68,2,Ethiopia,Túi giấy,60000,6
+68,3,Ethiopia,Hộp nhựa,75000,3
+68,4,Colombia,Hộp cao cấp,60000,7
+68,5,Colombia,Túi giấy,75000,4
+68,6,Colombia,Hộp nhựa,45000,5
+68,7,Việt Nam,Hộp cao cấp,75000,4
+68,8,Việt Nam,Túi giấy,45000,5
+68,9,Việt Nam,Hộp nhựa,60000,4
+69,1,Ethiopia,Hộp cao cấp,45000,7
+69,2,Ethiopia,Túi giấy,60000,6
+69,3,Ethiopia,Hộp nhựa,75000,2
+69,4,Colombia,Hộp cao cấp,60000,5
+69,5,Colombia,Túi giấy,75000,4
+69,6,Colombia,Hộp nhựa,45000,4
+69,7,Việt Nam,Hộp cao cấp,75000,4
+69,8,Việt Nam,Túi giấy,45000,4
+69,9,Việt Nam,Hộp nhựa,60000,3
+70,1,Ethiopia,Hộp cao cấp,45000,8
+70,2,Ethiopia,Túi giấy,60000,4
+70,3,Ethiopia,Hộp nhựa,75000,3
+70,4,Colombia,Hộp cao cấp,60000,7
+70,5,Colombia,Túi giấy,75000,4
+70,6,Colombia,Hộp nhựa,45000,5
+70,7,Việt Nam,Hộp cao cấp,75000,5
+70,8,Việt Nam,Túi giấy,45000,5
+70,9,Việt Nam,Hộp nhựa,60000,3
+71,1,Ethiopia,Hộp cao cấp,45000,7
+71,2,Ethiopia,Túi giấy,60000,6
+71,3,Ethiopia,Hộp nhựa,75000,3
+71,4,Colombia,Hộp cao cấp,60000,6
+71,5,Colombia,Túi giấy,75000,3
+71,6,Colombia,Hộp nhựa,45000,5
+71,7,Việt Nam,Hộp cao cấp,75000,4
+71,8,Việt Nam,Túi giấy,45000,5
+71,9,Việt Nam,Hộp nhựa,60000,3
+72,1,Ethiopia,Hộp cao cấp,45000,9
+72,2,Ethiopia,Túi giấy,60000,6
+72,3,Ethiopia,Hộp nhựa,75000,4
+72,4,Colombia,Hộp cao cấp,60000,6
+72,5,Colombia,Túi giấy,75000,5
+72,6,Colombia,Hộp nhựa,45000,7
+72,7,Việt Nam,Hộp cao cấp,75000,5
+72,8,Việt Nam,Túi giấy,45000,6
+72,9,Việt Nam,Hộp nhựa,60000,5
+73,1,Ethiopia,Hộp cao cấp,45000,8
+73,2,Ethiopia,Túi giấy,60000,6
+73,3,Ethiopia,Hộp nhựa,75000,4
+73,4,Colombia,Hộp cao cấp,60000,5
+73,5,Colombia,Túi giấy,75000,4
+73,6,Colombia,Hộp nhựa,45000,5
+73,7,Việt Nam,Hộp cao cấp,75000,5
+73,8,Việt Nam,Túi giấy,45000,5
+73,9,Việt Nam,Hộp nhựa,60000,4
+74,1,Ethiopia,Hộp cao cấp,45000,7
+74,2,Ethiopia,Túi giấy,60000,5
+74,3,Ethiopia,Hộp nhựa,75000,5
+74,4,Colombia,Hộp cao cấp,60000,4
+74,5,Colombia,Túi giấy,75000,4
+74,6,Colombia,Hộp nhựa,45000,5
+74,7,Việt Nam,Hộp cao cấp,75000,4
+74,8,Việt Nam,Túi giấy,45000,5
+74,9,Việt Nam,Hộp nhựa,60000,4
+75,1,Ethiopia,Hộp cao cấp,45000,8
+75,2,Ethiopia,Túi giấy,60000,6
+75,3,Ethiopia,Hộp nhựa,75000,4
+75,4,Colombia,Hộp cao cấp,60000,5
+75,5,Colombia,Túi giấy,75000,4
+75,6,Colombia,Hộp nhựa,45000,7
+75,7,Việt Nam,Hộp cao cấp,75000,4
+75,8,Việt Nam,Túi giấy,45000,6
+75,9,Việt Nam,Hộp nhựa,60000,4
+76,1,Ethiopia,Hộp cao cấp,45000,7
+76,2,Ethiopia,Túi giấy,60000,6
+76,3,Ethiopia,Hộp nhựa,75000,3
+76,4,Colombia,Hộp cao cấp,60000,5
+76,5,Colombia,Túi giấy,75000,3
+76,6,Colombia,Hộp nhựa,45000,5
+76,7,Việt Nam,Hộp cao cấp,75000,4
+76,8,Việt Nam,Túi giấy,45000,6
+76,9,Việt Nam,Hộp nhựa,60000,3
+77,1,Ethiopia,Hộp cao cấp,45000,7
+77,2,Ethiopia,Túi giấy,60000,6
+77,3,Ethiopia,Hộp nhựa,75000,3
+77,4,Colombia,Hộp cao cấp,60000,5
+77,5,Colombia,Túi giấy,75000,3
+77,6,Colombia,Hộp nhựa,45000,5
+77,7,Việt Nam,Hộp cao cấp,75000,2
+77,8,Việt Nam,Túi giấy,45000,5
+77,9,Việt Nam,Hộp nhựa,60000,2
+78,1,Ethiopia,Hộp cao cấp,45000,7
+78,2,Ethiopia,Túi giấy,60000,5
+78,3,Ethiopia,Hộp nhựa,75000,4
+78,4,Colombia,Hộp cao cấp,60000,5
+78,5,Colombia,Túi giấy,75000,3
+78,6,Colombia,Hộp nhựa,45000,6
+78,7,Việt Nam,Hộp cao cấp,75000,3
+78,8,Việt Nam,Túi giấy,45000,6
+78,9,Việt Nam,Hộp nhựa,60000,4
+79,1,Ethiopia,Hộp cao cấp,45000,6
+79,2,Ethiopia,Túi giấy,60000,5
+79,3,Ethiopia,Hộp nhựa,75000,3
+79,4,Colombia,Hộp cao cấp,60000,5
+79,5,Colombia,Túi giấy,75000,4
+79,6,Colombia,Hộp nhựa,45000,5
+79,7,Việt Nam,Hộp cao cấp,75000,3
+79,8,Việt Nam,Túi giấy,45000,5
+79,9,Việt Nam,Hộp nhựa,60000,3
+80,1,Ethiopia,Hộp cao cấp,45000,8
+80,2,Ethiopia,Túi giấy,60000,7
+80,3,Ethiopia,Hộp nhựa,75000,4
+80,4,Colombia,Hộp cao cấp,60000,7
+80,5,Colombia,Túi giấy,75000,4
+80,6,Colombia,Hộp nhựa,45000,6
+80,7,Việt Nam,Hộp cao cấp,75000,6
+80,8,Việt Nam,Túi giấy,45000,6
+80,9,Việt Nam,Hộp nhựa,60000,3
+81,1,Ethiopia,Hộp cao cấp,45000,8
+81,2,Ethiopia,Túi giấy,60000,6
+81,3,Ethiopia,Hộp nhựa,75000,3
+81,4,Colombia,Hộp cao cấp,60000,6
+81,5,Colombia,Túi giấy,75000,4
+81,6,Colombia,Hộp nhựa,45000,5
+81,7,Việt Nam,Hộp cao cấp,75000,5
+81,8,Việt Nam,Túi giấy,45000,6
+81,9,Việt Nam,Hộp nhựa,60000,4
+82,1,Ethiopia,Hộp cao cấp,45000,9
+82,2,Ethiopia,Túi giấy,60000,6
+82,3,Ethiopia,Hộp nhựa,75000,3
+82,4,Colombia,Hộp cao cấp,60000,5
+82,5,Colombia,Túi giấy,75000,4
+82,6,Colombia,Hộp nhựa,45000,5
+82,7,Việt Nam,Hộp cao cấp,75000,5
+82,8,Việt Nam,Túi giấy,45000,7
+82,9,Việt Nam,Hộp nhựa,60000,4
+83,1,Ethiopia,Hộp cao cấp,45000,9
+83,2,Ethiopia,Túi giấy,60000,6
+83,3,Ethiopia,Hộp nhựa,75000,5
+83,4,Colombia,Hộp cao cấp,60000,6
+83,5,Colombia,Túi giấy,75000,4
+83,6,Colombia,Hộp nhựa,45000,5
+83,7,Việt Nam,Hộp cao cấp,75000,4
+83,8,Việt Nam,Túi giấy,45000,6
+83,9,Việt Nam,Hộp nhựa,60000,4
+84,1,Ethiopia,Hộp cao cấp,45000,7
+84,2,Ethiopia,Túi giấy,60000,5
+84,3,Ethiopia,Hộp nhựa,75000,4
+84,4,Colombia,Hộp cao cấp,60000,5
+84,5,Colombia,Túi giấy,75000,4
+84,6,Colombia,Hộp nhựa,45000,5
+84,7,Việt Nam,Hộp cao cấp,75000,4
+84,8,Việt Nam,Túi giấy,45000,6
+84,9,Việt Nam,Hộp nhựa,60000,3
+85,1,Ethiopia,Hộp cao cấp,45000,9
+85,2,Ethiopia,Túi giấy,60000,7
+85,3,Ethiopia,Hộp nhựa,75000,4
+85,4,Colombia,Hộp cao cấp,60000,7
+85,5,Colombia,Túi giấy,75000,5
+85,6,Colombia,Hộp nhựa,45000,6
+85,7,Việt Nam,Hộp cao cấp,75000,5
+85,8,Việt Nam,Túi giấy,45000,6
+85,9,Việt Nam,Hộp nhựa,60000,4
+86,1,Ethiopia,Hộp cao cấp,45000,6
+86,2,Ethiopia,Túi giấy,60000,4
+86,3,Ethiopia,Hộp nhựa,75000,2
+86,4,Colombia,Hộp cao cấp,60000,5
+86,5,Colombia,Túi giấy,75000,3
+86,6,Colombia,Hộp nhựa,45000,5
+86,7,Việt Nam,Hộp cao cấp,75000,3
+86,8,Việt Nam,Túi giấy,45000,4
+86,9,Việt Nam,Hộp nhựa,60000,4
+87,1,Ethiopia,Hộp cao cấp,45000,8
+87,2,Ethiopia,Túi giấy,60000,5
+87,3,Ethiopia,Hộp nhựa,75000,2
+87,4,Colombia,Hộp cao cấp,60000,5
+87,5,Colombia,Túi giấy,75000,4
+87,6,Colombia,Hộp nhựa,45000,5
+87,7,Việt Nam,Hộp cao cấp,75000,4
+87,8,Việt Nam,Túi giấy,45000,4
+87,9,Việt Nam,Hộp nhựa,60000,5
+88,1,Ethiopia,Hộp cao cấp,45000,5
+88,2,Ethiopia,Túi giấy,60000,5
+88,3,Ethiopia,Hộp nhựa,75000,2
+88,4,Colombia,Hộp cao cấp,60000,6
+88,5,Colombia,Túi giấy,75000,4
+88,6,Colombia,Hộp nhựa,45000,4
+88,7,Việt Nam,Hộp cao cấp,75000,2
+88,8,Việt Nam,Túi giấy,45000,5
+88,9,Việt Nam,Hộp nhựa,60000,3
+89,1,Ethiopia,Hộp cao cấp,45000,9
+89,2,Ethiopia,Túi giấy,60000,7
+89,3,Ethiopia,Hộp nhựa,75000,5
+89,4,Colombia,Hộp cao cấp,60000,7
+89,5,Colombia,Túi giấy,75000,5
+89,6,Colombia,Hộp nhựa,45000,7
+89,7,Việt Nam,Hộp cao cấp,75000,4
+89,8,Việt Nam,Túi giấy,45000,5
+89,9,Việt Nam,Hộp nhựa,60000,4
+90,1,Ethiopia,Hộp cao cấp,45000,7
+90,2,Ethiopia,Túi giấy,60000,4
+90,3,Ethiopia,Hộp nhựa,75000,3
+90,4,Colombia,Hộp cao cấp,60000,5
+90,5,Colombia,Túi giấy,75000,3
+90,6,Colombia,Hộp nhựa,45000,4
+90,7,Việt Nam,Hộp cao cấp,75000,4
+90,8,Việt Nam,Túi giấy,45000,4
+90,9,Việt Nam,Hộp nhựa,60000,3
+91,1,Ethiopia,Hộp cao cấp,45000,8
+91,2,Ethiopia,Túi giấy,60000,6
+91,3,Ethiopia,Hộp nhựa,75000,4
+91,4,Colombia,Hộp cao cấp,60000,6
+91,5,Colombia,Túi giấy,75000,4
+91,6,Colombia,Hộp nhựa,45000,7
+91,7,Việt Nam,Hộp cao cấp,75000,5
+91,8,Việt Nam,Túi giấy,45000,6
+91,9,Việt Nam,Hộp nhựa,60000,4
+92,1,Ethiopia,Hộp cao cấp,45000,8
+92,2,Ethiopia,Túi giấy,60000,7
+92,3,Ethiopia,Hộp nhựa,75000,5
+92,4,Colombia,Hộp cao cấp,60000,7
+92,5,Colombia,Túi giấy,75000,4
+92,6,Colombia,Hộp nhựa,45000,6
+92,7,Việt Nam,Hộp cao cấp,75000,3
+92,8,Việt Nam,Túi giấy,45000,7
+92,9,Việt Nam,Hộp nhựa,60000,5
+93,1,Ethiopia,Hộp cao cấp,45000,6
+93,2,Ethiopia,Túi giấy,60000,6
+93,3,Ethiopia,Hộp nhựa,75000,3
+93,4,Colombia,Hộp cao cấp,60000,5
+93,5,Colombia,Túi giấy,75000,3
+93,6,Colombia,Hộp nhựa,45000,5
+93,7,Việt Nam,Hộp cao cấp,75000,4
+93,8,Việt Nam,Túi giấy,45000,4
+93,9,Việt Nam,Hộp nhựa,60000,4
+94,1,Ethiopia,Hộp cao cấp,45000,9
+94,2,Ethiopia,Túi giấy,60000,6
+94,3,Ethiopia,Hộp nhựa,75000,4
+94,4,Colombia,Hộp cao cấp,60000,6
+94,5,Colombia,Túi giấy,75000,4
+94,6,Colombia,Hộp nhựa,45000,6
+94,7,Việt Nam,Hộp cao cấp,75000,4
+94,8,Việt Nam,Túi giấy,45000,6
+94,9,Việt Nam,Hộp nhựa,60000,5
+95,1,Ethiopia,Hộp cao cấp,45000,6
+95,2,Ethiopia,Túi giấy,60000,4
+95,3,Ethiopia,Hộp nhựa,75000,4
+95,4,Colombia,Hộp cao cấp,60000,5
+95,5,Colombia,Túi giấy,75000,5
+95,6,Colombia,Hộp nhựa,45000,4
+95,7,Việt Nam,Hộp cao cấp,75000,3
+95,8,Việt Nam,Túi giấy,45000,5
+95,9,Việt Nam,Hộp nhựa,60000,3
+96,1,Ethiopia,Hộp cao cấp,45000,7
+96,2,Ethiopia,Túi giấy,60000,6
+96,3,Ethiopia,Hộp nhựa,75000,4
+96,4,Colombia,Hộp cao cấp,60000,6
+96,5,Colombia,Túi giấy,75000,4
+96,6,Colombia,Hộp nhựa,45000,6
+96,7,Việt Nam,Hộp cao cấp,75000,6
+96,8,Việt Nam,Túi giấy,45000,5
+96,9,Việt Nam,Hộp nhựa,60000,5
+97,1,Ethiopia,Hộp cao cấp,45000,9
+97,2,Ethiopia,Túi giấy,60000,6
+97,3,Ethiopia,Hộp nhựa,75000,4
+97,4,Colombia,Hộp cao cấp,60000,8
+97,5,Colombia,Túi giấy,75000,4
+97,6,Colombia,Hộp nhựa,45000,6
+97,7,Việt Nam,Hộp cao cấp,75000,5
+97,8,Việt Nam,Túi giấy,45000,6
+97,9,Việt Nam,Hộp nhựa,60000,5
+98,1,Ethiopia,Hộp cao cấp,45000,7
+98,2,Ethiopia,Túi giấy,60000,5
+98,3,Ethiopia,Hộp nhựa,75000,3
+98,4,Colombia,Hộp cao cấp,60000,4
+98,5,Colombia,Túi giấy,75000,3
+98,6,Colombia,Hộp nhựa,45000,4
+98,7,Việt Nam,Hộp cao cấp,75000,3
+98,8,Việt Nam,Túi giấy,45000,5
+98,9,Việt Nam,Hộp nhựa,60000,3
+99,1,Ethiopia,Hộp cao cấp,45000,6
+99,2,Ethiopia,Túi giấy,60000,5
+99,3,Ethiopia,Hộp nhựa,75000,4
+99,4,Colombia,Hộp cao cấp,60000,5
+99,5,Colombia,Túi giấy,75000,2
+99,6,Colombia,Hộp nhựa,45000,4
+99,7,Việt Nam,Hộp cao cấp,75000,3
+99,8,Việt Nam,Túi giấy,45000,4
+99,9,Việt Nam,Hộp nhựa,60000,2
+100,1,Ethiopia,Hộp cao cấp,45000,5
+100,2,Ethiopia,Túi giấy,60000,5
+100,3,Ethiopia,Hộp nhựa,75000,2
+100,4,Colombia,Hộp cao cấp,60000,5
+100,5,Colombia,Túi giấy,75000,4
+100,6,Colombia,Hộp nhựa,45000,5
+100,7,Việt Nam,Hộp cao cấp,75000,4
+100,8,Việt Nam,Túi giấy,45000,4
+100,9,Việt Nam,Hộp nhựa,60000,4
+101,1,Ethiopia,Hộp cao cấp,45000,8
+101,2,Ethiopia,Túi giấy,60000,5
+101,3,Ethiopia,Hộp nhựa,75000,4
+101,4,Colombia,Hộp cao cấp,60000,6
+101,5,Colombia,Túi giấy,75000,3
+101,6,Colombia,Hộp nhựa,45000,5
+101,7,Việt Nam,Hộp cao cấp,75000,4
+101,8,Việt Nam,Túi giấy,45000,5
+101,9,Việt Nam,Hộp nhựa,60000,2
+102,1,Ethiopia,Hộp cao cấp,45000,7
+102,2,Ethiopia,Túi giấy,60000,6
+102,3,Ethiopia,Hộp nhựa,75000,3
+102,4,Colombia,Hộp cao cấp,60000,5
+102,5,Colombia,Túi giấy,75000,4
+102,6,Colombia,Hộp nhựa,45000,6
+102,7,Việt Nam,Hộp cao cấp,75000,4
+102,8,Việt Nam,Túi giấy,45000,5
+102,9,Việt Nam,Hộp nhựa,60000,4
+103,1,Ethiopia,Hộp cao cấp,45000,7
+103,2,Ethiopia,Túi giấy,60000,6
+103,3,Ethiopia,Hộp nhựa,75000,4
+103,4,Colombia,Hộp cao cấp,60000,5
+103,5,Colombia,Túi giấy,75000,5
+103,6,Colombia,Hộp nhựa,45000,6
+103,7,Việt Nam,Hộp cao cấp,75000,4
+103,8,Việt Nam,Túi giấy,45000,5
+103,9,Việt Nam,Hộp nhựa,60000,3
+104,1,Ethiopia,Hộp cao cấp,45000,6
+104,2,Ethiopia,Túi giấy,60000,5
+104,3,Ethiopia,Hộp nhựa,75000,4
+104,4,Colombia,Hộp cao cấp,60000,4
+104,5,Colombia,Túi giấy,75000,3
+104,6,Colombia,Hộp nhựa,45000,4
+104,7,Việt Nam,Hộp cao cấp,75000,3
+104,8,Việt Nam,Túi giấy,45000,4
+104,9,Việt Nam,Hộp nhựa,60000,2
+105,1,Ethiopia,Hộp cao cấp,45000,8
+105,2,Ethiopia,Túi giấy,60000,5
+105,3,Ethiopia,Hộp nhựa,75000,3
+105,4,Colombia,Hộp cao cấp,60000,6
+105,5,Colombia,Túi giấy,75000,3
+105,6,Colombia,Hộp nhựa,45000,5
+105,7,Việt Nam,Hộp cao cấp,75000,3
+105,8,Việt Nam,Túi giấy,45000,5
+105,9,Việt Nam,Hộp nhựa,60000,3
+106,1,Ethiopia,Hộp cao cấp,45000,6
+106,2,Ethiopia,Túi giấy,60000,5
+106,3,Ethiopia,Hộp nhựa,75000,5
+106,4,Colombia,Hộp cao cấp,60000,6
+106,5,Colombia,Túi giấy,75000,3
+106,6,Colombia,Hộp nhựa,45000,5
+106,7,Việt Nam,Hộp cao cấp,75000,3
+106,8,Việt Nam,Túi giấy,45000,5
+106,9,Việt Nam,Hộp nhựa,60000,4
+107,1,Ethiopia,Hộp cao cấp,45000,6
+107,2,Ethiopia,Túi giấy,60000,7
+107,3,Ethiopia,Hộp nhựa,75000,4
+107,4,Colombia,Hộp cao cấp,60000,5
+107,5,Colombia,Túi giấy,75000,4
+107,6,Colombia,Hộp nhựa,45000,5
+107,7,Việt Nam,Hộp cao cấp,75000,4
+107,8,Việt Nam,Túi giấy,45000,5
+107,9,Việt Nam,Hộp nhựa,60000,4
+108,1,Ethiopia,Hộp cao cấp,45000,6
+108,2,Ethiopia,Túi giấy,60000,5
+108,3,Ethiopia,Hộp nhựa,75000,3
+108,4,Colombia,Hộp cao cấp,60000,5
+108,5,Colombia,Túi giấy,75000,3
+108,6,Colombia,Hộp nhựa,45000,5
+108,7,Việt Nam,Hộp cao cấp,75000,2
+108,8,Việt Nam,Túi giấy,45000,4
+108,9,Việt Nam,Hộp nhựa,60000,3
+109,1,Ethiopia,Hộp cao cấp,45000,6
+109,2,Ethiopia,Túi giấy,60000,5
+109,3,Ethiopia,Hộp nhựa,75000,3
+109,4,Colombia,Hộp cao cấp,60000,5
+109,5,Colombia,Túi giấy,75000,2
+109,6,Colombia,Hộp nhựa,45000,4
+109,7,Việt Nam,Hộp cao cấp,75000,3
+109,8,Việt Nam,Túi giấy,45000,4
+109,9,Việt Nam,Hộp nhựa,60000,3
+110,1,Ethiopia,Hộp cao cấp,45000,9
+110,2,Ethiopia,Túi giấy,60000,5
+110,3,Ethiopia,Hộp nhựa,75000,3
+110,4,Colombia,Hộp cao cấp,60000,6
+110,5,Colombia,Túi giấy,75000,4
+110,6,Colombia,Hộp nhựa,45000,5
+110,7,Việt Nam,Hộp cao cấp,75000,4
+110,8,Việt Nam,Túi giấy,45000,6
+110,9,Việt Nam,Hộp nhựa,60000,3
+111,1,Ethiopia,Hộp cao cấp,45000,5
+111,2,Ethiopia,Túi giấy,60000,5
+111,3,Ethiopia,Hộp nhựa,75000,4
+111,4,Colombia,Hộp cao cấp,60000,5
+111,5,Colombia,Túi giấy,75000,4
+111,6,Colombia,Hộp nhựa,45000,5
+111,7,Việt Nam,Hộp cao cấp,75000,3
+111,8,Việt Nam,Túi giấy,45000,3
+111,9,Việt Nam,Hộp nhựa,60000,3
+112,1,Ethiopia,Hộp cao cấp,45000,7
+112,2,Ethiopia,Túi giấy,60000,6
+112,3,Ethiopia,Hộp nhựa,75000,3
+112,4,Colombia,Hộp cao cấp,60000,5
+112,5,Colombia,Túi giấy,75000,4
+112,6,Colombia,Hộp nhựa,45000,5
+112,7,Việt Nam,Hộp cao cấp,75000,4
+112,8,Việt Nam,Túi giấy,45000,5
+112,9,Việt Nam,Hộp nhựa,60000,3
+113,1,Ethiopia,Hộp cao cấp,45000,9
+113,2,Ethiopia,Túi giấy,60000,6
+113,3,Ethiopia,Hộp nhựa,75000,4
+113,4,Colombia,Hộp cao cấp,60000,6
+113,5,Colombia,Túi giấy,75000,4
+113,6,Colombia,Hộp nhựa,45000,6
+113,7,Việt Nam,Hộp cao cấp,75000,4
+113,8,Việt Nam,Túi giấy,45000,6
+113,9,Việt Nam,Hộp nhựa,60000,4
+114,1,Ethiopia,Hộp cao cấp,45000,8
+114,2,Ethiopia,Túi giấy,60000,5
+114,3,Ethiopia,Hộp nhựa,75000,2
+114,4,Colombia,Hộp cao cấp,60000,7
+114,5,Colombia,Túi giấy,75000,3
+114,6,Colombia,Hộp nhựa,45000,6
+114,7,Việt Nam,Hộp cao cấp,75000,3
+114,8,Việt Nam,Túi giấy,45000,6
+114,9,Việt Nam,Hộp nhựa,60000,3
+115,1,Ethiopia,Hộp cao cấp,45000,6
+115,2,Ethiopia,Túi giấy,60000,6
+115,3,Ethiopia,Hộp nhựa,75000,3
+115,4,Colombia,Hộp cao cấp,60000,5
+115,5,Colombia,Túi giấy,75000,3
+115,6,Colombia,Hộp nhựa,45000,5
+115,7,Việt Nam,Hộp cao cấp,75000,5
+115,8,Việt Nam,Túi giấy,45000,5
+115,9,Việt Nam,Hộp nhựa,60000,3
+116,1,Ethiopia,Hộp cao cấp,45000,8
+116,2,Ethiopia,Túi giấy,60000,6
+116,3,Ethiopia,Hộp nhựa,75000,3
+116,4,Colombia,Hộp cao cấp,60000,5
+116,5,Colombia,Túi giấy,75000,3
+116,6,Colombia,Hộp nhựa,45000,5
+116,7,Việt Nam,Hộp cao cấp,75000,3
+116,8,Việt Nam,Túi giấy,45000,5
+116,9,Việt Nam,Hộp nhựa,60000,2
+117,1,Ethiopia,Hộp cao cấp,45000,8
+117,2,Ethiopia,Túi giấy,60000,6
+117,3,Ethiopia,Hộp nhựa,75000,4
+117,4,Colombia,Hộp cao cấp,60000,5
+117,5,Colombia,Túi giấy,75000,3
+117,6,Colombia,Hộp nhựa,45000,6
+117,7,Việt Nam,Hộp cao cấp,75000,3
+117,8,Việt Nam,Túi giấy,45000,5
+117,9,Việt Nam,Hộp nhựa,60000,3
+118,1,Ethiopia,Hộp cao cấp,45000,7
+118,2,Ethiopia,Túi giấy,60000,4
+118,3,Ethiopia,Hộp nhựa,75000,2
+118,4,Colombia,Hộp cao cấp,60000,6
+118,5,Colombia,Túi giấy,75000,4
+118,6,Colombia,Hộp nhựa,45000,6
+118,7,Việt Nam,Hộp cao cấp,75000,5
+118,8,Việt Nam,Túi giấy,45000,5
+118,9,Việt Nam,Hộp nhựa,60000,3
+119,1,Ethiopia,Hộp cao cấp,45000,9
+119,2,Ethiopia,Túi giấy,60000,7
+119,3,Ethiopia,Hộp nhựa,75000,3
+119,4,Colombia,Hộp cao cấp,60000,6
+119,5,Colombia,Túi giấy,75000,4
+119,6,Colombia,Hộp nhựa,45000,6
+119,7,Việt Nam,Hộp cao cấp,75000,3
+119,8,Việt Nam,Túi giấy,45000,6
+119,9,Việt Nam,Hộp nhựa,60000,3
+120,1,Ethiopia,Hộp cao cấp,45000,8
+120,2,Ethiopia,Túi giấy,60000,5
+120,3,Ethiopia,Hộp nhựa,75000,3
+120,4,Colombia,Hộp cao cấp,60000,5
+120,5,Colombia,Túi giấy,75000,3
+120,6,Colombia,Hộp nhựa,45000,5
+120,7,Việt Nam,Hộp cao cấp,75000,4
+120,8,Việt Nam,Túi giấy,45000,4
+120,9,Việt Nam,Hộp nhựa,60000,2
+121,1,Ethiopia,Hộp cao cấp,45000,8
+121,2,Ethiopia,Túi giấy,60000,5
+121,3,Ethiopia,Hộp nhựa,75000,4
+121,4,Colombia,Hộp cao cấp,60000,6
+121,5,Colombia,Túi giấy,75000,4
+121,6,Colombia,Hộp nhựa,45000,6
+121,7,Việt Nam,Hộp cao cấp,75000,3
+121,8,Việt Nam,Túi giấy,45000,5
+121,9,Việt Nam,Hộp nhựa,60000,4
+122,1,Ethiopia,Hộp cao cấp,45000,8
+122,2,Ethiopia,Túi giấy,60000,6
+122,3,Ethiopia,Hộp nhựa,75000,3
+122,4,Colombia,Hộp cao cấp,60000,5
+122,5,Colombia,Túi giấy,75000,4
+122,6,Colombia,Hộp nhựa,45000,6
+122,7,Việt Nam,Hộp cao cấp,75000,3
+122,8,Việt Nam,Túi giấy,45000,5
+122,9,Việt Nam,Hộp nhựa,60000,3
+123,1,Ethiopia,Hộp cao cấp,45000,9
+123,2,Ethiopia,Túi giấy,60000,7
+123,3,Ethiopia,Hộp nhựa,75000,4
+123,4,Colombia,Hộp cao cấp,60000,6
+123,5,Colombia,Túi giấy,75000,5
+123,6,Colombia,Hộp nhựa,45000,6
+123,7,Việt Nam,Hộp cao cấp,75000,4
+123,8,Việt Nam,Túi giấy,45000,6
+123,9,Việt Nam,Hộp nhựa,60000,4
+124,1,Ethiopia,Hộp cao cấp,45000,8
+124,2,Ethiopia,Túi giấy,60000,6
+124,3,Ethiopia,Hộp nhựa,75000,4
+124,4,Colombia,Hộp cao cấp,60000,6
+124,5,Colombia,Túi giấy,75000,3
+124,6,Colombia,Hộp nhựa,45000,5
+124,7,Việt Nam,Hộp cao cấp,75000,4
+124,8,Việt Nam,Túi giấy,45000,5
+124,9,Việt Nam,Hộp nhựa,60000,4
+125,1,Ethiopia,Hộp cao cấp,45000,7
+125,2,Ethiopia,Túi giấy,60000,5
+125,3,Ethiopia,Hộp nhựa,75000,3
+125,4,Colombia,Hộp cao cấp,60000,6
+125,5,Colombia,Túi giấy,75000,3
+125,6,Colombia,Hộp nhựa,45000,5
+125,7,Việt Nam,Hộp cao cấp,75000,4
+125,8,Việt Nam,Túi giấy,45000,6
+125,9,Việt Nam,Hộp nhựa,60000,2
+126,1,Ethiopia,Hộp cao cấp,45000,7
+126,2,Ethiopia,Túi giấy,60000,6
+126,3,Ethiopia,Hộp nhựa,75000,4
+126,4,Colombia,Hộp cao cấp,60000,5
+126,5,Colombia,Túi giấy,75000,3
+126,6,Colombia,Hộp nhựa,45000,5
+126,7,Việt Nam,Hộp cao cấp,75000,5
+126,8,Việt Nam,Túi giấy,45000,5
+126,9,Việt Nam,Hộp nhựa,60000,4
+127,1,Ethiopia,Hộp cao cấp,45000,7
+127,2,Ethiopia,Túi giấy,60000,5
+127,3,Ethiopia,Hộp nhựa,75000,3
+127,4,Colombia,Hộp cao cấp,60000,5
+127,5,Colombia,Túi giấy,75000,3
+127,6,Colombia,Hộp nhựa,45000,4
+127,7,Việt Nam,Hộp cao cấp,75000,3
+127,8,Việt Nam,Túi giấy,45000,5
+127,9,Việt Nam,Hộp nhựa,60000,3
+128,1,Ethiopia,Hộp cao cấp,45000,8
+128,2,Ethiopia,Túi giấy,60000,7
+128,3,Ethiopia,Hộp nhựa,75000,5
+128,4,Colombia,Hộp cao cấp,60000,7
+128,5,Colombia,Túi giấy,75000,4
+128,6,Colombia,Hộp nhựa,45000,5
+128,7,Việt Nam,Hộp cao cấp,75000,4
+128,8,Việt Nam,Túi giấy,45000,6
+128,9,Việt Nam,Hộp nhựa,60000,3
+129,1,Ethiopia,Hộp cao cấp,45000,7
+129,2,Ethiopia,Túi giấy,60000,4
+129,3,Ethiopia,Hộp nhựa,75000,2
+129,4,Colombia,Hộp cao cấp,60000,5
+129,5,Colombia,Túi giấy,75000,3
+129,6,Colombia,Hộp nhựa,45000,5
+129,7,Việt Nam,Hộp cao cấp,75000,2
+129,8,Việt Nam,Túi giấy,45000,4
+129,9,Việt Nam,Hộp nhựa,60000,2
+130,1,Ethiopia,Hộp cao cấp,45000,8
+130,2,Ethiopia,Túi giấy,60000,5
+130,3,Ethiopia,Hộp nhựa,75000,4
+130,4,Colombia,Hộp cao cấp,60000,6
+130,5,Colombia,Túi giấy,75000,4
+130,6,Colombia,Hộp nhựa,45000,5
+130,7,Việt Nam,Hộp cao cấp,75000,5
+130,8,Việt Nam,Túi giấy,45000,5
+130,9,Việt Nam,Hộp nhựa,60000,2
+131,1,Ethiopia,Hộp cao cấp,45000,7
+131,2,Ethiopia,Túi giấy,60000,5
+131,3,Ethiopia,Hộp nhựa,75000,4
+131,4,Colombia,Hộp cao cấp,60000,5
+131,5,Colombia,Túi giấy,75000,3
+131,6,Colombia,Hộp nhựa,45000,5
+131,7,Việt Nam,Hộp cao cấp,75000,5
+131,8,Việt Nam,Túi giấy,45000,6
+131,9,Việt Nam,Hộp nhựa,60000,3
+132,1,Ethiopia,Hộp cao cấp,45000,8
+132,2,Ethiopia,Túi giấy,60000,7
+132,3,Ethiopia,Hộp nhựa,75000,3
+132,4,Colombia,Hộp cao cấp,60000,5
+132,5,Colombia,Túi giấy,75000,3
+132,6,Colombia,Hộp nhựa,45000,6
+132,7,Việt Nam,Hộp cao cấp,75000,4
+132,8,Việt Nam,Túi giấy,45000,6
+132,9,Việt Nam,Hộp nhựa,60000,4
+133,1,Ethiopia,Hộp cao cấp,45000,9
+133,2,Ethiopia,Túi giấy,60000,6
+133,3,Ethiopia,Hộp nhựa,75000,4
+133,4,Colombia,Hộp cao cấp,60000,5
+133,5,Colombia,Túi giấy,75000,5
+133,6,Colombia,Hộp nhựa,45000,6
+133,7,Việt Nam,Hộp cao cấp,75000,5
+133,8,Việt Nam,Túi giấy,45000,6
+133,9,Việt Nam,Hộp nhựa,60000,4
+134,1,Ethiopia,Hộp cao cấp,45000,7
+134,2,Ethiopia,Túi giấy,60000,5
+134,3,Ethiopia,Hộp nhựa,75000,2
+134,4,Colombia,Hộp cao cấp,60000,5
+134,5,Colombia,Túi giấy,75000,4
+134,6,Colombia,Hộp nhựa,45000,5
+134,7,Việt Nam,Hộp cao cấp,75000,4
+134,8,Việt Nam,Túi giấy,45000,6
+134,9,Việt Nam,Hộp nhựa,60000,4
+135,1,Ethiopia,Hộp cao cấp,45000,8
+135,2,Ethiopia,Túi giấy,60000,6
+135,3,Ethiopia,Hộp nhựa,75000,4
+135,4,Colombia,Hộp cao cấp,60000,5
+135,5,Colombia,Túi giấy,75000,2
+135,6,Colombia,Hộp nhựa,45000,4
+135,7,Việt Nam,Hộp cao cấp,75000,3
+135,8,Việt Nam,Túi giấy,45000,4
+135,9,Việt Nam,Hộp nhựa,60000,3
+136,1,Ethiopia,Hộp cao cấp,45000,7
+136,2,Ethiopia,Túi giấy,60000,5
+136,3,Ethiopia,Hộp nhựa,75000,3
+136,4,Colombia,Hộp cao cấp,60000,6
+136,5,Colombia,Túi giấy,75000,2
+136,6,Colombia,Hộp nhựa,45000,5
+136,7,Việt Nam,Hộp cao cấp,75000,3
+136,8,Việt Nam,Túi giấy,45000,5
+136,9,Việt Nam,Hộp nhựa,60000,4
+137,1,Ethiopia,Hộp cao cấp,45000,8
+137,2,Ethiopia,Túi giấy,60000,6
+137,3,Ethiopia,Hộp nhựa,75000,4
+137,4,Colombia,Hộp cao cấp,60000,6
+137,5,Colombia,Túi giấy,75000,3
+137,6,Colombia,Hộp nhựa,45000,5
+137,7,Việt Nam,Hộp cao cấp,75000,3
+137,8,Việt Nam,Túi giấy,45000,5
+137,9,Việt Nam,Hộp nhựa,60000,3
+138,1,Ethiopia,Hộp cao cấp,45000,7
+138,2,Ethiopia,Túi giấy,60000,5
+138,3,Ethiopia,Hộp nhựa,75000,3
+138,4,Colombia,Hộp cao cấp,60000,4
+138,5,Colombia,Túi giấy,75000,2
+138,6,Colombia,Hộp nhựa,45000,3
+138,7,Việt Nam,Hộp cao cấp,75000,3
+138,8,Việt Nam,Túi giấy,45000,5
+138,9,Việt Nam,Hộp nhựa,60000,2
+139,1,Ethiopia,Hộp cao cấp,45000,8
+139,2,Ethiopia,Túi giấy,60000,5
+139,3,Ethiopia,Hộp nhựa,75000,3
+139,4,Colombia,Hộp cao cấp,60000,6
+139,5,Colombia,Túi giấy,75000,4
+139,6,Colombia,Hộp nhựa,45000,5
+139,7,Việt Nam,Hộp cao cấp,75000,4
+139,8,Việt Nam,Túi giấy,45000,5
+139,9,Việt Nam,Hộp nhựa,60000,2
+140,1,Ethiopia,Hộp cao cấp,45000,7
+140,2,Ethiopia,Túi giấy,60000,5
+140,3,Ethiopia,Hộp nhựa,75000,4
+140,4,Colombia,Hộp cao cấp,60000,6
+140,5,Colombia,Túi giấy,75000,4
+140,6,Colombia,Hộp nhựa,45000,5
+140,7,Việt Nam,Hộp cao cấp,75000,4
+140,8,Việt Nam,Túi giấy,45000,5
+140,9,Việt Nam,Hộp nhựa,60000,4
+141,1,Ethiopia,Hộp cao cấp,45000,9
+141,2,Ethiopia,Túi giấy,60000,7
+141,3,Ethiopia,Hộp nhựa,75000,5
+141,4,Colombia,Hộp cao cấp,60000,6
+141,5,Colombia,Túi giấy,75000,4
+141,6,Colombia,Hộp nhựa,45000,7
+141,7,Việt Nam,Hộp cao cấp,75000,4
+141,8,Việt Nam,Túi giấy,45000,6
+141,9,Việt Nam,Hộp nhựa,60000,4
+142,1,Ethiopia,Hộp cao cấp,45000,8
+142,2,Ethiopia,Túi giấy,60000,6
+142,3,Ethiopia,Hộp nhựa,75000,5
+142,4,Colombia,Hộp cao cấp,60000,7
+142,5,Colombia,Túi giấy,75000,4
+142,6,Colombia,Hộp nhựa,45000,7
+142,7,Việt Nam,Hộp cao cấp,75000,3
+142,8,Việt Nam,Túi giấy,45000,7
+142,9,Việt Nam,Hộp nhựa,60000,4
+143,1,Ethiopia,Hộp cao cấp,45000,7
+143,2,Ethiopia,Túi giấy,60000,6
+143,3,Ethiopia,Hộp nhựa,75000,5
+143,4,Colombia,Hộp cao cấp,60000,7
+143,5,Colombia,Túi giấy,75000,5
+143,6,Colombia,Hộp nhựa,45000,5
+143,7,Việt Nam,Hộp cao cấp,75000,5
+143,8,Việt Nam,Túi giấy,45000,5
+143,9,Việt Nam,Hộp nhựa,60000,4
+144,1,Ethiopia,Hộp cao cấp,45000,9
+144,2,Ethiopia,Túi giấy,60000,6
+144,3,Ethiopia,Hộp nhựa,75000,4
+144,4,Colombia,Hộp cao cấp,60000,6
+144,5,Colombia,Túi giấy,75000,5
+144,6,Colombia,Hộp nhựa,45000,5
+144,7,Việt Nam,Hộp cao cấp,75000,5
+144,8,Việt Nam,Túi giấy,45000,7
+144,9,Việt Nam,Hộp nhựa,60000,4
+145,1,Ethiopia,Hộp cao cấp,45000,7
+145,2,Ethiopia,Túi giấy,60000,5
+145,3,Ethiopia,Hộp nhựa,75000,3
+145,4,Colombia,Hộp cao cấp,60000,6
+145,5,Colombia,Túi giấy,75000,4
+145,6,Colombia,Hộp nhựa,45000,4
+145,7,Việt Nam,Hộp cao cấp,75000,4
+145,8,Việt Nam,Túi giấy,45000,5
+145,9,Việt Nam,Hộp nhựa,60000,2
+146,1,Ethiopia,Hộp cao cấp,45000,7
+146,2,Ethiopia,Túi giấy,60000,6
+146,3,Ethiopia,Hộp nhựa,75000,5
+146,4,Colombia,Hộp cao cấp,60000,5
+146,5,Colombia,Túi giấy,75000,5
+146,6,Colombia,Hộp nhựa,45000,6
+146,7,Việt Nam,Hộp cao cấp,75000,5
+146,8,Việt Nam,Túi giấy,45000,5
+146,9,Việt Nam,Hộp nhựa,60000,3
+147,1,Ethiopia,Hộp cao cấp,45000,7
+147,2,Ethiopia,Túi giấy,60000,6
+147,3,Ethiopia,Hộp nhựa,75000,4
+147,4,Colombia,Hộp cao cấp,60000,5
+147,5,Colombia,Túi giấy,75000,4
+147,6,Colombia,Hộp nhựa,45000,5
+147,7,Việt Nam,Hộp cao cấp,75000,4
+147,8,Việt Nam,Túi giấy,45000,5
+147,9,Việt Nam,Hộp nhựa,60000,3
+148,1,Ethiopia,Hộp cao cấp,45000,8
+148,2,Ethiopia,Túi giấy,60000,6
+148,3,Ethiopia,Hộp nhựa,75000,4
+148,4,Colombia,Hộp cao cấp,60000,5
+148,5,Colombia,Túi giấy,75000,5
+148,6,Colombia,Hộp nhựa,45000,5
+148,7,Việt Nam,Hộp cao cấp,75000,4
+148,8,Việt Nam,Túi giấy,45000,4
+148,9,Việt Nam,Hộp nhựa,60000,4
+149,1,Ethiopia,Hộp cao cấp,45000,6
+149,2,Ethiopia,Túi giấy,60000,5
+149,3,Ethiopia,Hộp nhựa,75000,3
+149,4,Colombia,Hộp cao cấp,60000,5
+149,5,Colombia,Túi giấy,75000,3
+149,6,Colombia,Hộp nhựa,45000,5
+149,7,Việt Nam,Hộp cao cấp,75000,3
+149,8,Việt Nam,Túi giấy,45000,4
+149,9,Việt Nam,Hộp nhựa,60000,3
+150,1,Ethiopia,Hộp cao cấp,45000,7
+150,2,Ethiopia,Túi giấy,60000,6
+150,3,Ethiopia,Hộp nhựa,75000,5
+150,4,Colombia,Hộp cao cấp,60000,6
+150,5,Colombia,Túi giấy,75000,4
+150,6,Colombia,Hộp nhựa,45000,6
+150,7,Việt Nam,Hộp cao cấp,75000,4
+150,8,Việt Nam,Túi giấy,45000,5
+150,9,Việt Nam,Hộp nhựa,60000,4
+151,1,Ethiopia,Hộp cao cấp,45000,7
+151,2,Ethiopia,Túi giấy,60000,5
+151,3,Ethiopia,Hộp nhựa,75000,3
+151,4,Colombia,Hộp cao cấp,60000,4
+151,5,Colombia,Túi giấy,75000,3
+151,6,Colombia,Hộp nhựa,45000,4
+151,7,Việt Nam,Hộp cao cấp,75000,2
+151,8,Việt Nam,Túi giấy,45000,4
+151,9,Việt Nam,Hộp nhựa,60000,3
+152,1,Ethiopia,Hộp cao cấp,45000,6
+152,2,Ethiopia,Túi giấy,60000,5
+152,3,Ethiopia,Hộp nhựa,75000,3
+152,4,Colombia,Hộp cao cấp,60000,5
+152,5,Colombia,Túi giấy,75000,2
+152,6,Colombia,Hộp nhựa,45000,4
+152,7,Việt Nam,Hộp cao cấp,75000,3
+152,8,Việt Nam,Túi giấy,45000,5
+152,9,Việt Nam,Hộp nhựa,60000,3
+153,1,Ethiopia,Hộp cao cấp,45000,6
+153,2,Ethiopia,Túi giấy,60000,5
+153,3,Ethiopia,Hộp nhựa,75000,4
+153,4,Colombia,Hộp cao cấp,60000,5
+153,5,Colombia,Túi giấy,75000,4
+153,6,Colombia,Hộp nhựa,45000,5
+153,7,Việt Nam,Hộp cao cấp,75000,3
+153,8,Việt Nam,Túi giấy,45000,3
+153,9,Việt Nam,Hộp nhựa,60000,3
+154,1,Ethiopia,Hộp cao cấp,45000,8
+154,2,Ethiopia,Túi giấy,60000,6
+154,3,Ethiopia,Hộp nhựa,75000,4
+154,4,Colombia,Hộp cao cấp,60000,6
+154,5,Colombia,Túi giấy,75000,3
+154,6,Colombia,Hộp nhựa,45000,5
+154,7,Việt Nam,Hộp cao cấp,75000,4
+154,8,Việt Nam,Túi giấy,45000,5
+154,9,Việt Nam,Hộp nhựa,60000,4
+155,1,Ethiopia,Hộp cao cấp,45000,8
+155,2,Ethiopia,Túi giấy,60000,5
+155,3,Ethiopia,Hộp nhựa,75000,3
+155,4,Colombia,Hộp cao cấp,60000,6
+155,5,Colombia,Túi giấy,75000,4
+155,6,Colombia,Hộp nhựa,45000,6
+155,7,Việt Nam,Hộp cao cấp,75000,4
+155,8,Việt Nam,Túi giấy,45000,6
+155,9,Việt Nam,Hộp nhựa,60000,3
+156,1,Ethiopia,Hộp cao cấp,45000,7
+156,2,Ethiopia,Túi giấy,60000,6
+156,3,Ethiopia,Hộp nhựa,75000,4
+156,4,Colombia,Hộp cao cấp,60000,5
+156,5,Colombia,Túi giấy,75000,5
+156,6,Colombia,Hộp nhựa,45000,7
+156,7,Việt Nam,Hộp cao cấp,75000,5
+156,8,Việt Nam,Túi giấy,45000,5
+156,9,Việt Nam,Hộp nhựa,60000,4
+157,1,Ethiopia,Hộp cao cấp,45000,8
+157,2,Ethiopia,Túi giấy,60000,5
+157,3,Ethiopia,Hộp nhựa,75000,4
+157,4,Colombia,Hộp cao cấp,60000,7
+157,5,Colombia,Túi giấy,75000,4
+157,6,Colombia,Hộp nhựa,45000,7
+157,7,Việt Nam,Hộp cao cấp,75000,5
+157,8,Việt Nam,Túi giấy,45000,6
+157,9,Việt Nam,Hộp nhựa,60000,4
+158,1,Ethiopia,Hộp cao cấp,45000,7
+158,2,Ethiopia,Túi giấy,60000,4
+158,3,Ethiopia,Hộp nhựa,75000,2
+158,4,Colombia,Hộp cao cấp,60000,5
+158,5,Colombia,Túi giấy,75000,2
+158,6,Colombia,Hộp nhựa,45000,4
+158,7,Việt Nam,Hộp cao cấp,75000,3
+158,8,Việt Nam,Túi giấy,45000,5
+158,9,Việt Nam,Hộp nhựa,60000,4
+159,1,Ethiopia,Hộp cao cấp,45000,9
+159,2,Ethiopia,Túi giấy,60000,7
+159,3,Ethiopia,Hộp nhựa,75000,4
+159,4,Colombia,Hộp cao cấp,60000,6
+159,5,Colombia,Túi giấy,75000,5
+159,6,Colombia,Hộp nhựa,45000,6
+159,7,Việt Nam,Hộp cao cấp,75000,5
+159,8,Việt Nam,Túi giấy,45000,7
+159,9,Việt Nam,Hộp nhựa,60000,5
+160,1,Ethiopia,Hộp cao cấp,45000,7
+160,2,Ethiopia,Túi giấy,60000,6
+160,3,Ethiopia,Hộp nhựa,75000,5
+160,4,Colombia,Hộp cao cấp,60000,5
+160,5,Colombia,Túi giấy,75000,4
+160,6,Colombia,Hộp nhựa,45000,6
+160,7,Việt Nam,Hộp cao cấp,75000,3
+160,8,Việt Nam,Túi giấy,45000,5
+160,9,Việt Nam,Hộp nhựa,60000,4
+161,1,Ethiopia,Hộp cao cấp,45000,8
+161,2,Ethiopia,Túi giấy,60000,6
+161,3,Ethiopia,Hộp nhựa,75000,5
+161,4,Colombia,Hộp cao cấp,60000,7
+161,5,Colombia,Túi giấy,75000,5
+161,6,Colombia,Hộp nhựa,45000,7
+161,7,Việt Nam,Hộp cao cấp,75000,5
+161,8,Việt Nam,Túi giấy,45000,7
+161,9,Việt Nam,Hộp nhựa,60000,4
+162,1,Ethiopia,Hộp cao cấp,45000,7
+162,2,Ethiopia,Túi giấy,60000,6
+162,3,Ethiopia,Hộp nhựa,75000,4
+162,4,Colombia,Hộp cao cấp,60000,6
+162,5,Colombia,Túi giấy,75000,4
+162,6,Colombia,Hộp nhựa,45000,6
+162,7,Việt Nam,Hộp cao cấp,75000,4
+162,8,Việt Nam,Túi giấy,45000,6
+162,9,Việt Nam,Hộp nhựa,60000,2
+163,1,Ethiopia,Hộp cao cấp,45000,7
+163,2,Ethiopia,Túi giấy,60000,5
+163,3,Ethiopia,Hộp nhựa,75000,4
+163,4,Colombia,Hộp cao cấp,60000,5
+163,5,Colombia,Túi giấy,75000,4
+163,6,Colombia,Hộp nhựa,45000,6
+163,7,Việt Nam,Hộp cao cấp,75000,5
+163,8,Việt Nam,Túi giấy,45000,5
+163,9,Việt Nam,Hộp nhựa,60000,3
+164,1,Ethiopia,Hộp cao cấp,45000,9
+164,2,Ethiopia,Túi giấy,60000,8
+164,3,Ethiopia,Hộp nhựa,75000,5
+164,4,Colombia,Hộp cao cấp,60000,8
+164,5,Colombia,Túi giấy,75000,5
+164,6,Colombia,Hộp nhựa,45000,6
+164,7,Việt Nam,Hộp cao cấp,75000,5
+164,8,Việt Nam,Túi giấy,45000,7
+164,9,Việt Nam,Hộp nhựa,60000,5
+165,1,Ethiopia,Hộp cao cấp,45000,8
+165,2,Ethiopia,Túi giấy,60000,5
+165,3,Ethiopia,Hộp nhựa,75000,4
+165,4,Colombia,Hộp cao cấp,60000,5
+165,5,Colombia,Túi giấy,75000,4
+165,6,Colombia,Hộp nhựa,45000,5
+165,7,Việt Nam,Hộp cao cấp,75000,4
+165,8,Việt Nam,Túi giấy,45000,5
+165,9,Việt Nam,Hộp nhựa,60000,4
+166,1,Ethiopia,Hộp cao cấp,45000,6
+166,2,Ethiopia,Túi giấy,60000,5
+166,3,Ethiopia,Hộp nhựa,75000,3
+166,4,Colombia,Hộp cao cấp,60000,5
+166,5,Colombia,Túi giấy,75000,4
+166,6,Colombia,Hộp nhựa,45000,4
+166,7,Việt Nam,Hộp cao cấp,75000,4
+166,8,Việt Nam,Túi giấy,45000,5
+166,9,Việt Nam,Hộp nhựa,60000,4
+167,1,Ethiopia,Hộp cao cấp,45000,8
+167,2,Ethiopia,Túi giấy,60000,7
+167,3,Ethiopia,Hộp nhựa,75000,4
+167,4,Colombia,Hộp cao cấp,60000,7
+167,5,Colombia,Túi giấy,75000,4
+167,6,Colombia,Hộp nhựa,45000,6
+167,7,Việt Nam,Hộp cao cấp,75000,4
+167,8,Việt Nam,Túi giấy,45000,7
+167,9,Việt Nam,Hộp nhựa,60000,3
+168,1,Ethiopia,Hộp cao cấp,45000,7
+168,2,Ethiopia,Túi giấy,60000,5
+168,3,Ethiopia,Hộp nhựa,75000,4
+168,4,Colombia,Hộp cao cấp,60000,6
+168,5,Colombia,Túi giấy,75000,2
+168,6,Colombia,Hộp nhựa,45000,4
+168,7,Việt Nam,Hộp cao cấp,75000,3
+168,8,Việt Nam,Túi giấy,45000,5
+168,9,Việt Nam,Hộp nhựa,60000,4
+169,1,Ethiopia,Hộp cao cấp,45000,6
+169,2,Ethiopia,Túi giấy,60000,4
+169,3,Ethiopia,Hộp nhựa,75000,4
+169,4,Colombia,Hộp cao cấp,60000,5
+169,5,Colombia,Túi giấy,75000,3
+169,6,Colombia,Hộp nhựa,45000,6
+169,7,Việt Nam,Hộp cao cấp,75000,3
+169,8,Việt Nam,Túi giấy,45000,5
+169,9,Việt Nam,Hộp nhựa,60000,4
+170,1,Ethiopia,Hộp cao cấp,45000,7
+170,2,Ethiopia,Túi giấy,60000,5
+170,3,Ethiopia,Hộp nhựa,75000,4
+170,4,Colombia,Hộp cao cấp,60000,5
+170,5,Colombia,Túi giấy,75000,3
+170,6,Colombia,Hộp nhựa,45000,7
+170,7,Việt Nam,Hộp cao cấp,75000,3
+170,8,Việt Nam,Túi giấy,45000,6
+170,9,Việt Nam,Hộp nhựa,60000,4
+171,1,Ethiopia,Hộp cao cấp,45000,9
+171,2,Ethiopia,Túi giấy,60000,7
+171,3,Ethiopia,Hộp nhựa,75000,4
+171,4,Colombia,Hộp cao cấp,60000,7
+171,5,Colombia,Túi giấy,75000,4
+171,6,Colombia,Hộp nhựa,45000,7
+171,7,Việt Nam,Hộp cao cấp,75000,5
+171,8,Việt Nam,Túi giấy,45000,7
+171,9,Việt Nam,Hộp nhựa,60000,4
+172,1,Ethiopia,Hộp cao cấp,45000,9
+172,2,Ethiopia,Túi giấy,60000,6
+172,3,Ethiopia,Hộp nhựa,75000,6
+172,4,Colombia,Hộp cao cấp,60000,7
+172,5,Colombia,Túi giấy,75000,5
+172,6,Colombia,Hộp nhựa,45000,6
+172,7,Việt Nam,Hộp cao cấp,75000,5
+172,8,Việt Nam,Túi giấy,45000,8
+172,9,Việt Nam,Hộp nhựa,60000,5
+173,1,Ethiopia,Hộp cao cấp,45000,7
+173,2,Ethiopia,Túi giấy,60000,5
+173,3,Ethiopia,Hộp nhựa,75000,3
+173,4,Colombia,Hộp cao cấp,60000,4
+173,5,Colombia,Túi giấy,75000,3
+173,6,Colombia,Hộp nhựa,45000,5
+173,7,Việt Nam,Hộp cao cấp,75000,3
+173,8,Việt Nam,Túi giấy,45000,5
+173,9,Việt Nam,Hộp nhựa,60000,2
+174,1,Ethiopia,Hộp cao cấp,45000,8
+174,2,Ethiopia,Túi giấy,60000,5
+174,3,Ethiopia,Hộp nhựa,75000,3
+174,4,Colombia,Hộp cao cấp,60000,4
+174,5,Colombia,Túi giấy,75000,3
+174,6,Colombia,Hộp nhựa,45000,5
+174,7,Việt Nam,Hộp cao cấp,75000,3
+174,8,Việt Nam,Túi giấy,45000,5
+174,9,Việt Nam,Hộp nhựa,60000,4
+175,1,Ethiopia,Hộp cao cấp,45000,8
+175,2,Ethiopia,Túi giấy,60000,6
+175,3,Ethiopia,Hộp nhựa,75000,3
+175,4,Colombia,Hộp cao cấp,60000,5
+175,5,Colombia,Túi giấy,75000,3
+175,6,Colombia,Hộp nhựa,45000,5
+175,7,Việt Nam,Hộp cao cấp,75000,4
+175,8,Việt Nam,Túi giấy,45000,6
+175,9,Việt Nam,Hộp nhựa,60000,4
+176,1,Ethiopia,Hộp cao cấp,45000,7
+176,2,Ethiopia,Túi giấy,60000,5
+176,3,Ethiopia,Hộp nhựa,75000,4
+176,4,Colombia,Hộp cao cấp,60000,5
+176,5,Colombia,Túi giấy,75000,4
+176,6,Colombia,Hộp nhựa,45000,5
+176,7,Việt Nam,Hộp cao cấp,75000,4
+176,8,Việt Nam,Túi giấy,45000,5
+176,9,Việt Nam,Hộp nhựa,60000,4
+177,1,Ethiopia,Hộp cao cấp,45000,7
+177,2,Ethiopia,Túi giấy,60000,5
+177,3,Ethiopia,Hộp nhựa,75000,2
+177,4,Colombia,Hộp cao cấp,60000,5
+177,5,Colombia,Túi giấy,75000,3
+177,6,Colombia,Hộp nhựa,45000,5
+177,7,Việt Nam,Hộp cao cấp,75000,2
+177,8,Việt Nam,Túi giấy,45000,5
+177,9,Việt Nam,Hộp nhựa,60000,3
+178,1,Ethiopia,Hộp cao cấp,45000,7
+178,2,Ethiopia,Túi giấy,60000,6
+178,3,Ethiopia,Hộp nhựa,75000,5
+178,4,Colombia,Hộp cao cấp,60000,6
+178,5,Colombia,Túi giấy,75000,4
+178,6,Colombia,Hộp nhựa,45000,5
+178,7,Việt Nam,Hộp cao cấp,75000,4
+178,8,Việt Nam,Túi giấy,45000,4
+178,9,Việt Nam,Hộp nhựa,60000,3
+179,1,Ethiopia,Hộp cao cấp,45000,6
+179,2,Ethiopia,Túi giấy,60000,5
+179,3,Ethiopia,Hộp nhựa,75000,4
+179,4,Colombia,Hộp cao cấp,60000,4
+179,5,Colombia,Túi giấy,75000,3
+179,6,Colombia,Hộp nhựa,45000,4
+179,7,Việt Nam,Hộp cao cấp,75000,3
+179,8,Việt Nam,Túi giấy,45000,4
+179,9,Việt Nam,Hộp nhựa,60000,3
+180,1,Ethiopia,Hộp cao cấp,45000,8
+180,2,Ethiopia,Túi giấy,60000,6
+180,3,Ethiopia,Hộp nhựa,75000,4
+180,4,Colombia,Hộp cao cấp,60000,7
+180,5,Colombia,Túi giấy,75000,4
+180,6,Colombia,Hộp nhựa,45000,5
+180,7,Việt Nam,Hộp cao cấp,75000,4
+180,8,Việt Nam,Túi giấy,45000,5
+180,9,Việt Nam,Hộp nhựa,60000,4
+181,1,Ethiopia,Hộp cao cấp,45000,7
+181,2,Ethiopia,Túi giấy,60000,5
+181,3,Ethiopia,Hộp nhựa,75000,4
+181,4,Colombia,Hộp cao cấp,60000,5
+181,5,Colombia,Túi giấy,75000,4
+181,6,Colombia,Hộp nhựa,45000,4
+181,7,Việt Nam,Hộp cao cấp,75000,3
+181,8,Việt Nam,Túi giấy,45000,3
+181,9,Việt Nam,Hộp nhựa,60000,4
+182,1,Ethiopia,Hộp cao cấp,45000,7
+182,2,Ethiopia,Túi giấy,60000,6
+182,3,Ethiopia,Hộp nhựa,75000,4
+182,4,Colombia,Hộp cao cấp,60000,6
+182,5,Colombia,Túi giấy,75000,4
+182,6,Colombia,Hộp nhựa,45000,7
+182,7,Việt Nam,Hộp cao cấp,75000,3
+182,8,Việt Nam,Túi giấy,45000,5
+182,9,Việt Nam,Hộp nhựa,60000,3
+183,1,Ethiopia,Hộp cao cấp,45000,8
+183,2,Ethiopia,Túi giấy,60000,7
+183,3,Ethiopia,Hộp nhựa,75000,5
+183,4,Colombia,Hộp cao cấp,60000,6
+183,5,Colombia,Túi giấy,75000,5
+183,6,Colombia,Hộp nhựa,45000,6
+183,7,Việt Nam,Hộp cao cấp,75000,3
+183,8,Việt Nam,Túi giấy,45000,6
+183,9,Việt Nam,Hộp nhựa,60000,4
+184,1,Ethiopia,Hộp cao cấp,45000,8
+184,2,Ethiopia,Túi giấy,60000,6
+184,3,Ethiopia,Hộp nhựa,75000,3
+184,4,Colombia,Hộp cao cấp,60000,7
+184,5,Colombia,Túi giấy,75000,4
+184,6,Colombia,Hộp nhựa,45000,5
+184,7,Việt Nam,Hộp cao cấp,75000,5
+184,8,Việt Nam,Túi giấy,45000,6
+184,9,Việt Nam,Hộp nhựa,60000,3
+185,1,Ethiopia,Hộp cao cấp,45000,9
+185,2,Ethiopia,Túi giấy,60000,6
+185,3,Ethiopia,Hộp nhựa,75000,4
+185,4,Colombia,Hộp cao cấp,60000,5
+185,5,Colombia,Túi giấy,75000,4
+185,6,Colombia,Hộp nhựa,45000,5
+185,7,Việt Nam,Hộp cao cấp,75000,4
+185,8,Việt Nam,Túi giấy,45000,4
+185,9,Việt Nam,Hộp nhựa,60000,3
+186,1,Ethiopia,Hộp cao cấp,45000,6
+186,2,Ethiopia,Túi giấy,60000,5
+186,3,Ethiopia,Hộp nhựa,75000,2
+186,4,Colombia,Hộp cao cấp,60000,5
+186,5,Colombia,Túi giấy,75000,2
+186,6,Colombia,Hộp nhựa,45000,4
+186,7,Việt Nam,Hộp cao cấp,75000,3
+186,8,Việt Nam,Túi giấy,45000,4
+186,9,Việt Nam,Hộp nhựa,60000,2
+187,1,Ethiopia,Hộp cao cấp,45000,8
+187,2,Ethiopia,Túi giấy,60000,5
+187,3,Ethiopia,Hộp nhựa,75000,4
+187,4,Colombia,Hộp cao cấp,60000,5
+187,5,Colombia,Túi giấy,75000,5
+187,6,Colombia,Hộp nhựa,45000,6
+187,7,Việt Nam,Hộp cao cấp,75000,3
+187,8,Việt Nam,Túi giấy,45000,4
+187,9,Việt Nam,Hộp nhựa,60000,3
+188,1,Ethiopia,Hộp cao cấp,45000,7
+188,2,Ethiopia,Túi giấy,60000,5
+188,3,Ethiopia,Hộp nhựa,75000,4
+188,4,Colombia,Hộp cao cấp,60000,5
+188,5,Colombia,Túi giấy,75000,5
+188,6,Colombia,Hộp nhựa,45000,5
+188,7,Việt Nam,Hộp cao cấp,75000,4
+188,8,Việt Nam,Túi giấy,45000,5
+188,9,Việt Nam,Hộp nhựa,60000,3
+189,1,Ethiopia,Hộp cao cấp,45000,7
+189,2,Ethiopia,Túi giấy,60000,6
+189,3,Ethiopia,Hộp nhựa,75000,4
+189,4,Colombia,Hộp cao cấp,60000,6
+189,5,Colombia,Túi giấy,75000,5
+189,6,Colombia,Hộp nhựa,45000,5
+189,7,Việt Nam,Hộp cao cấp,75000,4
+189,8,Việt Nam,Túi giấy,45000,4
+189,9,Việt Nam,Hộp nhựa,60000,4
+190,1,Ethiopia,Hộp cao cấp,45000,8
+190,2,Ethiopia,Túi giấy,60000,5
+190,3,Ethiopia,Hộp nhựa,75000,4
+190,4,Colombia,Hộp cao cấp,60000,5
+190,5,Colombia,Túi giấy,75000,4
+190,6,Colombia,Hộp nhựa,45000,5
+190,7,Việt Nam,Hộp cao cấp,75000,3
+190,8,Việt Nam,Túi giấy,45000,5
+190,9,Việt Nam,Hộp nhựa,60000,3
+191,1,Ethiopia,Hộp cao cấp,45000,5
+191,2,Ethiopia,Túi giấy,60000,4
+191,3,Ethiopia,Hộp nhựa,75000,2
+191,4,Colombia,Hộp cao cấp,60000,4
+191,5,Colombia,Túi giấy,75000,4
+191,6,Colombia,Hộp nhựa,45000,4
+191,7,Việt Nam,Hộp cao cấp,75000,3
+191,8,Việt Nam,Túi giấy,45000,3
+191,9,Việt Nam,Hộp nhựa,60000,2
+192,1,Ethiopia,Hộp cao cấp,45000,8
+192,2,Ethiopia,Túi giấy,60000,5
+192,3,Ethiopia,Hộp nhựa,75000,3
+192,4,Colombia,Hộp cao cấp,60000,5
+192,5,Colombia,Túi giấy,75000,3
+192,6,Colombia,Hộp nhựa,45000,5
+192,7,Việt Nam,Hộp cao cấp,75000,2
+192,8,Việt Nam,Túi giấy,45000,5
+192,9,Việt Nam,Hộp nhựa,60000,4
+193,1,Ethiopia,Hộp cao cấp,45000,8
+193,2,Ethiopia,Túi giấy,60000,6
+193,3,Ethiopia,Hộp nhựa,75000,4
+193,4,Colombia,Hộp cao cấp,60000,6
+193,5,Colombia,Túi giấy,75000,3
+193,6,Colombia,Hộp nhựa,45000,6
+193,7,Việt Nam,Hộp cao cấp,75000,4
+193,8,Việt Nam,Túi giấy,45000,5
+193,9,Việt Nam,Hộp nhựa,60000,4
+194,1,Ethiopia,Hộp cao cấp,45000,9
+194,2,Ethiopia,Túi giấy,60000,7
+194,3,Ethiopia,Hộp nhựa,75000,4
+194,4,Colombia,Hộp cao cấp,60000,7
+194,5,Colombia,Túi giấy,75000,4
+194,6,Colombia,Hộp nhựa,45000,7
+194,7,Việt Nam,Hộp cao cấp,75000,5
+194,8,Việt Nam,Túi giấy,45000,6
+194,9,Việt Nam,Hộp nhựa,60000,4
+195,1,Ethiopia,Hộp cao cấp,45000,7
+195,2,Ethiopia,Túi giấy,60000,7
+195,3,Ethiopia,Hộp nhựa,75000,5
+195,4,Colombia,Hộp cao cấp,60000,5
+195,5,Colombia,Túi giấy,75000,3
+195,6,Colombia,Hộp nhựa,45000,4
+195,7,Việt Nam,Hộp cao cấp,75000,4
+195,8,Việt Nam,Túi giấy,45000,6
+195,9,Việt Nam,Hộp nhựa,60000,4
+196,1,Ethiopia,Hộp cao cấp,45000,9
+196,2,Ethiopia,Túi giấy,60000,6
+196,3,Ethiopia,Hộp nhựa,75000,4
+196,4,Colombia,Hộp cao cấp,60000,7
+196,5,Colombia,Túi giấy,75000,4
+196,6,Colombia,Hộp nhựa,45000,6
+196,7,Việt Nam,Hộp cao cấp,75000,5
+196,8,Việt Nam,Túi giấy,45000,7
+196,9,Việt Nam,Hộp nhựa,60000,5
+197,1,Ethiopia,Hộp cao cấp,45000,8
+197,2,Ethiopia,Túi giấy,60000,6
+197,3,Ethiopia,Hộp nhựa,75000,4
+197,4,Colombia,Hộp cao cấp,60000,6
+197,5,Colombia,Túi giấy,75000,4
+197,6,Colombia,Hộp nhựa,45000,6
+197,7,Việt Nam,Hộp cao cấp,75000,4
+197,8,Việt Nam,Túi giấy,45000,6
+197,9,Việt Nam,Hộp nhựa,60000,3
+198,1,Ethiopia,Hộp cao cấp,45000,8
+198,2,Ethiopia,Túi giấy,60000,6
+198,3,Ethiopia,Hộp nhựa,75000,5
+198,4,Colombia,Hộp cao cấp,60000,5
+198,5,Colombia,Túi giấy,75000,5
+198,6,Colombia,Hộp nhựa,45000,5
+198,7,Việt Nam,Hộp cao cấp,75000,5
+198,8,Việt Nam,Túi giấy,45000,6
+198,9,Việt Nam,Hộp nhựa,60000,5
+199,1,Ethiopia,Hộp cao cấp,45000,9
+199,2,Ethiopia,Túi giấy,60000,7
+199,3,Ethiopia,Hộp nhựa,75000,4
+199,4,Colombia,Hộp cao cấp,60000,6
+199,5,Colombia,Túi giấy,75000,5
+199,6,Colombia,Hộp nhựa,45000,5
+199,7,Việt Nam,Hộp cao cấp,75000,5
+199,8,Việt Nam,Túi giấy,45000,7
+199,9,Việt Nam,Hộp nhựa,60000,4
+200,1,Ethiopia,Hộp cao cấp,45000,8
+200,2,Ethiopia,Túi giấy,60000,5
+200,3,Ethiopia,Hộp nhựa,75000,3
+200,4,Colombia,Hộp cao cấp,60000,6
+200,5,Colombia,Túi giấy,75000,4
+200,6,Colombia,Hộp nhựa,45000,5
+200,7,Việt Nam,Hộp cao cấp,75000,3
+200,8,Việt Nam,Túi giấy,45000,5
+200,9,Việt Nam,Hộp nhựa,60000,4
